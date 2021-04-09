@@ -1,0 +1,246 @@
+23:57:11 **** Incremental Build of configuration Keil 8051 v9.60.0 - Debug for project uart ****
+make all 
+PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 
+Building file: ../src/uart_main.c
+Invoking: Keil 8051 Compiler
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/uart_main.__i" || test $? -lt 2
+
+C51 COMPILER V9.60.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.omf
+Invoking: Keil 8051 Linker
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@uart.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2019
+@uart.lnp "./src/InitDevice.OBJ",
+"./src/SILABS_STARTUP.OBJ",
+"./src/uart_main.OBJ"
+TO "UART.OMF.CRBUILD" REMOVEUNUSED PRINT(.\uart.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0090H BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=16.0 xdata=0 const=0 code=119
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: uart.omf
+23:57:17 **** Incremental Build of configuration Keil 8051 v9.60.0 - Debug for project uart ****
+make all 
+PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 
+Building target: uart.omf
+Invoking: Keil 8051 Linker
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@uart.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2019
+@uart.lnp "./src/InitDevice.OBJ",
+"./src/SILABS_STARTUP.OBJ",
+"./src/uart_main.OBJ"
+TO "UART.OMF.CRBUILD" REMOVEUNUSED PRINT(.\uart.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0090H BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=16.0 xdata=0 const=0 code=119
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: uart.omf
+00:12:20 **** Incremental Build of configuration Keil 8051 v9.60.0 - Debug for project uart ****
+make all 
+PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 
+Building file: ../src/uart_main.c
+Invoking: Keil 8051 Compiler
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/uart_main.__i" || test $? -lt 2
+
+C51 COMPILER V9.60.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.omf
+Invoking: Keil 8051 Linker
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@uart.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2019
+@uart.lnp "./src/InitDevice.OBJ",
+"./src/SILABS_STARTUP.OBJ",
+"./src/uart_main.OBJ"
+TO "UART.OMF.CRBUILD" REMOVEUNUSED PRINT(.\uart.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 009BH BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=16.0 xdata=0 const=0 code=130
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: uart.omf
+00:13:39 **** Incremental Build of configuration Keil 8051 v9.60.0 - Debug for project uart ****
+make all 
+PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 
+Building file: ../src/uart_main.c
+Invoking: Keil 8051 Compiler
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/uart_main.__i" || test $? -lt 2
+
+C51 COMPILER V9.60.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.omf
+Invoking: Keil 8051 Linker
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@uart.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2019
+@uart.lnp "./src/InitDevice.OBJ",
+"./src/SILABS_STARTUP.OBJ",
+"./src/uart_main.OBJ"
+TO "UART.OMF.CRBUILD" REMOVEUNUSED PRINT(.\uart.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 009EH BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=16.0 xdata=0 const=0 code=133
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: uart.omf
+00:14:38 **** Incremental Build of configuration Keil 8051 v9.60.0 - Debug for project uart ****
+make all 
+PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 
+Building file: ../src/uart_main.c
+Invoking: Keil 8051 Compiler
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/uart_main.__i" || test $? -lt 2
+
+C51 COMPILER V9.60.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.omf
+Invoking: Keil 8051 Linker
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@uart.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2019
+@uart.lnp "./src/InitDevice.OBJ",
+"./src/SILABS_STARTUP.OBJ",
+"./src/uart_main.OBJ"
+TO "UART.OMF.CRBUILD" REMOVEUNUSED PRINT(.\uart.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 009EH BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=16.0 xdata=0 const=0 code=133
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: uart.omf
+00:14:48 **** Incremental Build of configuration Keil 8051 v9.60.0 - Debug for project uart ****
+make all 
+PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 
+Building target: uart.omf
+Invoking: Keil 8051 Linker
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@uart.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2019
+@uart.lnp "./src/InitDevice.OBJ",
+"./src/SILABS_STARTUP.OBJ",
+"./src/uart_main.OBJ"
+TO "UART.OMF.CRBUILD" REMOVEUNUSED PRINT(.\uart.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 009EH BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=16.0 xdata=0 const=0 code=133
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: uart.omf
+00:16:54 **** Incremental Build of configuration Keil 8051 v9.60.0 - Debug for project uart ****
+make all 
+PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 
+Building file: ../src/uart_main.c
+Invoking: Keil 8051 Compiler
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/uart_main.__i" || test $? -lt 2
+
+C51 COMPILER V9.60.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.omf
+Invoking: Keil 8051 Linker
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@uart.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2019
+@uart.lnp "./src/InitDevice.OBJ",
+"./src/SILABS_STARTUP.OBJ",
+"./src/uart_main.OBJ"
+TO "UART.OMF.CRBUILD" REMOVEUNUSED PRINT(.\uart.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0099H BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=16.0 xdata=0 const=0 code=117
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: uart.omf
+00:18:37 **** Incremental Build of configuration Keil 8051 v9.60.0 - Debug for project uart ****
+make all 
+PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 
+Building file: ../src/uart_main.c
+Invoking: Keil 8051 Compiler
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/uart_main.__i" || test $? -lt 2
+
+C51 COMPILER V9.60.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+*** ERROR C141 IN LINE 95 OF /home/tadashi/SimplicityStudio/v5_workspace/uart/src/uart_main.c: syntax error near 'unsigned', expected '__asm'
+*** ERROR C202 IN LINE 95 OF /home/tadashi/SimplicityStudio/v5_workspace/uart/src/uart_main.c: 'i': undefined identifier
+*** ERROR C202 IN LINE 102 OF /home/tadashi/SimplicityStudio/v5_workspace/uart/src/uart_main.c: 'i': undefined identifier
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  3 ERROR(S)
+src/subdir.mk:21: recipe for target 'src/uart_main.OBJ' failed
+make: *** [src/uart_main.OBJ] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:18:59 **** Incremental Build of configuration Keil 8051 v9.60.0 - Debug for project uart ****
+make all 
+PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 
+Building file: ../src/uart_main.c
+Invoking: Keil 8051 Compiler
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/uart_main.__i" || test $? -lt 2
+
+C51 COMPILER V9.60.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.omf
+Invoking: Keil 8051 Linker
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@uart.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2019
+@uart.lnp "./src/InitDevice.OBJ",
+"./src/SILABS_STARTUP.OBJ",
+"./src/uart_main.OBJ"
+TO "UART.OMF.CRBUILD" REMOVEUNUSED PRINT(.\uart.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00E3H BYTE (11%) *
+******************************************************************************
+
+Program Size: data=20.0 xdata=0 const=0 code=337
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: uart.omf

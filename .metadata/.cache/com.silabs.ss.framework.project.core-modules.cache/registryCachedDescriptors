@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="ASCII"?>
+<model:MDescriptors xmlns:model="http://www.silabs.com/ss/Studio.ecore">
+  <descriptors name="com.silabs.sdk.si8051.external.bsp.efm8_bsp">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/bsp/efm8_bsp.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|BSP"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/bsp/efm8_bsp.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.bsp.efm8_bsp"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.bsp.efm8_joystick">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/bsp/efm8_joystick.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|BSP"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/bsp/efm8_joystick.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.bsp.efm8_joystick"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.bsp.efm8_memory_lcd">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/bsp/efm8_memory_lcd.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|BSP"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/bsp/efm8_memory_lcd.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.bsp.efm8_memory_lcd"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.bsp.efm8_retargetserial">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/bsp/efm8_retargetserial.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|BSP"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/bsp/efm8_retargetserial.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.bsp.efm8_retargetserial"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.bsp.efm8_rgb_led">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/bsp/efm8_rgb_led.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|BSP"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/bsp/efm8_rgb_led.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.bsp.efm8_rgb_led"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8Library.assert">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/assert.slsproj"/>
+    <properties key="core.category" value="8051|EFM8"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/assert.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8Library.assert"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8Library.capsense_core">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/efm8_capsense.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|CapSense"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/efm8_capsense.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8Library.capsense_core"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8Library.capsense_serial_interface">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/efm8_capsense_serial_interface.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|CapSense"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/efm8_capsense_serial_interface.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8Library.capsense_serial_interface"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8Library.iec60730">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/efm8_iec60730.slsproj"/>
+    <properties key="core.category" value="8051|EFM8"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/efm8_iec60730.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8Library.iec60730"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8Library.usb">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/efm8_usb.slsproj"/>
+    <properties key="core.category" value="8051|EFM8"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/efm8_usb.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8Library.usb"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8Library.usbc">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/efm8_usbc.slsproj"/>
+    <properties key="core.category" value="8051|EFM8"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/efm8_usbc.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8Library.usbc"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.adc0">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_ADC0.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_ADC0.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.adc0"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.clu0">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_CLU0.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_CLU0.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.clu0"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.clu1">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_CLU1.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_CLU1.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.clu1"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.clu2">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_CLU2.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_CLU2.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.clu2"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.clu3">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_CLU3.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_CLU3.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.clu3"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.dac0">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_DAC0.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_DAC0.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.dac0"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.dac1">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_DAC1.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_DAC1.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.dac1"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.dac2">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_DAC2.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_DAC2.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.dac2"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.dac3">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_DAC3.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_DAC3.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.dac3"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.i2c0">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_I2C0.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_I2C0.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.i2c0"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.pca0">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_PCA0.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_PCA0.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.pca0"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.pwr">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_PWR.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_PWR.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.pwr"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.smb0">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_SMB0.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_SMB0.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.smb0"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.spi0">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_SPI0.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_SPI0.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.spi0"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.spi1">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_SPI1.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_SPI1.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.spi1"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.uart0">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_UART0.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_UART0.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.uart0"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.uart1">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_UART1.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_UART1.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.uart1"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.usb0">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_USB0.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_USB0.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.usb0"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.efm8PeripheralDriver.wdt0">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_WDT0.slsproj"/>
+    <properties key="core.category" value="8051|EFM8|Peripheral Drivers"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/device/peripheralDriver_WDT0.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.efm8PeripheralDriver.wdt0"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.usbxpress">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/USBXpressClient.slsproj"/>
+    <properties key="core.category" value="8051|EFM8"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/USBXpressClient.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.usbxpress"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.external.vcpxpress">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/VCPXpressClient.slsproj"/>
+    <properties key="core.category" value="8051|EFM8"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/VCPXpressClient.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.external.vcpxpress"/>
+  </descriptors>
+  <descriptors name="com.silabs.sdk.si8051.shared">
+    <properties key="module.clientModelURI" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/shared.slsproj"/>
+    <properties key="core.category" value="8051"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/./modules/library/shared.slsproj"/>
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="coreSdk.contributingSdk" value="com.silabs.sdk.8051:4.2.0.0_1279911441"/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.framework.project.internal.api.core.modules.SDKModuleDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.si8051.shared"/>
+  </descriptors>
+</model:MDescriptors>

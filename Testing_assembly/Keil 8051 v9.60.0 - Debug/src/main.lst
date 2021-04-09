@@ -1,0 +1,1173 @@
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE     1
+
+
+MACRO ASSEMBLER AX51 V3.15.3.0
+OBJECT MODULE PLACED IN .\src\main.OBJ
+ASSEMBLER INVOKED BY: Z:\home\tadashi\Downloads\SimplicityStudio_v5\developer\toolchains\keil_8051\9.60\BIN\AX51.exe /ho
+                      me/tadashi/SimplicityStudio/v5_workspace/emptyCProject_5/src/main.asm ERRORPRINT SET(SMALL,SILABS_
+                      STARTUP=1) DEBUG MACRO NOMOD51 INCDIR(/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8
+                      051/v4.2.0//Device/shared/si8051Base;/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/80
+                      51/v4.2.0//Device/EFM8LB1/inc) PRINT(.\src\main.lst) COND SYMBOLS PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src\main.OBJ) 
+
+LOC    OBJ             LINE     SOURCE
+
+                          1     
+                          2     
+                          3     
+                          4     
+                          5     
+                          6     
+                          7     
+                          8     
+                          9     
+                         10     
+                         11     
+                         12     
+                         13     
+                         14     
+                         15     ;$include (SI_EFM8LB1_DEFS.INC)
+                    +1   16     ;------------------------------------------------------------------------------
+                    +1   17     ; Copyright 2014 Silicon Laboratories, Inc.
+                    +1   18     ; All rights reserved. This program and the accompanying materials
+                    +1   19     ; are made available under the terms of the Silicon Laboratories End User
+                    +1   20     ; License Agreement which accompanies this distribution, and is available at
+                    +1   21     ; http://developer.silabs.com/legal/version/v11/Silicon_Labs_Software_License_Agreement.
+                               txt
+                    +1   22     ; Original content and implementation provided by Silicon Laboratories.
+                    +1   23     ;------------------------------------------------------------------------------
+                    +1   24     ;Supported Devices:
+                    +1   25     ;  EFM8LB10F16E_QFN24
+                    +1   26     ;  EFM8LB10F16E_QFN32
+                    +1   27     ;  EFM8LB10F16E_QFP32
+                    +1   28     ;  EFM8LB10F16E_QSOP24
+                    +1   29     ;  EFM8LB10F16ES0_QFN24
+                    +1   30     ;  EFM8LB10F16ES0_QFN32
+                    +1   31     ;  EFM8LB10F16ES1_QFN24
+                    +1   32     ;  EFM8LB10F16ES1_QFN32
+                    +1   33     ;  EFM8LB11F16E_QFN24
+                    +1   34     ;  EFM8LB11F16E_QFN32
+                    +1   35     ;  EFM8LB11F16E_QFP32
+                    +1   36     ;  EFM8LB11F16E_QSOP24
+                    +1   37     ;  EFM8LB11F16ES0_QFN24
+                    +1   38     ;  EFM8LB11F16ES0_QFN32
+                    +1   39     ;  EFM8LB11F16ES1_QFN24
+                    +1   40     ;  EFM8LB11F16ES1_QFN32
+                    +1   41     ;  EFM8LB11F32E_QFN24
+                    +1   42     ;  EFM8LB11F32E_QFN32
+                    +1   43     ;  EFM8LB11F32E_QFP32
+                    +1   44     ;  EFM8LB11F32E_QSOP24
+                    +1   45     ;  EFM8LB11F32ES0_QFN24
+                    +1   46     ;  EFM8LB11F32ES0_QFN32
+                    +1   47     ;  EFM8LB11F32ES1_QFN24
+                    +1   48     ;  EFM8LB11F32ES1_QFN32
+                    +1   49     ;  EFM8LB12F32E_QFN24
+                    +1   50     ;  EFM8LB12F32E_QFN32
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE     2
+
+                    +1   51     ;  EFM8LB12F32E_QFP32
+                    +1   52     ;  EFM8LB12F32E_QSOP24
+                    +1   53     ;  EFM8LB12F32ES0_QFN24
+                    +1   54     ;  EFM8LB12F32ES0_QFN32
+                    +1   55     ;  EFM8LB12F32ES1_QFN24
+                    +1   56     ;  EFM8LB12F32ES1_QFN32
+                    +1   57     ;  EFM8LB12F64E_QFN24
+                    +1   58     ;  EFM8LB12F64E_QFN32
+                    +1   59     ;  EFM8LB12F64E_QFP32
+                    +1   60     ;  EFM8LB12F64E_QSOP24
+                    +1   61     ;  EFM8LB12F64ES0_QFN24
+                    +1   62     ;  EFM8LB12F64ES0_QFN32
+                    +1   63     ;  EFM8LB12F64ES1_QFN24
+                    +1   64     ;  EFM8LB12F64ES1_QFN32
+                    +1   65     
+                    +1   66     ;-----------------------------------------------------------------------------
+                    +1   67     ; Register Definitions
+                    +1   68     ;-----------------------------------------------------------------------------
+ 00E0               +1   69     ACC       DATA 0E0H; Accumulator                              
+ 00B6               +1   70     ADC0ASAH  DATA 0B6H; ADC0 Autoscan Start Address High Byte    
+ 00B5               +1   71     ADC0ASAL  DATA 0B5H; ADC0 Autoscan Start Address Low Byte     
+ 00A1               +1   72     ADC0ASCF  DATA 0A1H; ADC0 Autoscan Configuration              
+ 00C7               +1   73     ADC0ASCT  DATA 0C7H; ADC0 Autoscan Output Count               
+ 00BC               +1   74     ADC0CF0   DATA 0BCH; ADC0 Configuration                       
+ 00B9               +1   75     ADC0CF1   DATA 0B9H; ADC0 Configuration                       
+ 00DF               +1   76     ADC0CF2   DATA 0DFH; ADC0 Power Control                       
+ 00E8               +1   77     ADC0CN0   DATA 0E8H; ADC0 Control 0                           
+ 00B2               +1   78     ADC0CN1   DATA 0B2H; ADC0 Control 1                           
+ 00B3               +1   79     ADC0CN2   DATA 0B3H; ADC0 Control 2                           
+ 00C4               +1   80     ADC0GTH   DATA 0C4H; ADC0 Greater-Than High Byte              
+ 00C3               +1   81     ADC0GTL   DATA 0C3H; ADC0 Greater-Than Low Byte               
+ 00BE               +1   82     ADC0H     DATA 0BEH; ADC0 Data Word High Byte                 
+ 00BD               +1   83     ADC0L     DATA 0BDH; ADC0 Data Word Low Byte                  
+ 00C6               +1   84     ADC0LTH   DATA 0C6H; ADC0 Less-Than High Byte                 
+ 00C5               +1   85     ADC0LTL   DATA 0C5H; ADC0 Less-Than Low Byte                  
+ 00BB               +1   86     ADC0MX    DATA 0BBH; ADC0 Multiplexer Selection               
+ 00F0               +1   87     B         DATA 0F0H; B Register                               
+ 008E               +1   88     CKCON0    DATA 08EH; Clock Control 0                          
+ 00A6               +1   89     CKCON1    DATA 0A6H; Clock Control 1                          
+ 00C6               +1   90     CLEN0     DATA 0C6H; Configurable Logic Enable 0              
+ 00C7               +1   91     CLIE0     DATA 0C7H; Configurable Logic Interrupt Enable 0    
+ 00E8               +1   92     CLIF0     DATA 0E8H; Configurable Logic Interrupt Flag 0      
+ 00A9               +1   93     CLKSEL    DATA 0A9H; Clock Select                             
+ 00D1               +1   94     CLOUT0    DATA 0D1H; Configurable Logic Output 0              
+ 00B1               +1   95     CLU0CF    DATA 0B1H; Configurable Logic Unit 0 Configuration  
+ 00AF               +1   96     CLU0FN    DATA 0AFH; Configurable Logic Unit 0 Function Select
+ 0084               +1   97     CLU0MX    DATA 084H; Configurable Logic Unit 0 Multiplexer    
+ 00B3               +1   98     CLU1CF    DATA 0B3H; Configurable Logic Unit 1 Configuration  
+ 00B2               +1   99     CLU1FN    DATA 0B2H; Configurable Logic Unit 1 Function Select
+ 0085               +1  100     CLU1MX    DATA 085H; Configurable Logic Unit 1 Multiplexer    
+ 00B6               +1  101     CLU2CF    DATA 0B6H; Configurable Logic Unit 2 Configuration  
+ 00B5               +1  102     CLU2FN    DATA 0B5H; Configurable Logic Unit 2 Function Select
+ 0091               +1  103     CLU2MX    DATA 091H; Configurable Logic Unit 2 Multiplexer    
+ 00BF               +1  104     CLU3CF    DATA 0BFH; Configurable Logic Unit 3 Configuration  
+ 00BE               +1  105     CLU3FN    DATA 0BEH; Configurable Logic Unit 3 Function Select
+ 00AE               +1  106     CLU3MX    DATA 0AEH; Configurable Logic Unit 3 Multiplexer    
+ 009B               +1  107     CMP0CN0   DATA 09BH; Comparator 0 Control 0                   
+ 0099               +1  108     CMP0CN1   DATA 099H; Comparator 0 Control 1                   
+ 009D               +1  109     CMP0MD    DATA 09DH; Comparator 0 Mode                        
+ 009F               +1  110     CMP0MX    DATA 09FH; Comparator 0 Multiplexer Selection       
+ 00BF               +1  111     CMP1CN0   DATA 0BFH; Comparator 1 Control 0                   
+ 00AC               +1  112     CMP1CN1   DATA 0ACH; Comparator 1 Control 1                   
+ 00AB               +1  113     CMP1MD    DATA 0ABH; Comparator 1 Mode                        
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE     3
+
+ 00AA               +1  114     CMP1MX    DATA 0AAH; Comparator 1 Multiplexer Selection       
+ 00CE               +1  115     CRC0CN0   DATA 0CEH; CRC0 Control 0                           
+ 0086               +1  116     CRC0CN1   DATA 086H; CRC0 Control 1                           
+ 00D3               +1  117     CRC0CNT   DATA 0D3H; CRC0 Automatic Flash Sector Count        
+ 00CB               +1  118     CRC0DAT   DATA 0CBH; CRC0 Data Output                         
+ 00CF               +1  119     CRC0FLIP  DATA 0CFH; CRC0 Bit Flip                            
+ 00CA               +1  120     CRC0IN    DATA 0CAH; CRC0 Data Input                          
+ 00D2               +1  121     CRC0ST    DATA 0D2H; CRC0 Automatic Flash Sector Start        
+ 0091               +1  122     DAC0CF0   DATA 091H; DAC0 Configuration 0                     
+ 0092               +1  123     DAC0CF1   DATA 092H; DAC0 Configuration 1                     
+ 0085               +1  124     DAC0H     DATA 085H; DAC0 Data Word High Byte                 
+ 0084               +1  125     DAC0L     DATA 084H; DAC0 Data Word Low Byte                  
+ 0093               +1  126     DAC1CF0   DATA 093H; DAC1 Configuration 0                     
+ 0094               +1  127     DAC1CF1   DATA 094H; DAC1 Configuration 1                     
+ 008A               +1  128     DAC1H     DATA 08AH; DAC1 Data Word High Byte                 
+ 0089               +1  129     DAC1L     DATA 089H; DAC1 Data Word Low Byte                  
+ 0095               +1  130     DAC2CF0   DATA 095H; DAC2 Configuration 0                     
+ 0096               +1  131     DAC2CF1   DATA 096H; DAC2 Configuration 1                     
+ 008C               +1  132     DAC2H     DATA 08CH; DAC2 Data Word High Byte                 
+ 008B               +1  133     DAC2L     DATA 08BH; DAC2 Data Word Low Byte                  
+ 009A               +1  134     DAC3CF0   DATA 09AH; DAC3 Configuration 0                     
+ 009C               +1  135     DAC3CF1   DATA 09CH; DAC3 Configuration 1                     
+ 008E               +1  136     DAC3H     DATA 08EH; DAC3 Data Word High Byte                 
+ 008D               +1  137     DAC3L     DATA 08DH; DAC3 Data Word Low Byte                  
+ 0088               +1  138     DACGCF0   DATA 088H; DAC Global Configuration 0               
+ 0098               +1  139     DACGCF1   DATA 098H; DAC Global Configuration 1               
+ 00A2               +1  140     DACGCF2   DATA 0A2H; DAC Global Configuration 2               
+ 00AD               +1  141     DERIVID   DATA 0ADH; Derivative Identification                
+ 00B5               +1  142     DEVICEID  DATA 0B5H; Device Identification                    
+ 0083               +1  143     DPH       DATA 083H; Data Pointer High                        
+ 0082               +1  144     DPL       DATA 082H; Data Pointer Low                         
+ 00E6               +1  145     EIE1      DATA 0E6H; Extended Interrupt Enable 1              
+ 00F3               +1  146     EIE2      DATA 0F3H; Extended Interrupt Enable 2              
+ 00BB               +1  147     EIP1      DATA 0BBH; Extended Interrupt Priority 1 Low        
+ 00EE               +1  148     EIP1H     DATA 0EEH; Extended Interrupt Priority 1 High       
+ 00ED               +1  149     EIP2      DATA 0EDH; Extended Interrupt Priority 2            
+ 00F6               +1  150     EIP2H     DATA 0F6H; Extended Interrupt Priority 2 High       
+ 00E7               +1  151     EMI0CN    DATA 0E7H; External Memory Interface Control        
+ 00B7               +1  152     FLKEY     DATA 0B7H; Flash Lock and Key                       
+ 00C7               +1  153     HFO0CAL   DATA 0C7H; High Frequency Oscillator 0 Calibration  
+ 00D6               +1  154     HFO1CAL   DATA 0D6H; High Frequency Oscillator 1 Calibration  
+ 00EF               +1  155     HFOCN     DATA 0EFH; High Frequency Oscillator Control        
+ 00FF               +1  156     I2C0ADM   DATA 0FFH; I2C0 Slave Address Mask                  
+ 00BA               +1  157     I2C0CN0   DATA 0BAH; I2C0 Control                             
+ 00BC               +1  158     I2C0DIN   DATA 0BCH; I2C0 Received Data                       
+ 00BB               +1  159     I2C0DOUT  DATA 0BBH; I2C0 Transmit Data                       
+ 00AD               +1  160     I2C0FCN0  DATA 0ADH; I2C0 FIFO Control 0                      
+ 00AB               +1  161     I2C0FCN1  DATA 0ABH; I2C0 FIFO Control 1                      
+ 00F5               +1  162     I2C0FCT   DATA 0F5H; I2C0 FIFO Count                          
+ 00BD               +1  163     I2C0SLAD  DATA 0BDH; I2C0 Slave Address                       
+ 00B9               +1  164     I2C0STAT  DATA 0B9H; I2C0 Status                              
+ 00A8               +1  165     IE        DATA 0A8H; Interrupt Enable                         
+ 00B8               +1  166     IP        DATA 0B8H; Interrupt Priority                       
+ 00F2               +1  167     IPH       DATA 0F2H; Interrupt Priority High                  
+ 00E4               +1  168     IT01CF    DATA 0E4H; INT0/INT1 Configuration                  
+ 00B1               +1  169     LFO0CN    DATA 0B1H; Low Frequency Oscillator Control         
+ 0080               +1  170     P0        DATA 080H; Port 0 Pin Latch                         
+ 00FE               +1  171     P0MASK    DATA 0FEH; Port 0 Mask                              
+ 00FD               +1  172     P0MAT     DATA 0FDH; Port 0 Match                             
+ 00F1               +1  173     P0MDIN    DATA 0F1H; Port 0 Input Mode                        
+ 00A4               +1  174     P0MDOUT   DATA 0A4H; Port 0 Output Mode                       
+ 00D4               +1  175     P0SKIP    DATA 0D4H; Port 0 Skip                              
+ 0090               +1  176     P1        DATA 090H; Port 1 Pin Latch                         
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE     4
+
+ 00EE               +1  177     P1MASK    DATA 0EEH; Port 1 Mask                              
+ 00ED               +1  178     P1MAT     DATA 0EDH; Port 1 Match                             
+ 00F2               +1  179     P1MDIN    DATA 0F2H; Port 1 Input Mode                        
+ 00A5               +1  180     P1MDOUT   DATA 0A5H; Port 1 Output Mode                       
+ 00D5               +1  181     P1SKIP    DATA 0D5H; Port 1 Skip                              
+ 00A0               +1  182     P2        DATA 0A0H; Port 2 Pin Latch                         
+ 00FC               +1  183     P2MASK    DATA 0FCH; Port 2 Mask                              
+ 00FB               +1  184     P2MAT     DATA 0FBH; Port 2 Match                             
+ 00F3               +1  185     P2MDIN    DATA 0F3H; Port 2 Input Mode                        
+ 00A6               +1  186     P2MDOUT   DATA 0A6H; Port 2 Output Mode                       
+ 00CC               +1  187     P2SKIP    DATA 0CCH; Port 2 Skip                              
+ 00B0               +1  188     P3        DATA 0B0H; Port 3 Pin Latch                         
+ 00F4               +1  189     P3MDIN    DATA 0F4H; Port 3 Input Mode                        
+ 009C               +1  190     P3MDOUT   DATA 09CH; Port 3 Output Mode                       
+ 009E               +1  191     PCA0CENT  DATA 09EH; PCA Center Alignment Enable              
+ 009C               +1  192     PCA0CLR   DATA 09CH; PCA Comparator Clear Control             
+ 00D8               +1  193     PCA0CN0   DATA 0D8H; PCA Control                              
+ 00FC               +1  194     PCA0CPH0  DATA 0FCH; PCA Channel 0 Capture Module High Byte   
+ 00EA               +1  195     PCA0CPH1  DATA 0EAH; PCA Channel 1 Capture Module High Byte   
+ 00EC               +1  196     PCA0CPH2  DATA 0ECH; PCA Channel 2 Capture Module High Byte   
+ 00F5               +1  197     PCA0CPH3  DATA 0F5H; PCA Channel 3 Capture Module High Byte   
+ 0085               +1  198     PCA0CPH4  DATA 085H; PCA Channel 4 Capture Module High Byte   
+ 00DE               +1  199     PCA0CPH5  DATA 0DEH; PCA Channel 5 Capture Module High Byte   
+ 00FB               +1  200     PCA0CPL0  DATA 0FBH; PCA Channel 0 Capture Module Low Byte    
+ 00E9               +1  201     PCA0CPL1  DATA 0E9H; PCA Channel 1 Capture Module Low Byte    
+ 00EB               +1  202     PCA0CPL2  DATA 0EBH; PCA Channel 2 Capture Module Low Byte    
+ 00F4               +1  203     PCA0CPL3  DATA 0F4H; PCA Channel 3 Capture Module Low Byte    
+ 0084               +1  204     PCA0CPL4  DATA 084H; PCA Channel 4 Capture Module Low Byte    
+ 00DD               +1  205     PCA0CPL5  DATA 0DDH; PCA Channel 5 Capture Module Low Byte    
+ 00DA               +1  206     PCA0CPM0  DATA 0DAH; PCA Channel 0 Capture/Compare Mode       
+ 00DB               +1  207     PCA0CPM1  DATA 0DBH; PCA Channel 1 Capture/Compare Mode       
+ 00DC               +1  208     PCA0CPM2  DATA 0DCH; PCA Channel 2 Capture/Compare Mode       
+ 00AE               +1  209     PCA0CPM3  DATA 0AEH; PCA Channel 3 Capture/Compare Mode       
+ 00AF               +1  210     PCA0CPM4  DATA 0AFH; PCA Channel 4 Capture/Compare Mode       
+ 00CC               +1  211     PCA0CPM5  DATA 0CCH; PCA Channel 5 Capture/Compare Mode       
+ 00FA               +1  212     PCA0H     DATA 0FAH; PCA Counter/Timer High Byte              
+ 00F9               +1  213     PCA0L     DATA 0F9H; PCA Counter/Timer Low Byte               
+ 00D9               +1  214     PCA0MD    DATA 0D9H; PCA Mode                                 
+ 0096               +1  215     PCA0POL   DATA 096H; PCA Output Polarity                      
+ 00F7               +1  216     PCA0PWM   DATA 0F7H; PCA PWM Configuration                    
+ 0087               +1  217     PCON0     DATA 087H; Power Control                            
+ 00CD               +1  218     PCON1     DATA 0CDH; Power Control 1                          
+ 00C1               +1  219     PFE0CN    DATA 0C1H; Prefetch Engine Control                  
+ 00F6               +1  220     PRTDRV    DATA 0F6H; Port Drive Strength                      
+ 008F               +1  221     PSCTL     DATA 08FH; Program Store Control                    
+ 00AA               +1  222     PSTAT0    DATA 0AAH; PMU Status 0                             
+ 00D0               +1  223     PSW       DATA 0D0H; Program Status Word                      
+ 00D1               +1  224     REF0CN    DATA 0D1H; Voltage Reference Control                
+ 00C9               +1  225     REG0CN    DATA 0C9H; Voltage Regulator 0 Control              
+ 00B6               +1  226     REVID     DATA 0B6H; Revision Identifcation                   
+ 00EF               +1  227     RSTSRC    DATA 0EFH; Reset Source                             
+ 0094               +1  228     SBCON1    DATA 094H; UART1 Baud Rate Generator Control        
+ 0096               +1  229     SBRLH1    DATA 096H; UART1 Baud Rate Generator High Byte      
+ 0095               +1  230     SBRLL1    DATA 095H; UART1 Baud Rate Generator Low Byte       
+ 0099               +1  231     SBUF0     DATA 099H; UART0 Serial Port Data Buffer            
+ 0092               +1  232     SBUF1     DATA 092H; UART1 Serial Port Data Buffer            
+ 0098               +1  233     SCON0     DATA 098H; UART0 Serial Port Control                
+ 00C8               +1  234     SCON1     DATA 0C8H; UART1 Serial Port Control                
+ 00A7               +1  235     SFRPAGE   DATA 0A7H; SFR Page                                 
+ 00BC               +1  236     SFRPGCN   DATA 0BCH; SFR Page Control                         
+ 00D7               +1  237     SFRSTACK  DATA 0D7H; SFR Page Stack                           
+ 00D6               +1  238     SMB0ADM   DATA 0D6H; SMBus 0 Slave Address Mask               
+ 00D7               +1  239     SMB0ADR   DATA 0D7H; SMBus 0 Slave Address                    
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE     5
+
+ 00C1               +1  240     SMB0CF    DATA 0C1H; SMBus 0 Configuration                    
+ 00C0               +1  241     SMB0CN0   DATA 0C0H; SMBus 0 Control                          
+ 00C2               +1  242     SMB0DAT   DATA 0C2H; SMBus 0 Data                             
+ 00C3               +1  243     SMB0FCN0  DATA 0C3H; SMBus 0 FIFO Control 0                   
+ 00C4               +1  244     SMB0FCN1  DATA 0C4H; SMBus 0 FIFO Control 1                   
+ 00EF               +1  245     SMB0FCT   DATA 0EFH; SMBus 0 FIFO Count                       
+ 00C5               +1  246     SMB0RXLN  DATA 0C5H; SMBus 0 Receive Length Counter           
+ 00AC               +1  247     SMB0TC    DATA 0ACH; SMBus 0 Timing and Pin Control           
+ 0093               +1  248     SMOD1     DATA 093H; UART1 Mode                               
+ 0081               +1  249     SP        DATA 081H; Stack Pointer                            
+ 00A1               +1  250     SPI0CFG   DATA 0A1H; SPI0 Configuration                       
+ 00A2               +1  251     SPI0CKR   DATA 0A2H; SPI0 Clock Rate                          
+ 00F8               +1  252     SPI0CN0   DATA 0F8H; SPI0 Control                             
+ 00A3               +1  253     SPI0DAT   DATA 0A3H; SPI0 Data                                
+ 009A               +1  254     SPI0FCN0  DATA 09AH; SPI0 FIFO Control 0                      
+ 009B               +1  255     SPI0FCN1  DATA 09BH; SPI0 FIFO Control 1                      
+ 00F7               +1  256     SPI0FCT   DATA 0F7H; SPI0 FIFO Count                          
+ 00DF               +1  257     SPI0PCF   DATA 0DFH; SPI0 Pin Configuration                   
+ 0088               +1  258     TCON      DATA 088H; Timer 0/1 Control                        
+ 008C               +1  259     TH0       DATA 08CH; Timer 0 High Byte                        
+ 008D               +1  260     TH1       DATA 08DH; Timer 1 High Byte                        
+ 008A               +1  261     TL0       DATA 08AH; Timer 0 Low Byte                         
+ 008B               +1  262     TL1       DATA 08BH; Timer 1 Low Byte                         
+ 0089               +1  263     TMOD      DATA 089H; Timer 0/1 Mode                           
+ 00C8               +1  264     TMR2CN0   DATA 0C8H; Timer 2 Control 0                        
+ 00FD               +1  265     TMR2CN1   DATA 0FDH; Timer 2 Control 1                        
+ 00CF               +1  266     TMR2H     DATA 0CFH; Timer 2 High Byte                        
+ 00CE               +1  267     TMR2L     DATA 0CEH; Timer 2 Low Byte                         
+ 00CB               +1  268     TMR2RLH   DATA 0CBH; Timer 2 Reload High Byte                 
+ 00CA               +1  269     TMR2RLL   DATA 0CAH; Timer 2 Reload Low Byte                  
+ 0091               +1  270     TMR3CN0   DATA 091H; Timer 3 Control 0                        
+ 00FE               +1  271     TMR3CN1   DATA 0FEH; Timer 3 Control 1                        
+ 0095               +1  272     TMR3H     DATA 095H; Timer 3 High Byte                        
+ 0094               +1  273     TMR3L     DATA 094H; Timer 3 Low Byte                         
+ 0093               +1  274     TMR3RLH   DATA 093H; Timer 3 Reload High Byte                 
+ 0092               +1  275     TMR3RLL   DATA 092H; Timer 3 Reload Low Byte                  
+ 0098               +1  276     TMR4CN0   DATA 098H; Timer 4 Control 0                        
+ 00FF               +1  277     TMR4CN1   DATA 0FFH; Timer 4 Control 1                        
+ 00A5               +1  278     TMR4H     DATA 0A5H; Timer 4 High Byte                        
+ 00A4               +1  279     TMR4L     DATA 0A4H; Timer 4 Low Byte                         
+ 00A3               +1  280     TMR4RLH   DATA 0A3H; Timer 4 Reload High Byte                 
+ 00A2               +1  281     TMR4RLL   DATA 0A2H; Timer 4 Reload Low Byte                  
+ 00C0               +1  282     TMR5CN0   DATA 0C0H; Timer 5 Control 0                        
+ 00F1               +1  283     TMR5CN1   DATA 0F1H; Timer 5 Control 1                        
+ 00D5               +1  284     TMR5H     DATA 0D5H; Timer 5 High Byte                        
+ 00D4               +1  285     TMR5L     DATA 0D4H; Timer 5 Low Byte                         
+ 00D3               +1  286     TMR5RLH   DATA 0D3H; Timer 5 Reload High Byte                 
+ 00D2               +1  287     TMR5RLL   DATA 0D2H; Timer 5 Reload Low Byte                  
+ 00D9               +1  288     UART0PCF  DATA 0D9H; UART0 Pin Configuration                  
+ 009D               +1  289     UART1FCN0 DATA 09DH; UART1 FIFO Control 0                     
+ 00D8               +1  290     UART1FCN1 DATA 0D8H; UART1 FIFO Control 1                     
+ 00FA               +1  291     UART1FCT  DATA 0FAH; UART1 FIFO Count                         
+ 009E               +1  292     UART1LIN  DATA 09EH; UART1 LIN Configuration                  
+ 00DA               +1  293     UART1PCF  DATA 0DAH; UART1 Pin Configuration                  
+ 00FF               +1  294     VDM0CN    DATA 0FFH; Supply Monitor Control                   
+ 0097               +1  295     WDTCN     DATA 097H; Watchdog Timer Control                   
+ 00E1               +1  296     XBR0      DATA 0E1H; Port I/O Crossbar 0                      
+ 00E2               +1  297     XBR1      DATA 0E2H; Port I/O Crossbar 1                      
+ 00E3               +1  298     XBR2      DATA 0E3H; Port I/O Crossbar 2                      
+ 0086               +1  299     XOSC0CN   DATA 086H; External Oscillator Control              
+                    +1  300     
+                    +1  301     ;------------------------------------------------------------------------------
+                    +1  302     ; 16-bit Register Definitions (may not work on all compilers)
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE     6
+
+                    +1  303     ;------------------------------------------------------------------------------
+ 00B5               +1  304     ADC0ASA DATA 0B5H ; ADC0 Autoscan Start Address Low Byte 
+ 00C3               +1  305     ADC0GT  DATA 0C3H ; ADC0 Greater-Than Low Byte           
+ 00BD               +1  306     ADC0    DATA 0BDH ; ADC0 Data Word Low Byte              
+ 00C5               +1  307     ADC0LT  DATA 0C5H ; ADC0 Less-Than Low Byte              
+ 0082               +1  308     DP      DATA 082H ; Data Pointer Low                     
+ 00FB               +1  309     PCA0CP0 DATA 0FBH ; PCA Channel 0 Capture Module Low Byte
+ 00E9               +1  310     PCA0CP1 DATA 0E9H ; PCA Channel 1 Capture Module Low Byte
+ 00EB               +1  311     PCA0CP2 DATA 0EBH ; PCA Channel 2 Capture Module Low Byte
+ 00F4               +1  312     PCA0CP3 DATA 0F4H ; PCA Channel 3 Capture Module Low Byte
+ 0084               +1  313     PCA0CP4 DATA 084H ; PCA Channel 4 Capture Module Low Byte
+ 00DD               +1  314     PCA0CP5 DATA 0DDH ; PCA Channel 5 Capture Module Low Byte
+ 00F9               +1  315     PCA0    DATA 0F9H ; PCA Counter/Timer Low Byte           
+ 00CE               +1  316     TMR2    DATA 0CEH ; Timer 2 Low Byte                     
+ 00CA               +1  317     TMR2RL  DATA 0CAH ; Timer 2 Reload Low Byte              
+ 0094               +1  318     TMR3    DATA 094H ; Timer 3 Low Byte                     
+ 0092               +1  319     TMR3RL  DATA 092H ; Timer 3 Reload Low Byte              
+ 00A4               +1  320     TMR4    DATA 0A4H ; Timer 4 Low Byte                     
+ 00A2               +1  321     TMR4RL  DATA 0A2H ; Timer 4 Reload Low Byte              
+ 00D4               +1  322     TMR5    DATA 0D4H ; Timer 5 Low Byte                     
+ 00D2               +1  323     TMR5RL  DATA 0D2H ; Timer 5 Reload Low Byte              
+                    +1  324     
+                    +1  325     ;------------------------------------------------------------------------------
+                    +1  326     ; Indirect Register Definitions
+                    +1  327     ;------------------------------------------------------------------------------
+                    +1  328     
+                    +1  329     ;------------------------------------------------------------------------------
+                    +1  330     ; Bit Definitions
+                    +1  331     ;------------------------------------------------------------------------------
+                    +1  332     
+                    +1  333     ; ACC 0xE0 (Accumulator)
+ 00E0.0             +1  334     ACC_ACC0 BIT ACC.0 ; Accumulator Bit 0
+ 00E0.1             +1  335     ACC_ACC1 BIT ACC.1 ; Accumulator Bit 1
+ 00E0.2             +1  336     ACC_ACC2 BIT ACC.2 ; Accumulator Bit 2
+ 00E0.3             +1  337     ACC_ACC3 BIT ACC.3 ; Accumulator Bit 3
+ 00E0.4             +1  338     ACC_ACC4 BIT ACC.4 ; Accumulator Bit 4
+ 00E0.5             +1  339     ACC_ACC5 BIT ACC.5 ; Accumulator Bit 5
+ 00E0.6             +1  340     ACC_ACC6 BIT ACC.6 ; Accumulator Bit 6
+ 00E0.7             +1  341     ACC_ACC7 BIT ACC.7 ; Accumulator Bit 7
+                    +1  342     
+                    +1  343     ; ADC0CN0 0xE8 (ADC0 Control 0)
+ 00E8.0             +1  344     ADC0CN0_TEMPE  BIT ADC0CN0.0 ; Temperature Sensor Enable         
+ 00E8.1             +1  345     ADC0CN0_ADGN0  BIT ADC0CN0.1 ; Gain Control Bit 0                
+ 00E8.2             +1  346     ADC0CN0_ADGN1  BIT ADC0CN0.2 ; Gain Control Bit 1                
+ 00E8.3             +1  347     ADC0CN0_ADWINT BIT ADC0CN0.3 ; Window Compare Interrupt Flag     
+ 00E8.4             +1  348     ADC0CN0_ADBUSY BIT ADC0CN0.4 ; ADC Busy                          
+ 00E8.5             +1  349     ADC0CN0_ADINT  BIT ADC0CN0.5 ; Conversion Complete Interrupt Flag
+ 00E8.6             +1  350     ADC0CN0_IPOEN  BIT ADC0CN0.6 ; Idle Powered-off Enable           
+ 00E8.7             +1  351     ADC0CN0_ADEN   BIT ADC0CN0.7 ; ADC Enable                        
+                    +1  352     
+                    +1  353     ; B 0xF0 (B Register)
+ 00F0.0             +1  354     B_B0 BIT B.0 ; B Register Bit 0
+ 00F0.1             +1  355     B_B1 BIT B.1 ; B Register Bit 1
+ 00F0.2             +1  356     B_B2 BIT B.2 ; B Register Bit 2
+ 00F0.3             +1  357     B_B3 BIT B.3 ; B Register Bit 3
+ 00F0.4             +1  358     B_B4 BIT B.4 ; B Register Bit 4
+ 00F0.5             +1  359     B_B5 BIT B.5 ; B Register Bit 5
+ 00F0.6             +1  360     B_B6 BIT B.6 ; B Register Bit 6
+ 00F0.7             +1  361     B_B7 BIT B.7 ; B Register Bit 7
+                    +1  362     
+                    +1  363     ; CLIF0 0xE8 (Configurable Logic Interrupt Flag 0)
+ 00E8.0             +1  364     CLIF0_C0FIF BIT CLIF0.0 ; CLU0 Falling Edge Flag
+ 00E8.1             +1  365     CLIF0_C0RIF BIT CLIF0.1 ; CLU0 Rising Edge Flag 
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE     7
+
+ 00E8.2             +1  366     CLIF0_C1FIF BIT CLIF0.2 ; CLU1 Falling Edge Flag
+ 00E8.3             +1  367     CLIF0_C1RIF BIT CLIF0.3 ; CLU1 Rising Edge Flag 
+ 00E8.4             +1  368     CLIF0_C2FIF BIT CLIF0.4 ; CLU2 Falling Edge Flag
+ 00E8.5             +1  369     CLIF0_C2RIF BIT CLIF0.5 ; CLU2 Rising Edge Flag 
+ 00E8.6             +1  370     CLIF0_C3FIF BIT CLIF0.6 ; CLU3 Falling Edge Flag
+ 00E8.7             +1  371     CLIF0_C3RIF BIT CLIF0.7 ; CLU3 Rising Edge Flag 
+                    +1  372     
+                    +1  373     ; DACGCF0 0x88 (DAC Global Configuration 0)
+ 0088.0             +1  374     DACGCF0_D1SRC0   BIT DACGCF0.0 ; DAC1 Data Source Bit 0                
+ 0088.1             +1  375     DACGCF0_D1SRC1   BIT DACGCF0.1 ; DAC1 Data Source Bit 1                
+ 0088.2             +1  376     DACGCF0_D1AMEN   BIT DACGCF0.2 ; DAC1 Alternating Mode Enable          
+ 0088.3             +1  377     DACGCF0_D01REFSL BIT DACGCF0.3 ; DAC0 and DAC1 Reference Voltage Select
+ 0088.4             +1  378     DACGCF0_D3SRC0   BIT DACGCF0.4 ; DAC3 Data Source Bit 0                
+ 0088.5             +1  379     DACGCF0_D3SRC1   BIT DACGCF0.5 ; DAC3 Data Source Bit 1                
+ 0088.6             +1  380     DACGCF0_D3AMEN   BIT DACGCF0.6 ; DAC3 Alternating Mode Enable          
+ 0088.7             +1  381     DACGCF0_D23REFSL BIT DACGCF0.7 ; DAC2 and DAC3 Reference Voltage Select
+                    +1  382     
+                    +1  383     ; DACGCF1 0x98 (DAC Global Configuration 1)
+ 0098.0             +1  384     DACGCF1_D0UDIS BIT DACGCF1.0 ; DAC0 Update Disable
+ 0098.1             +1  385     DACGCF1_D1UDIS BIT DACGCF1.1 ; DAC1 Update Disable
+ 0098.2             +1  386     DACGCF1_D2UDIS BIT DACGCF1.2 ; DAC2 Update Disable
+ 0098.3             +1  387     DACGCF1_D3UDIS BIT DACGCF1.3 ; DAC3 Update Disable
+                    +1  388     
+                    +1  389     ; IE 0xA8 (Interrupt Enable)
+ 00A8.0             +1  390     IE_EX0   BIT IE.0 ; External Interrupt 0 Enable
+ 00A8.1             +1  391     IE_ET0   BIT IE.1 ; Timer 0 Interrupt Enable   
+ 00A8.2             +1  392     IE_EX1   BIT IE.2 ; External Interrupt 1 Enable
+ 00A8.3             +1  393     IE_ET1   BIT IE.3 ; Timer 1 Interrupt Enable   
+ 00A8.4             +1  394     IE_ES0   BIT IE.4 ; UART0 Interrupt Enable     
+ 00A8.5             +1  395     IE_ET2   BIT IE.5 ; Timer 2 Interrupt Enable   
+ 00A8.6             +1  396     IE_ESPI0 BIT IE.6 ; SPI0 Interrupt Enable      
+ 00A8.7             +1  397     IE_EA    BIT IE.7 ; All Interrupts Enable      
+                    +1  398     
+                    +1  399     ; IP 0xB8 (Interrupt Priority)
+ 00B8.0             +1  400     IP_PX0   BIT IP.0 ; External Interrupt 0 Priority Control LSB                        
+ 00B8.1             +1  401     IP_PT0   BIT IP.1 ; Timer 0 Interrupt Priority Control LSB                           
+ 00B8.2             +1  402     IP_PX1   BIT IP.2 ; External Interrupt 1 Priority Control LSB                        
+ 00B8.3             +1  403     IP_PT1   BIT IP.3 ; Timer 1 Interrupt Priority Control LSB                           
+ 00B8.4             +1  404     IP_PS0   BIT IP.4 ; UART0 Interrupt Priority Control LSB                             
+ 00B8.5             +1  405     IP_PT2   BIT IP.5 ; Timer 2 Interrupt Priority Control LSB                           
+ 00B8.6             +1  406     IP_PSPI0 BIT IP.6 ; Serial Peripheral Interface (SPI0) Interrupt Priority Control LSB
+                    +1  407     
+                    +1  408     ; P0 0x80 (Port 0 Pin Latch)
+ 0080.0             +1  409     P0_B0 BIT P0.0 ; Port 0 Bit 0 Latch
+ 0080.1             +1  410     P0_B1 BIT P0.1 ; Port 0 Bit 1 Latch
+ 0080.2             +1  411     P0_B2 BIT P0.2 ; Port 0 Bit 2 Latch
+ 0080.3             +1  412     P0_B3 BIT P0.3 ; Port 0 Bit 3 Latch
+ 0080.4             +1  413     P0_B4 BIT P0.4 ; Port 0 Bit 4 Latch
+ 0080.5             +1  414     P0_B5 BIT P0.5 ; Port 0 Bit 5 Latch
+ 0080.6             +1  415     P0_B6 BIT P0.6 ; Port 0 Bit 6 Latch
+ 0080.7             +1  416     P0_B7 BIT P0.7 ; Port 0 Bit 7 Latch
+                    +1  417     
+                    +1  418     ; P1 0x90 (Port 1 Pin Latch)
+ 0090.0             +1  419     P1_B0 BIT P1.0 ; Port 1 Bit 0 Latch
+ 0090.1             +1  420     P1_B1 BIT P1.1 ; Port 1 Bit 1 Latch
+ 0090.2             +1  421     P1_B2 BIT P1.2 ; Port 1 Bit 2 Latch
+ 0090.3             +1  422     P1_B3 BIT P1.3 ; Port 1 Bit 3 Latch
+ 0090.4             +1  423     P1_B4 BIT P1.4 ; Port 1 Bit 4 Latch
+ 0090.5             +1  424     P1_B5 BIT P1.5 ; Port 1 Bit 5 Latch
+ 0090.6             +1  425     P1_B6 BIT P1.6 ; Port 1 Bit 6 Latch
+ 0090.7             +1  426     P1_B7 BIT P1.7 ; Port 1 Bit 7 Latch
+                    +1  427     
+                    +1  428     ; P2 0xA0 (Port 2 Pin Latch)
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE     8
+
+ 00A0.0             +1  429     P2_B0 BIT P2.0 ; Port 2 Bit 0 Latch
+ 00A0.1             +1  430     P2_B1 BIT P2.1 ; Port 2 Bit 1 Latch
+ 00A0.2             +1  431     P2_B2 BIT P2.2 ; Port 2 Bit 2 Latch
+ 00A0.3             +1  432     P2_B3 BIT P2.3 ; Port 2 Bit 3 Latch
+ 00A0.4             +1  433     P2_B4 BIT P2.4 ; Port 2 Bit 4 Latch
+ 00A0.5             +1  434     P2_B5 BIT P2.5 ; Port 2 Bit 5 Latch
+ 00A0.6             +1  435     P2_B6 BIT P2.6 ; Port 2 Bit 6 Latch
+                    +1  436     
+                    +1  437     ; P3 0xB0 (Port 3 Pin Latch)
+ 00B0.0             +1  438     P3_B0 BIT P3.0 ; Port 3 Bit 0 Latch
+ 00B0.1             +1  439     P3_B1 BIT P3.1 ; Port 3 Bit 1 Latch
+ 00B0.2             +1  440     P3_B2 BIT P3.2 ; Port 3 Bit 2 Latch
+ 00B0.3             +1  441     P3_B3 BIT P3.3 ; Port 3 Bit 3 Latch
+ 00B0.4             +1  442     P3_B4 BIT P3.4 ; Port 3 Bit 4 Latch
+ 00B0.7             +1  443     P3_B7 BIT P3.7 ; Port 3 Bit 7 Latch
+                    +1  444     
+                    +1  445     ; PCA0CN0 0xD8 (PCA Control)
+ 00D8.0             +1  446     PCA0CN0_CCF0 BIT PCA0CN0.0 ; PCA Module 0 Capture/Compare Flag
+ 00D8.1             +1  447     PCA0CN0_CCF1 BIT PCA0CN0.1 ; PCA Module 1 Capture/Compare Flag
+ 00D8.2             +1  448     PCA0CN0_CCF2 BIT PCA0CN0.2 ; PCA Module 2 Capture/Compare Flag
+ 00D8.3             +1  449     PCA0CN0_CCF3 BIT PCA0CN0.3 ; PCA Module 3 Capture/Compare Flag
+ 00D8.4             +1  450     PCA0CN0_CCF4 BIT PCA0CN0.4 ; PCA Module 4 Capture/Compare Flag
+ 00D8.5             +1  451     PCA0CN0_CCF5 BIT PCA0CN0.5 ; PCA Module 5 Capture/Compare Flag
+ 00D8.6             +1  452     PCA0CN0_CR   BIT PCA0CN0.6 ; PCA Counter/Timer Run Control    
+ 00D8.7             +1  453     PCA0CN0_CF   BIT PCA0CN0.7 ; PCA Counter/Timer Overflow Flag  
+                    +1  454     
+                    +1  455     ; PSW 0xD0 (Program Status Word)
+ 00D0.0             +1  456     PSW_PARITY BIT PSW.0 ; Parity Flag               
+ 00D0.1             +1  457     PSW_F1     BIT PSW.1 ; User Flag 1               
+ 00D0.2             +1  458     PSW_OV     BIT PSW.2 ; Overflow Flag             
+ 00D0.3             +1  459     PSW_RS0    BIT PSW.3 ; Register Bank Select Bit 0
+ 00D0.4             +1  460     PSW_RS1    BIT PSW.4 ; Register Bank Select Bit 1
+ 00D0.5             +1  461     PSW_F0     BIT PSW.5 ; User Flag 0               
+ 00D0.6             +1  462     PSW_AC     BIT PSW.6 ; Auxiliary Carry Flag      
+ 00D0.7             +1  463     PSW_CY     BIT PSW.7 ; Carry Flag                
+                    +1  464     
+                    +1  465     ; SCON0 0x98 (UART0 Serial Port Control)
+ 0098.0             +1  466     SCON0_RI    BIT SCON0.0 ; Receive Interrupt Flag             
+ 0098.1             +1  467     SCON0_TI    BIT SCON0.1 ; Transmit Interrupt Flag            
+ 0098.2             +1  468     SCON0_RB8   BIT SCON0.2 ; Ninth Receive Bit                  
+ 0098.3             +1  469     SCON0_TB8   BIT SCON0.3 ; Ninth Transmission Bit             
+ 0098.4             +1  470     SCON0_REN   BIT SCON0.4 ; Receive Enable                     
+ 0098.5             +1  471     SCON0_MCE   BIT SCON0.5 ; Multiprocessor Communication Enable
+ 0098.7             +1  472     SCON0_SMODE BIT SCON0.7 ; Serial Port 0 Operation Mode       
+                    +1  473     
+                    +1  474     ; SCON1 0xC8 (UART1 Serial Port Control)
+ 00C8.0             +1  475     SCON1_RI   BIT SCON1.0 ; Receive Interrupt Flag   
+ 00C8.1             +1  476     SCON1_TI   BIT SCON1.1 ; Transmit Interrupt Flag  
+ 00C8.2             +1  477     SCON1_RBX  BIT SCON1.2 ; Extra Receive Bit        
+ 00C8.3             +1  478     SCON1_TBX  BIT SCON1.3 ; Extra Transmission Bit   
+ 00C8.4             +1  479     SCON1_REN  BIT SCON1.4 ; Receive Enable           
+ 00C8.6             +1  480     SCON1_PERR BIT SCON1.6 ; Parity Error Flag        
+ 00C8.7             +1  481     SCON1_OVR  BIT SCON1.7 ; Receive FIFO Overrun Flag
+                    +1  482     
+                    +1  483     ; SMB0CN0 0xC0 (SMBus 0 Control)
+ 00C0.0             +1  484     SMB0CN0_SI      BIT SMB0CN0.0 ; SMBus Interrupt Flag            
+ 00C0.1             +1  485     SMB0CN0_ACK     BIT SMB0CN0.1 ; SMBus Acknowledge               
+ 00C0.2             +1  486     SMB0CN0_ARBLOST BIT SMB0CN0.2 ; SMBus Arbitration Lost Indicator
+ 00C0.3             +1  487     SMB0CN0_ACKRQ   BIT SMB0CN0.3 ; SMBus Acknowledge Request       
+ 00C0.4             +1  488     SMB0CN0_STO     BIT SMB0CN0.4 ; SMBus Stop Flag                 
+ 00C0.5             +1  489     SMB0CN0_STA     BIT SMB0CN0.5 ; SMBus Start Flag                
+ 00C0.6             +1  490     SMB0CN0_TXMODE  BIT SMB0CN0.6 ; SMBus Transmit Mode Indicator   
+ 00C0.7             +1  491     SMB0CN0_MASTER  BIT SMB0CN0.7 ; SMBus Master/Slave Indicator    
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE     9
+
+                    +1  492     
+                    +1  493     ; SPI0CN0 0xF8 (SPI0 Control)
+ 00F8.0             +1  494     SPI0CN0_SPIEN  BIT SPI0CN0.0 ; SPI0 Enable            
+ 00F8.1             +1  495     SPI0CN0_TXNF   BIT SPI0CN0.1 ; TX FIFO Not Full       
+ 00F8.2             +1  496     SPI0CN0_NSSMD0 BIT SPI0CN0.2 ; Slave Select Mode Bit 0
+ 00F8.3             +1  497     SPI0CN0_NSSMD1 BIT SPI0CN0.3 ; Slave Select Mode Bit 1
+ 00F8.4             +1  498     SPI0CN0_RXOVRN BIT SPI0CN0.4 ; Receive Overrun Flag   
+ 00F8.5             +1  499     SPI0CN0_MODF   BIT SPI0CN0.5 ; Mode Fault Flag        
+ 00F8.6             +1  500     SPI0CN0_WCOL   BIT SPI0CN0.6 ; Write Collision Flag   
+ 00F8.7             +1  501     SPI0CN0_SPIF   BIT SPI0CN0.7 ; SPI0 Interrupt Flag    
+                    +1  502     
+                    +1  503     ; TCON 0x88 (Timer 0/1 Control)
+ 0088.0             +1  504     TCON_IT0 BIT TCON.0 ; Interrupt 0 Type Select
+ 0088.1             +1  505     TCON_IE0 BIT TCON.1 ; External Interrupt 0   
+ 0088.2             +1  506     TCON_IT1 BIT TCON.2 ; Interrupt 1 Type Select
+ 0088.3             +1  507     TCON_IE1 BIT TCON.3 ; External Interrupt 1   
+ 0088.4             +1  508     TCON_TR0 BIT TCON.4 ; Timer 0 Run Control    
+ 0088.5             +1  509     TCON_TF0 BIT TCON.5 ; Timer 0 Overflow Flag  
+ 0088.6             +1  510     TCON_TR1 BIT TCON.6 ; Timer 1 Run Control    
+ 0088.7             +1  511     TCON_TF1 BIT TCON.7 ; Timer 1 Overflow Flag  
+                    +1  512     
+                    +1  513     ; TMR2CN0 0xC8 (Timer 2 Control 0)
+ 00C8.0             +1  514     TMR2CN0_T2XCLK0 BIT TMR2CN0.0 ; Timer 2 External Clock Select Bit 0
+ 00C8.1             +1  515     TMR2CN0_T2XCLK1 BIT TMR2CN0.1 ; Timer 2 External Clock Select Bit 1
+ 00C8.2             +1  516     TMR2CN0_TR2     BIT TMR2CN0.2 ; Timer 2 Run Control                
+ 00C8.3             +1  517     TMR2CN0_T2SPLIT BIT TMR2CN0.3 ; Timer 2 Split Mode Enable          
+ 00C8.4             +1  518     TMR2CN0_TF2CEN  BIT TMR2CN0.4 ; Timer 2 Capture Enable             
+ 00C8.5             +1  519     TMR2CN0_TF2LEN  BIT TMR2CN0.5 ; Timer 2 Low Byte Interrupt Enable  
+ 00C8.6             +1  520     TMR2CN0_TF2L    BIT TMR2CN0.6 ; Timer 2 Low Byte Overflow Flag     
+ 00C8.7             +1  521     TMR2CN0_TF2H    BIT TMR2CN0.7 ; Timer 2 High Byte Overflow Flag    
+                    +1  522     
+                    +1  523     ; TMR4CN0 0x98 (Timer 4 Control 0)
+ 0098.0             +1  524     TMR4CN0_T4XCLK0 BIT TMR4CN0.0 ; Timer 4 External Clock Select Bit 0
+ 0098.1             +1  525     TMR4CN0_T4XCLK1 BIT TMR4CN0.1 ; Timer 4 External Clock Select Bit 1
+ 0098.2             +1  526     TMR4CN0_TR4     BIT TMR4CN0.2 ; Timer 4 Run Control                
+ 0098.3             +1  527     TMR4CN0_T4SPLIT BIT TMR4CN0.3 ; Timer 4 Split Mode Enable          
+ 0098.4             +1  528     TMR4CN0_TF4CEN  BIT TMR4CN0.4 ; Timer 4 Capture Enable             
+ 0098.5             +1  529     TMR4CN0_TF4LEN  BIT TMR4CN0.5 ; Timer 4 Low Byte Interrupt Enable  
+ 0098.6             +1  530     TMR4CN0_TF4L    BIT TMR4CN0.6 ; Timer 4 Low Byte Overflow Flag     
+ 0098.7             +1  531     TMR4CN0_TF4H    BIT TMR4CN0.7 ; Timer 4 High Byte Overflow Flag    
+                    +1  532     
+                    +1  533     ; TMR5CN0 0xC0 (Timer 5 Control 0)
+ 00C0.0             +1  534     TMR5CN0_T5XCLK0 BIT TMR5CN0.0 ; Timer 5 External Clock Select Bit 0
+ 00C0.1             +1  535     TMR5CN0_T5XCLK1 BIT TMR5CN0.1 ; Timer 5 External Clock Select Bit 1
+ 00C0.2             +1  536     TMR5CN0_TR5     BIT TMR5CN0.2 ; Timer 5 Run Control                
+ 00C0.3             +1  537     TMR5CN0_T5SPLIT BIT TMR5CN0.3 ; Timer 5 Split Mode Enable          
+ 00C0.4             +1  538     TMR5CN0_TF5CEN  BIT TMR5CN0.4 ; Timer 5 Capture Enable             
+ 00C0.5             +1  539     TMR5CN0_TF5LEN  BIT TMR5CN0.5 ; Timer 5 Low Byte Interrupt Enable  
+ 00C0.6             +1  540     TMR5CN0_TF5L    BIT TMR5CN0.6 ; Timer 5 Low Byte Overflow Flag     
+ 00C0.7             +1  541     TMR5CN0_TF5H    BIT TMR5CN0.7 ; Timer 5 High Byte Overflow Flag    
+                    +1  542     
+                    +1  543     ; UART1FCN1 0xD8 (UART1 FIFO Control 1)
+ 00D8.0             +1  544     UART1FCN1_RIE    BIT UART1FCN1.0 ; Receive Interrupt Enable 
+ 00D8.1             +1  545     UART1FCN1_RXTO0  BIT UART1FCN1.1 ; Receive Timeout Bit 0    
+ 00D8.2             +1  546     UART1FCN1_RXTO1  BIT UART1FCN1.2 ; Receive Timeout Bit 1    
+ 00D8.3             +1  547     UART1FCN1_RFRQ   BIT UART1FCN1.3 ; Receive FIFO Request     
+ 00D8.4             +1  548     UART1FCN1_TIE    BIT UART1FCN1.4 ; Transmit Interrupt Enable
+ 00D8.5             +1  549     UART1FCN1_TXHOLD BIT UART1FCN1.5 ; Transmit Hold            
+ 00D8.6             +1  550     UART1FCN1_TXNF   BIT UART1FCN1.6 ; TX FIFO Not Full         
+ 00D8.7             +1  551     UART1FCN1_TFRQ   BIT UART1FCN1.7 ; Transmit FIFO Request    
+                    +1  552     
+                    +1  553     ;------------------------------------------------------------------------------
+                    +1  554     ; Interrupt Definitions
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE    10
+
+                    +1  555     ;------------------------------------------------------------------------------
+ 0000               +1  556     INT0_IRQn    EQU 0  ; External Interrupt 0      
+ 0001               +1  557     TIMER0_IRQn  EQU 1  ; Timer 0 Overflow          
+ 0002               +1  558     INT1_IRQn    EQU 2  ; External Interrupt 1      
+ 0003               +1  559     TIMER1_IRQn  EQU 3  ; Timer 1 Overflow          
+ 0004               +1  560     UART0_IRQn   EQU 4  ; UART0                     
+ 0005               +1  561     TIMER2_IRQn  EQU 5  ; Timer 2 Overflow / Capture
+ 0006               +1  562     SPI0_IRQn    EQU 6  ; SPI0                      
+ 0007               +1  563     SMBUS0_IRQn  EQU 7  ; SMBus 0                   
+ 0008               +1  564     PMATCH_IRQn  EQU 8  ; Port Match                
+ 0009               +1  565     ADC0WC_IRQn  EQU 9  ; ADC0 Window Compare       
+ 000A               +1  566     ADC0EOC_IRQn EQU 10 ; ADC0 End of Conversion    
+ 000B               +1  567     PCA0_IRQn    EQU 11 ; PCA0                      
+ 000C               +1  568     CMP0_IRQn    EQU 12 ; Comparator 0              
+ 000D               +1  569     CMP1_IRQn    EQU 13 ; Comparator 1              
+ 000E               +1  570     TIMER3_IRQn  EQU 14 ; Timer 3 Overflow / Capture
+ 000F               +1  571     UART1_IRQn   EQU 15 ; UART1                     
+ 0010               +1  572     I2C0_IRQn    EQU 16 ; I2C0 Slave                
+ 0011               +1  573     TIMER4_IRQn  EQU 17 ; Timer 4 Overflow / Capture
+ 0012               +1  574     TIMER5_IRQn  EQU 18 ; Timer 5 Overflow / Capture
+ 0013               +1  575     CL0_IRQn     EQU 19 ; Configurable Logic        
+                    +1  576     
+                    +1  577     ;------------------------------------------------------------------------------
+                    +1  578     ; SFR Page Definitions
+                    +1  579     ;------------------------------------------------------------------------------
+ 0000               +1  580     LEGACY_PAGE  EQU 000H ; Legacy SFR Page
+ 0010               +1  581     PG2_PAGE     EQU 010H ; Page2          
+ 0020               +1  582     PG3_PAGE     EQU 020H ; Page3          
+ 0030               +1  583     PG4_PAGE     EQU 030H ; Page4          
+                        584     
+                        585     ; equates
+0090.3                  586     MY_LED          EQU             P1.3
+                        587     
+                        588     ; reset and interrupt vectors
+000000                  589     CSEG    AT      0
+000000 020000     F     590     LJMP    MAIN
+                        591     
+                        592     ; IRAM address 0x00 - 0x07 is reserved for R0 - R7
+                        593     ;                          0x07 - 0x2F is reserved for bit address (if used)
+                        594     ;                  0x30 - 0x7F is direct addressing
+                        595     ;                          0x80 - 0xFF is indirect addressing
+                        596     
+------                  597     ?BI?main                SEGMENT         BIT
+------                  598                                     RSEG            ?BI?main
+0000.0                  599     myBit:                  DBIT            1
+                        600     
+------                  601     ?DT?main                SEGMENT         DATA
+------                  602                                     RSEG            ?DT?main
+000030                  603                                     ORG                     30h
+000030                  604     myByte:                 DS                      1
+                        605     
+------                  606     ?PR?main                SEGMENT         CODE
+------                  607                                     RSEG            ?PR?main
+000000                  608     MAIN:
+                        609             ; initialize stack pointer 20 bytes from the top of internal RAM address
+                        610             ; to prevent overlapping with DATA segment
+000000 7581EC           611             MOV SP, #-20
+                        612     
+                        613             ; disable watchdog timer
+000003 7597DE           614             MOV WDTCN, #0DEh
+000006 7597AD           615             MOV WDTCN, #0ADh
+                        616     
+                        617             ; enable crossbar
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE    11
+
+000009 75E340           618             MOV XBR2, #40h
+                        619     
+                        620             ; configure push-pull P1.3
+00000C 75A508           621             MOV P1MDOUT, #(1 << 3)
+                        622     
+                        623             ; set LED to high to disable it
+00000F D293             624             SETB MY_LED
+                        625     
+000011                  626     LOOP:
+000011 7B0E             627             MOV R3, #0Eh
+000013 7CE6             628             MOV R4, #0E6h
+                        629     
+000015                  630     LOOP1:
+                        631             ; the loops takes 13 instruction to complete
+                        632             ; we want LED to toggle every 250 ms or 4Hz
+                        633             ; SYSCLK = 3062500Hz
+                        634             ; => counter = SYSCLK/13/4 = 58894 = 0xE60E
+                        635     
+                        636             ; 2-byte subtraction
+000015 C3               637             CLR C                   ; 1
+000016 EB               638             MOV A, R3               ; 1
+000017 9401             639             SUBB A, #1              ; 2
+000019 FB               640             MOV R3, A               ; 1
+                        641     
+00001A EC               642             MOV A, R4               ; 1
+00001B 9400             643             SUBB A, #0              ; 2
+00001D FC               644             MOV R4, A               ; 1
+                        645     
+                        646             ; compare if R3 = R4 = 0
+00001E 4B               647             ORL A, R3               ; 1
+00001F 70F4             648             JNZ LOOP1               ; 3
+                        649     
+000021 B293             650             CPL MY_LED              ; toggle LED
+000023 80EC             651             JMP LOOP
+                        652     
+                        653     END
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE    12
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E                     T Y P E  V A L U E     ATTRIBUTES
+
+?BI?MAIN . . . . . . . . .  B  SEG   000001H       REL=UNIT, ALN=BIT
+?DT?MAIN . . . . . . . . .  D  SEG   000031H       REL=UNIT, ALN=BYTE
+?PR?MAIN . . . . . . . . .  C  SEG   000025H       REL=UNIT, ALN=BYTE
+ACC. . . . . . . . . . . .  D  ADDR  00E0H     A   
+ACC_ACC0 . . . . . . . . .  B  ADDR  00E0H.0   A   
+ACC_ACC1 . . . . . . . . .  B  ADDR  00E0H.1   A   
+ACC_ACC2 . . . . . . . . .  B  ADDR  00E0H.2   A   
+ACC_ACC3 . . . . . . . . .  B  ADDR  00E0H.3   A   
+ACC_ACC4 . . . . . . . . .  B  ADDR  00E0H.4   A   
+ACC_ACC5 . . . . . . . . .  B  ADDR  00E0H.5   A   
+ACC_ACC6 . . . . . . . . .  B  ADDR  00E0H.6   A   
+ACC_ACC7 . . . . . . . . .  B  ADDR  00E0H.7   A   
+ADC0 . . . . . . . . . . .  D  ADDR  00BDH     A   
+ADC0ASA. . . . . . . . . .  D  ADDR  00B5H     A   
+ADC0ASAH . . . . . . . . .  D  ADDR  00B6H     A   
+ADC0ASAL . . . . . . . . .  D  ADDR  00B5H     A   
+ADC0ASCF . . . . . . . . .  D  ADDR  00A1H     A   
+ADC0ASCT . . . . . . . . .  D  ADDR  00C7H     A   
+ADC0CF0. . . . . . . . . .  D  ADDR  00BCH     A   
+ADC0CF1. . . . . . . . . .  D  ADDR  00B9H     A   
+ADC0CF2. . . . . . . . . .  D  ADDR  00DFH     A   
+ADC0CN0. . . . . . . . . .  D  ADDR  00E8H     A   
+ADC0CN0_ADBUSY . . . . . .  B  ADDR  00E8H.4   A   
+ADC0CN0_ADEN . . . . . . .  B  ADDR  00E8H.7   A   
+ADC0CN0_ADGN0. . . . . . .  B  ADDR  00E8H.1   A   
+ADC0CN0_ADGN1. . . . . . .  B  ADDR  00E8H.2   A   
+ADC0CN0_ADINT. . . . . . .  B  ADDR  00E8H.5   A   
+ADC0CN0_ADWINT . . . . . .  B  ADDR  00E8H.3   A   
+ADC0CN0_IPOEN. . . . . . .  B  ADDR  00E8H.6   A   
+ADC0CN0_TEMPE. . . . . . .  B  ADDR  00E8H.0   A   
+ADC0CN1. . . . . . . . . .  D  ADDR  00B2H     A   
+ADC0CN2. . . . . . . . . .  D  ADDR  00B3H     A   
+ADC0EOC_IRQN . . . . . . .  N  NUMB  000AH     A   
+ADC0GT . . . . . . . . . .  D  ADDR  00C3H     A   
+ADC0GTH. . . . . . . . . .  D  ADDR  00C4H     A   
+ADC0GTL. . . . . . . . . .  D  ADDR  00C3H     A   
+ADC0H. . . . . . . . . . .  D  ADDR  00BEH     A   
+ADC0L. . . . . . . . . . .  D  ADDR  00BDH     A   
+ADC0LT . . . . . . . . . .  D  ADDR  00C5H     A   
+ADC0LTH. . . . . . . . . .  D  ADDR  00C6H     A   
+ADC0LTL. . . . . . . . . .  D  ADDR  00C5H     A   
+ADC0MX . . . . . . . . . .  D  ADDR  00BBH     A   
+ADC0WC_IRQN. . . . . . . .  N  NUMB  0009H     A   
+B. . . . . . . . . . . . .  D  ADDR  00F0H     A   
+B_B0 . . . . . . . . . . .  B  ADDR  00F0H.0   A   
+B_B1 . . . . . . . . . . .  B  ADDR  00F0H.1   A   
+B_B2 . . . . . . . . . . .  B  ADDR  00F0H.2   A   
+B_B3 . . . . . . . . . . .  B  ADDR  00F0H.3   A   
+B_B4 . . . . . . . . . . .  B  ADDR  00F0H.4   A   
+B_B5 . . . . . . . . . . .  B  ADDR  00F0H.5   A   
+B_B6 . . . . . . . . . . .  B  ADDR  00F0H.6   A   
+B_B7 . . . . . . . . . . .  B  ADDR  00F0H.7   A   
+CKCON0 . . . . . . . . . .  D  ADDR  008EH     A   
+CKCON1 . . . . . . . . . .  D  ADDR  00A6H     A   
+CL0_IRQN . . . . . . . . .  N  NUMB  0013H     A   
+CLEN0. . . . . . . . . . .  D  ADDR  00C6H     A   
+CLIE0. . . . . . . . . . .  D  ADDR  00C7H     A   
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE    13
+
+CLIF0. . . . . . . . . . .  D  ADDR  00E8H     A   
+CLIF0_C0FIF. . . . . . . .  B  ADDR  00E8H.0   A   
+CLIF0_C0RIF. . . . . . . .  B  ADDR  00E8H.1   A   
+CLIF0_C1FIF. . . . . . . .  B  ADDR  00E8H.2   A   
+CLIF0_C1RIF. . . . . . . .  B  ADDR  00E8H.3   A   
+CLIF0_C2FIF. . . . . . . .  B  ADDR  00E8H.4   A   
+CLIF0_C2RIF. . . . . . . .  B  ADDR  00E8H.5   A   
+CLIF0_C3FIF. . . . . . . .  B  ADDR  00E8H.6   A   
+CLIF0_C3RIF. . . . . . . .  B  ADDR  00E8H.7   A   
+CLKSEL . . . . . . . . . .  D  ADDR  00A9H     A   
+CLOUT0 . . . . . . . . . .  D  ADDR  00D1H     A   
+CLU0CF . . . . . . . . . .  D  ADDR  00B1H     A   
+CLU0FN . . . . . . . . . .  D  ADDR  00AFH     A   
+CLU0MX . . . . . . . . . .  D  ADDR  0084H     A   
+CLU1CF . . . . . . . . . .  D  ADDR  00B3H     A   
+CLU1FN . . . . . . . . . .  D  ADDR  00B2H     A   
+CLU1MX . . . . . . . . . .  D  ADDR  0085H     A   
+CLU2CF . . . . . . . . . .  D  ADDR  00B6H     A   
+CLU2FN . . . . . . . . . .  D  ADDR  00B5H     A   
+CLU2MX . . . . . . . . . .  D  ADDR  0091H     A   
+CLU3CF . . . . . . . . . .  D  ADDR  00BFH     A   
+CLU3FN . . . . . . . . . .  D  ADDR  00BEH     A   
+CLU3MX . . . . . . . . . .  D  ADDR  00AEH     A   
+CMP0_IRQN. . . . . . . . .  N  NUMB  000CH     A   
+CMP0CN0. . . . . . . . . .  D  ADDR  009BH     A   
+CMP0CN1. . . . . . . . . .  D  ADDR  0099H     A   
+CMP0MD . . . . . . . . . .  D  ADDR  009DH     A   
+CMP0MX . . . . . . . . . .  D  ADDR  009FH     A   
+CMP1_IRQN. . . . . . . . .  N  NUMB  000DH     A   
+CMP1CN0. . . . . . . . . .  D  ADDR  00BFH     A   
+CMP1CN1. . . . . . . . . .  D  ADDR  00ACH     A   
+CMP1MD . . . . . . . . . .  D  ADDR  00ABH     A   
+CMP1MX . . . . . . . . . .  D  ADDR  00AAH     A   
+CRC0CN0. . . . . . . . . .  D  ADDR  00CEH     A   
+CRC0CN1. . . . . . . . . .  D  ADDR  0086H     A   
+CRC0CNT. . . . . . . . . .  D  ADDR  00D3H     A   
+CRC0DAT. . . . . . . . . .  D  ADDR  00CBH     A   
+CRC0FLIP . . . . . . . . .  D  ADDR  00CFH     A   
+CRC0IN . . . . . . . . . .  D  ADDR  00CAH     A   
+CRC0ST . . . . . . . . . .  D  ADDR  00D2H     A   
+DAC0CF0. . . . . . . . . .  D  ADDR  0091H     A   
+DAC0CF1. . . . . . . . . .  D  ADDR  0092H     A   
+DAC0H. . . . . . . . . . .  D  ADDR  0085H     A   
+DAC0L. . . . . . . . . . .  D  ADDR  0084H     A   
+DAC1CF0. . . . . . . . . .  D  ADDR  0093H     A   
+DAC1CF1. . . . . . . . . .  D  ADDR  0094H     A   
+DAC1H. . . . . . . . . . .  D  ADDR  008AH     A   
+DAC1L. . . . . . . . . . .  D  ADDR  0089H     A   
+DAC2CF0. . . . . . . . . .  D  ADDR  0095H     A   
+DAC2CF1. . . . . . . . . .  D  ADDR  0096H     A   
+DAC2H. . . . . . . . . . .  D  ADDR  008CH     A   
+DAC2L. . . . . . . . . . .  D  ADDR  008BH     A   
+DAC3CF0. . . . . . . . . .  D  ADDR  009AH     A   
+DAC3CF1. . . . . . . . . .  D  ADDR  009CH     A   
+DAC3H. . . . . . . . . . .  D  ADDR  008EH     A   
+DAC3L. . . . . . . . . . .  D  ADDR  008DH     A   
+DACGCF0. . . . . . . . . .  D  ADDR  0088H     A   
+DACGCF0_D01REFSL . . . . .  B  ADDR  0088H.3   A   
+DACGCF0_D1AMEN . . . . . .  B  ADDR  0088H.2   A   
+DACGCF0_D1SRC0 . . . . . .  B  ADDR  0088H.0   A   
+DACGCF0_D1SRC1 . . . . . .  B  ADDR  0088H.1   A   
+DACGCF0_D23REFSL . . . . .  B  ADDR  0088H.7   A   
+DACGCF0_D3AMEN . . . . . .  B  ADDR  0088H.6   A   
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE    14
+
+DACGCF0_D3SRC0 . . . . . .  B  ADDR  0088H.4   A   
+DACGCF0_D3SRC1 . . . . . .  B  ADDR  0088H.5   A   
+DACGCF1. . . . . . . . . .  D  ADDR  0098H     A   
+DACGCF1_D0UDIS . . . . . .  B  ADDR  0098H.0   A   
+DACGCF1_D1UDIS . . . . . .  B  ADDR  0098H.1   A   
+DACGCF1_D2UDIS . . . . . .  B  ADDR  0098H.2   A   
+DACGCF1_D3UDIS . . . . . .  B  ADDR  0098H.3   A   
+DACGCF2. . . . . . . . . .  D  ADDR  00A2H     A   
+DERIVID. . . . . . . . . .  D  ADDR  00ADH     A   
+DEVICEID . . . . . . . . .  D  ADDR  00B5H     A   
+DP . . . . . . . . . . . .  D  ADDR  0082H     A   
+DPH. . . . . . . . . . . .  D  ADDR  0083H     A   
+DPL. . . . . . . . . . . .  D  ADDR  0082H     A   
+EIE1 . . . . . . . . . . .  D  ADDR  00E6H     A   
+EIE2 . . . . . . . . . . .  D  ADDR  00F3H     A   
+EIP1 . . . . . . . . . . .  D  ADDR  00BBH     A   
+EIP1H. . . . . . . . . . .  D  ADDR  00EEH     A   
+EIP2 . . . . . . . . . . .  D  ADDR  00EDH     A   
+EIP2H. . . . . . . . . . .  D  ADDR  00F6H     A   
+EMI0CN . . . . . . . . . .  D  ADDR  00E7H     A   
+FLKEY. . . . . . . . . . .  D  ADDR  00B7H     A   
+HFO0CAL. . . . . . . . . .  D  ADDR  00C7H     A   
+HFO1CAL. . . . . . . . . .  D  ADDR  00D6H     A   
+HFOCN. . . . . . . . . . .  D  ADDR  00EFH     A   
+I2C0_IRQN. . . . . . . . .  N  NUMB  0010H     A   
+I2C0ADM. . . . . . . . . .  D  ADDR  00FFH     A   
+I2C0CN0. . . . . . . . . .  D  ADDR  00BAH     A   
+I2C0DIN. . . . . . . . . .  D  ADDR  00BCH     A   
+I2C0DOUT . . . . . . . . .  D  ADDR  00BBH     A   
+I2C0FCN0 . . . . . . . . .  D  ADDR  00ADH     A   
+I2C0FCN1 . . . . . . . . .  D  ADDR  00ABH     A   
+I2C0FCT. . . . . . . . . .  D  ADDR  00F5H     A   
+I2C0SLAD . . . . . . . . .  D  ADDR  00BDH     A   
+I2C0STAT . . . . . . . . .  D  ADDR  00B9H     A   
+IE . . . . . . . . . . . .  D  ADDR  00A8H     A   
+IE_EA. . . . . . . . . . .  B  ADDR  00A8H.7   A   
+IE_ES0 . . . . . . . . . .  B  ADDR  00A8H.4   A   
+IE_ESPI0 . . . . . . . . .  B  ADDR  00A8H.6   A   
+IE_ET0 . . . . . . . . . .  B  ADDR  00A8H.1   A   
+IE_ET1 . . . . . . . . . .  B  ADDR  00A8H.3   A   
+IE_ET2 . . . . . . . . . .  B  ADDR  00A8H.5   A   
+IE_EX0 . . . . . . . . . .  B  ADDR  00A8H.0   A   
+IE_EX1 . . . . . . . . . .  B  ADDR  00A8H.2   A   
+INT0_IRQN. . . . . . . . .  N  NUMB  0000H     A   
+INT1_IRQN. . . . . . . . .  N  NUMB  0002H     A   
+IP . . . . . . . . . . . .  D  ADDR  00B8H     A   
+IP_PS0 . . . . . . . . . .  B  ADDR  00B8H.4   A   
+IP_PSPI0 . . . . . . . . .  B  ADDR  00B8H.6   A   
+IP_PT0 . . . . . . . . . .  B  ADDR  00B8H.1   A   
+IP_PT1 . . . . . . . . . .  B  ADDR  00B8H.3   A   
+IP_PT2 . . . . . . . . . .  B  ADDR  00B8H.5   A   
+IP_PX0 . . . . . . . . . .  B  ADDR  00B8H.0   A   
+IP_PX1 . . . . . . . . . .  B  ADDR  00B8H.2   A   
+IPH. . . . . . . . . . . .  D  ADDR  00F2H     A   
+IT01CF . . . . . . . . . .  D  ADDR  00E4H     A   
+LEGACY_PAGE. . . . . . . .  N  NUMB  0000H     A   
+LFO0CN . . . . . . . . . .  D  ADDR  00B1H     A   
+LOOP . . . . . . . . . . .  C  ADDR  0011H     R   SEG=?PR?MAIN
+LOOP1. . . . . . . . . . .  C  ADDR  0015H     R   SEG=?PR?MAIN
+MAIN . . . . . . . . . . .  C  ADDR  0000H     R   SEG=?PR?MAIN
+MY_LED . . . . . . . . . .  B  ADDR  0090H.3   A   
+MYBIT. . . . . . . . . . .  B  ADDR  0000H.0   R   SEG=?BI?MAIN
+MYBYTE . . . . . . . . . .  D  ADDR  0030H     R   SEG=?DT?MAIN
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE    15
+
+P0 . . . . . . . . . . . .  D  ADDR  0080H     A   
+P0_B0. . . . . . . . . . .  B  ADDR  0080H.0   A   
+P0_B1. . . . . . . . . . .  B  ADDR  0080H.1   A   
+P0_B2. . . . . . . . . . .  B  ADDR  0080H.2   A   
+P0_B3. . . . . . . . . . .  B  ADDR  0080H.3   A   
+P0_B4. . . . . . . . . . .  B  ADDR  0080H.4   A   
+P0_B5. . . . . . . . . . .  B  ADDR  0080H.5   A   
+P0_B6. . . . . . . . . . .  B  ADDR  0080H.6   A   
+P0_B7. . . . . . . . . . .  B  ADDR  0080H.7   A   
+P0MASK . . . . . . . . . .  D  ADDR  00FEH     A   
+P0MAT. . . . . . . . . . .  D  ADDR  00FDH     A   
+P0MDIN . . . . . . . . . .  D  ADDR  00F1H     A   
+P0MDOUT. . . . . . . . . .  D  ADDR  00A4H     A   
+P0SKIP . . . . . . . . . .  D  ADDR  00D4H     A   
+P1 . . . . . . . . . . . .  D  ADDR  0090H     A   
+P1_B0. . . . . . . . . . .  B  ADDR  0090H.0   A   
+P1_B1. . . . . . . . . . .  B  ADDR  0090H.1   A   
+P1_B2. . . . . . . . . . .  B  ADDR  0090H.2   A   
+P1_B3. . . . . . . . . . .  B  ADDR  0090H.3   A   
+P1_B4. . . . . . . . . . .  B  ADDR  0090H.4   A   
+P1_B5. . . . . . . . . . .  B  ADDR  0090H.5   A   
+P1_B6. . . . . . . . . . .  B  ADDR  0090H.6   A   
+P1_B7. . . . . . . . . . .  B  ADDR  0090H.7   A   
+P1MASK . . . . . . . . . .  D  ADDR  00EEH     A   
+P1MAT. . . . . . . . . . .  D  ADDR  00EDH     A   
+P1MDIN . . . . . . . . . .  D  ADDR  00F2H     A   
+P1MDOUT. . . . . . . . . .  D  ADDR  00A5H     A   
+P1SKIP . . . . . . . . . .  D  ADDR  00D5H     A   
+P2 . . . . . . . . . . . .  D  ADDR  00A0H     A   
+P2_B0. . . . . . . . . . .  B  ADDR  00A0H.0   A   
+P2_B1. . . . . . . . . . .  B  ADDR  00A0H.1   A   
+P2_B2. . . . . . . . . . .  B  ADDR  00A0H.2   A   
+P2_B3. . . . . . . . . . .  B  ADDR  00A0H.3   A   
+P2_B4. . . . . . . . . . .  B  ADDR  00A0H.4   A   
+P2_B5. . . . . . . . . . .  B  ADDR  00A0H.5   A   
+P2_B6. . . . . . . . . . .  B  ADDR  00A0H.6   A   
+P2MASK . . . . . . . . . .  D  ADDR  00FCH     A   
+P2MAT. . . . . . . . . . .  D  ADDR  00FBH     A   
+P2MDIN . . . . . . . . . .  D  ADDR  00F3H     A   
+P2MDOUT. . . . . . . . . .  D  ADDR  00A6H     A   
+P2SKIP . . . . . . . . . .  D  ADDR  00CCH     A   
+P3 . . . . . . . . . . . .  D  ADDR  00B0H     A   
+P3_B0. . . . . . . . . . .  B  ADDR  00B0H.0   A   
+P3_B1. . . . . . . . . . .  B  ADDR  00B0H.1   A   
+P3_B2. . . . . . . . . . .  B  ADDR  00B0H.2   A   
+P3_B3. . . . . . . . . . .  B  ADDR  00B0H.3   A   
+P3_B4. . . . . . . . . . .  B  ADDR  00B0H.4   A   
+P3_B7. . . . . . . . . . .  B  ADDR  00B0H.7   A   
+P3MDIN . . . . . . . . . .  D  ADDR  00F4H     A   
+P3MDOUT. . . . . . . . . .  D  ADDR  009CH     A   
+PCA0 . . . . . . . . . . .  D  ADDR  00F9H     A   
+PCA0_IRQN. . . . . . . . .  N  NUMB  000BH     A   
+PCA0CENT . . . . . . . . .  D  ADDR  009EH     A   
+PCA0CLR. . . . . . . . . .  D  ADDR  009CH     A   
+PCA0CN0. . . . . . . . . .  D  ADDR  00D8H     A   
+PCA0CN0_CCF0 . . . . . . .  B  ADDR  00D8H.0   A   
+PCA0CN0_CCF1 . . . . . . .  B  ADDR  00D8H.1   A   
+PCA0CN0_CCF2 . . . . . . .  B  ADDR  00D8H.2   A   
+PCA0CN0_CCF3 . . . . . . .  B  ADDR  00D8H.3   A   
+PCA0CN0_CCF4 . . . . . . .  B  ADDR  00D8H.4   A   
+PCA0CN0_CCF5 . . . . . . .  B  ADDR  00D8H.5   A   
+PCA0CN0_CF . . . . . . . .  B  ADDR  00D8H.7   A   
+PCA0CN0_CR . . . . . . . .  B  ADDR  00D8H.6   A   
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE    16
+
+PCA0CP0. . . . . . . . . .  D  ADDR  00FBH     A   
+PCA0CP1. . . . . . . . . .  D  ADDR  00E9H     A   
+PCA0CP2. . . . . . . . . .  D  ADDR  00EBH     A   
+PCA0CP3. . . . . . . . . .  D  ADDR  00F4H     A   
+PCA0CP4. . . . . . . . . .  D  ADDR  0084H     A   
+PCA0CP5. . . . . . . . . .  D  ADDR  00DDH     A   
+PCA0CPH0 . . . . . . . . .  D  ADDR  00FCH     A   
+PCA0CPH1 . . . . . . . . .  D  ADDR  00EAH     A   
+PCA0CPH2 . . . . . . . . .  D  ADDR  00ECH     A   
+PCA0CPH3 . . . . . . . . .  D  ADDR  00F5H     A   
+PCA0CPH4 . . . . . . . . .  D  ADDR  0085H     A   
+PCA0CPH5 . . . . . . . . .  D  ADDR  00DEH     A   
+PCA0CPL0 . . . . . . . . .  D  ADDR  00FBH     A   
+PCA0CPL1 . . . . . . . . .  D  ADDR  00E9H     A   
+PCA0CPL2 . . . . . . . . .  D  ADDR  00EBH     A   
+PCA0CPL3 . . . . . . . . .  D  ADDR  00F4H     A   
+PCA0CPL4 . . . . . . . . .  D  ADDR  0084H     A   
+PCA0CPL5 . . . . . . . . .  D  ADDR  00DDH     A   
+PCA0CPM0 . . . . . . . . .  D  ADDR  00DAH     A   
+PCA0CPM1 . . . . . . . . .  D  ADDR  00DBH     A   
+PCA0CPM2 . . . . . . . . .  D  ADDR  00DCH     A   
+PCA0CPM3 . . . . . . . . .  D  ADDR  00AEH     A   
+PCA0CPM4 . . . . . . . . .  D  ADDR  00AFH     A   
+PCA0CPM5 . . . . . . . . .  D  ADDR  00CCH     A   
+PCA0H. . . . . . . . . . .  D  ADDR  00FAH     A   
+PCA0L. . . . . . . . . . .  D  ADDR  00F9H     A   
+PCA0MD . . . . . . . . . .  D  ADDR  00D9H     A   
+PCA0POL. . . . . . . . . .  D  ADDR  0096H     A   
+PCA0PWM. . . . . . . . . .  D  ADDR  00F7H     A   
+PCON0. . . . . . . . . . .  D  ADDR  0087H     A   
+PCON1. . . . . . . . . . .  D  ADDR  00CDH     A   
+PFE0CN . . . . . . . . . .  D  ADDR  00C1H     A   
+PG2_PAGE . . . . . . . . .  N  NUMB  0010H     A   
+PG3_PAGE . . . . . . . . .  N  NUMB  0020H     A   
+PG4_PAGE . . . . . . . . .  N  NUMB  0030H     A   
+PMATCH_IRQN. . . . . . . .  N  NUMB  0008H     A   
+PRTDRV . . . . . . . . . .  D  ADDR  00F6H     A   
+PSCTL. . . . . . . . . . .  D  ADDR  008FH     A   
+PSTAT0 . . . . . . . . . .  D  ADDR  00AAH     A   
+PSW. . . . . . . . . . . .  D  ADDR  00D0H     A   
+PSW_AC . . . . . . . . . .  B  ADDR  00D0H.6   A   
+PSW_CY . . . . . . . . . .  B  ADDR  00D0H.7   A   
+PSW_F0 . . . . . . . . . .  B  ADDR  00D0H.5   A   
+PSW_F1 . . . . . . . . . .  B  ADDR  00D0H.1   A   
+PSW_OV . . . . . . . . . .  B  ADDR  00D0H.2   A   
+PSW_PARITY . . . . . . . .  B  ADDR  00D0H.0   A   
+PSW_RS0. . . . . . . . . .  B  ADDR  00D0H.3   A   
+PSW_RS1. . . . . . . . . .  B  ADDR  00D0H.4   A   
+REF0CN . . . . . . . . . .  D  ADDR  00D1H     A   
+REG0CN . . . . . . . . . .  D  ADDR  00C9H     A   
+REVID. . . . . . . . . . .  D  ADDR  00B6H     A   
+RSTSRC . . . . . . . . . .  D  ADDR  00EFH     A   
+SBCON1 . . . . . . . . . .  D  ADDR  0094H     A   
+SBRLH1 . . . . . . . . . .  D  ADDR  0096H     A   
+SBRLL1 . . . . . . . . . .  D  ADDR  0095H     A   
+SBUF0. . . . . . . . . . .  D  ADDR  0099H     A   
+SBUF1. . . . . . . . . . .  D  ADDR  0092H     A   
+SCON0. . . . . . . . . . .  D  ADDR  0098H     A   
+SCON0_MCE. . . . . . . . .  B  ADDR  0098H.5   A   
+SCON0_RB8. . . . . . . . .  B  ADDR  0098H.2   A   
+SCON0_REN. . . . . . . . .  B  ADDR  0098H.4   A   
+SCON0_RI . . . . . . . . .  B  ADDR  0098H.0   A   
+SCON0_SMODE. . . . . . . .  B  ADDR  0098H.7   A   
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE    17
+
+SCON0_TB8. . . . . . . . .  B  ADDR  0098H.3   A   
+SCON0_TI . . . . . . . . .  B  ADDR  0098H.1   A   
+SCON1. . . . . . . . . . .  D  ADDR  00C8H     A   
+SCON1_OVR. . . . . . . . .  B  ADDR  00C8H.7   A   
+SCON1_PERR . . . . . . . .  B  ADDR  00C8H.6   A   
+SCON1_RBX. . . . . . . . .  B  ADDR  00C8H.2   A   
+SCON1_REN. . . . . . . . .  B  ADDR  00C8H.4   A   
+SCON1_RI . . . . . . . . .  B  ADDR  00C8H.0   A   
+SCON1_TBX. . . . . . . . .  B  ADDR  00C8H.3   A   
+SCON1_TI . . . . . . . . .  B  ADDR  00C8H.1   A   
+SFRPAGE. . . . . . . . . .  D  ADDR  00A7H     A   
+SFRPGCN. . . . . . . . . .  D  ADDR  00BCH     A   
+SFRSTACK . . . . . . . . .  D  ADDR  00D7H     A   
+SMB0ADM. . . . . . . . . .  D  ADDR  00D6H     A   
+SMB0ADR. . . . . . . . . .  D  ADDR  00D7H     A   
+SMB0CF . . . . . . . . . .  D  ADDR  00C1H     A   
+SMB0CN0. . . . . . . . . .  D  ADDR  00C0H     A   
+SMB0CN0_ACK. . . . . . . .  B  ADDR  00C0H.1   A   
+SMB0CN0_ACKRQ. . . . . . .  B  ADDR  00C0H.3   A   
+SMB0CN0_ARBLOST. . . . . .  B  ADDR  00C0H.2   A   
+SMB0CN0_MASTER . . . . . .  B  ADDR  00C0H.7   A   
+SMB0CN0_SI . . . . . . . .  B  ADDR  00C0H.0   A   
+SMB0CN0_STA. . . . . . . .  B  ADDR  00C0H.5   A   
+SMB0CN0_STO. . . . . . . .  B  ADDR  00C0H.4   A   
+SMB0CN0_TXMODE . . . . . .  B  ADDR  00C0H.6   A   
+SMB0DAT. . . . . . . . . .  D  ADDR  00C2H     A   
+SMB0FCN0 . . . . . . . . .  D  ADDR  00C3H     A   
+SMB0FCN1 . . . . . . . . .  D  ADDR  00C4H     A   
+SMB0FCT. . . . . . . . . .  D  ADDR  00EFH     A   
+SMB0RXLN . . . . . . . . .  D  ADDR  00C5H     A   
+SMB0TC . . . . . . . . . .  D  ADDR  00ACH     A   
+SMBUS0_IRQN. . . . . . . .  N  NUMB  0007H     A   
+SMOD1. . . . . . . . . . .  D  ADDR  0093H     A   
+SP . . . . . . . . . . . .  D  ADDR  0081H     A   
+SPI0_IRQN. . . . . . . . .  N  NUMB  0006H     A   
+SPI0CFG. . . . . . . . . .  D  ADDR  00A1H     A   
+SPI0CKR. . . . . . . . . .  D  ADDR  00A2H     A   
+SPI0CN0. . . . . . . . . .  D  ADDR  00F8H     A   
+SPI0CN0_MODF . . . . . . .  B  ADDR  00F8H.5   A   
+SPI0CN0_NSSMD0 . . . . . .  B  ADDR  00F8H.2   A   
+SPI0CN0_NSSMD1 . . . . . .  B  ADDR  00F8H.3   A   
+SPI0CN0_RXOVRN . . . . . .  B  ADDR  00F8H.4   A   
+SPI0CN0_SPIEN. . . . . . .  B  ADDR  00F8H.0   A   
+SPI0CN0_SPIF . . . . . . .  B  ADDR  00F8H.7   A   
+SPI0CN0_TXNF . . . . . . .  B  ADDR  00F8H.1   A   
+SPI0CN0_WCOL . . . . . . .  B  ADDR  00F8H.6   A   
+SPI0DAT. . . . . . . . . .  D  ADDR  00A3H     A   
+SPI0FCN0 . . . . . . . . .  D  ADDR  009AH     A   
+SPI0FCN1 . . . . . . . . .  D  ADDR  009BH     A   
+SPI0FCT. . . . . . . . . .  D  ADDR  00F7H     A   
+SPI0PCF. . . . . . . . . .  D  ADDR  00DFH     A   
+TCON . . . . . . . . . . .  D  ADDR  0088H     A   
+TCON_IE0 . . . . . . . . .  B  ADDR  0088H.1   A   
+TCON_IE1 . . . . . . . . .  B  ADDR  0088H.3   A   
+TCON_IT0 . . . . . . . . .  B  ADDR  0088H.0   A   
+TCON_IT1 . . . . . . . . .  B  ADDR  0088H.2   A   
+TCON_TF0 . . . . . . . . .  B  ADDR  0088H.5   A   
+TCON_TF1 . . . . . . . . .  B  ADDR  0088H.7   A   
+TCON_TR0 . . . . . . . . .  B  ADDR  0088H.4   A   
+TCON_TR1 . . . . . . . . .  B  ADDR  0088H.6   A   
+TH0. . . . . . . . . . . .  D  ADDR  008CH     A   
+TH1. . . . . . . . . . . .  D  ADDR  008DH     A   
+TIMER0_IRQN. . . . . . . .  N  NUMB  0001H     A   
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE    18
+
+TIMER1_IRQN. . . . . . . .  N  NUMB  0003H     A   
+TIMER2_IRQN. . . . . . . .  N  NUMB  0005H     A   
+TIMER3_IRQN. . . . . . . .  N  NUMB  000EH     A   
+TIMER4_IRQN. . . . . . . .  N  NUMB  0011H     A   
+TIMER5_IRQN. . . . . . . .  N  NUMB  0012H     A   
+TL0. . . . . . . . . . . .  D  ADDR  008AH     A   
+TL1. . . . . . . . . . . .  D  ADDR  008BH     A   
+TMOD . . . . . . . . . . .  D  ADDR  0089H     A   
+TMR2 . . . . . . . . . . .  D  ADDR  00CEH     A   
+TMR2CN0. . . . . . . . . .  D  ADDR  00C8H     A   
+TMR2CN0_T2SPLIT. . . . . .  B  ADDR  00C8H.3   A   
+TMR2CN0_T2XCLK0. . . . . .  B  ADDR  00C8H.0   A   
+TMR2CN0_T2XCLK1. . . . . .  B  ADDR  00C8H.1   A   
+TMR2CN0_TF2CEN . . . . . .  B  ADDR  00C8H.4   A   
+TMR2CN0_TF2H . . . . . . .  B  ADDR  00C8H.7   A   
+TMR2CN0_TF2L . . . . . . .  B  ADDR  00C8H.6   A   
+TMR2CN0_TF2LEN . . . . . .  B  ADDR  00C8H.5   A   
+TMR2CN0_TR2. . . . . . . .  B  ADDR  00C8H.2   A   
+TMR2CN1. . . . . . . . . .  D  ADDR  00FDH     A   
+TMR2H. . . . . . . . . . .  D  ADDR  00CFH     A   
+TMR2L. . . . . . . . . . .  D  ADDR  00CEH     A   
+TMR2RL . . . . . . . . . .  D  ADDR  00CAH     A   
+TMR2RLH. . . . . . . . . .  D  ADDR  00CBH     A   
+TMR2RLL. . . . . . . . . .  D  ADDR  00CAH     A   
+TMR3 . . . . . . . . . . .  D  ADDR  0094H     A   
+TMR3CN0. . . . . . . . . .  D  ADDR  0091H     A   
+TMR3CN1. . . . . . . . . .  D  ADDR  00FEH     A   
+TMR3H. . . . . . . . . . .  D  ADDR  0095H     A   
+TMR3L. . . . . . . . . . .  D  ADDR  0094H     A   
+TMR3RL . . . . . . . . . .  D  ADDR  0092H     A   
+TMR3RLH. . . . . . . . . .  D  ADDR  0093H     A   
+TMR3RLL. . . . . . . . . .  D  ADDR  0092H     A   
+TMR4 . . . . . . . . . . .  D  ADDR  00A4H     A   
+TMR4CN0. . . . . . . . . .  D  ADDR  0098H     A   
+TMR4CN0_T4SPLIT. . . . . .  B  ADDR  0098H.3   A   
+TMR4CN0_T4XCLK0. . . . . .  B  ADDR  0098H.0   A   
+TMR4CN0_T4XCLK1. . . . . .  B  ADDR  0098H.1   A   
+TMR4CN0_TF4CEN . . . . . .  B  ADDR  0098H.4   A   
+TMR4CN0_TF4H . . . . . . .  B  ADDR  0098H.7   A   
+TMR4CN0_TF4L . . . . . . .  B  ADDR  0098H.6   A   
+TMR4CN0_TF4LEN . . . . . .  B  ADDR  0098H.5   A   
+TMR4CN0_TR4. . . . . . . .  B  ADDR  0098H.2   A   
+TMR4CN1. . . . . . . . . .  D  ADDR  00FFH     A   
+TMR4H. . . . . . . . . . .  D  ADDR  00A5H     A   
+TMR4L. . . . . . . . . . .  D  ADDR  00A4H     A   
+TMR4RL . . . . . . . . . .  D  ADDR  00A2H     A   
+TMR4RLH. . . . . . . . . .  D  ADDR  00A3H     A   
+TMR4RLL. . . . . . . . . .  D  ADDR  00A2H     A   
+TMR5 . . . . . . . . . . .  D  ADDR  00D4H     A   
+TMR5CN0. . . . . . . . . .  D  ADDR  00C0H     A   
+TMR5CN0_T5SPLIT. . . . . .  B  ADDR  00C0H.3   A   
+TMR5CN0_T5XCLK0. . . . . .  B  ADDR  00C0H.0   A   
+TMR5CN0_T5XCLK1. . . . . .  B  ADDR  00C0H.1   A   
+TMR5CN0_TF5CEN . . . . . .  B  ADDR  00C0H.4   A   
+TMR5CN0_TF5H . . . . . . .  B  ADDR  00C0H.7   A   
+TMR5CN0_TF5L . . . . . . .  B  ADDR  00C0H.6   A   
+TMR5CN0_TF5LEN . . . . . .  B  ADDR  00C0H.5   A   
+TMR5CN0_TR5. . . . . . . .  B  ADDR  00C0H.2   A   
+TMR5CN1. . . . . . . . . .  D  ADDR  00F1H     A   
+TMR5H. . . . . . . . . . .  D  ADDR  00D5H     A   
+TMR5L. . . . . . . . . . .  D  ADDR  00D4H     A   
+TMR5RL . . . . . . . . . .  D  ADDR  00D2H     A   
+TMR5RLH. . . . . . . . . .  D  ADDR  00D3H     A   
+AX51 MACRO ASSEMBLER  MAIN                                                                  03/02/21 10:10:16 PAGE    19
+
+TMR5RLL. . . . . . . . . .  D  ADDR  00D2H     A   
+UART0_IRQN . . . . . . . .  N  NUMB  0004H     A   
+UART0PCF . . . . . . . . .  D  ADDR  00D9H     A   
+UART1_IRQN . . . . . . . .  N  NUMB  000FH     A   
+UART1FCN0. . . . . . . . .  D  ADDR  009DH     A   
+UART1FCN1. . . . . . . . .  D  ADDR  00D8H     A   
+UART1FCN1_RFRQ . . . . . .  B  ADDR  00D8H.3   A   
+UART1FCN1_RIE. . . . . . .  B  ADDR  00D8H.0   A   
+UART1FCN1_RXTO0. . . . . .  B  ADDR  00D8H.1   A   
+UART1FCN1_RXTO1. . . . . .  B  ADDR  00D8H.2   A   
+UART1FCN1_TFRQ . . . . . .  B  ADDR  00D8H.7   A   
+UART1FCN1_TIE. . . . . . .  B  ADDR  00D8H.4   A   
+UART1FCN1_TXHOLD . . . . .  B  ADDR  00D8H.5   A   
+UART1FCN1_TXNF . . . . . .  B  ADDR  00D8H.6   A   
+UART1FCT . . . . . . . . .  D  ADDR  00FAH     A   
+UART1LIN . . . . . . . . .  D  ADDR  009EH     A   
+UART1PCF . . . . . . . . .  D  ADDR  00DAH     A   
+VDM0CN . . . . . . . . . .  D  ADDR  00FFH     A   
+WDTCN. . . . . . . . . . .  D  ADDR  0097H     A   
+XBR0 . . . . . . . . . . .  D  ADDR  00E1H     A   
+XBR1 . . . . . . . . . . .  D  ADDR  00E2H     A   
+XBR2 . . . . . . . . . . .  D  ADDR  00E3H     A   
+XOSC0CN. . . . . . . . . .  D  ADDR  0086H     A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S).

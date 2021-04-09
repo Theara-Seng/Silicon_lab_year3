@@ -1,0 +1,34 @@
+12:02:39 **** Incremental Build of configuration Keil 8051 v9.60.0 - Debug for project port_DIO ****
+make all 
+PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 
+Building file: ../src/port_DIO_main.c
+Invoking: Keil 8051 Compiler
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/port_DIO_main.__i" || test $? -lt 2
+
+C51 COMPILER V9.60.0.0 - SN: Eval Version
+COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building: ../src/port_DIO_main.c
+ 
+Building target: port_DIO.omf
+Invoking: Keil 8051 Linker
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@port_DIO.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2019
+@port_DIO.lnp "./src/InitDevice.OBJ",
+"./src/SILABS_STARTUP.OBJ",
+"./src/port_DIO_main.OBJ"
+TO "PORT_DIO.OMF.CRBUILD" REMOVEUNUSED PRINT(.\port_DIO.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00E6H BYTE (11%) *
+******************************************************************************
+
+Program Size: data=14.0 xdata=0 const=0 code=106
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: port_DIO.omf
+
+12:02:43 Build Finished. 0 errors, 0 warnings. (took 3s.532ms)
+

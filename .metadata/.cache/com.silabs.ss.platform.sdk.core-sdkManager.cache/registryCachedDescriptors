@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<model:MDescriptors xmlns:model="http://www.silabs.com/ss/Studio.ecore">
+  <descriptors name="com.silabs.sdk.8051" label="8051 SDK" description="">
+    <properties key="core.builtin" value="true"/>
+    <properties key="core.installationPath" value="file:/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/"/>
+    <properties key="core.version" value="4.2.0.0_1279911441"/>
+    <properties key="sdk.subPropertyFiles" value=""/>
+    <properties key="core.partCompatibility" value=""/>
+    <properties key="sdk.modulesFile" value="/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/modules.xml"/>
+    <properties key="sdk.docURL" value="http://devtools.silabs.com/studio/doc/EFM8/software/"/>
+    <properties key="sdk.appnotesFile" value="/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/appnotes.xml"/>
+    <properties key="sdk.templatesFile" value="/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/templates.xml"/>
+    <properties key="sdk.demosFile" value="/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/.studio/demos.xml"/>
+    <properties key="core.keywords" value="8051"/>
+    <properties key="core.scannedErrorMessage" value=""/>
+    <properties key="core.detected" value="true"/>
+    <properties key="registry.providingDetector" value="com.silabs.ss.platform.internal.api.sdk.core.SDKDetector"/>
+    <properties key="CACHED_ID_STRING" value="com.silabs.sdk.8051"/>
+  </descriptors>
+</model:MDescriptors>

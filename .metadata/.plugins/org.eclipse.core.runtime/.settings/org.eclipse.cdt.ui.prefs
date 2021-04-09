@@ -1,0 +1,8 @@
+buildConsoleLines=50000
+consoleOnTop=true
+eclipse.preferences.version=1
+org.eclipse.cdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="false" context\="org.eclipse.cdt.core.asmSource.contenttype_context" deleted\="false" description\="Default template for newly created assembly files" enabled\="true" id\="org.eclipse.cdt.ui.text.codetemplates.asmsourcefile" name\="Default assembly template">${filecomment}\n</template><template autoinsert\="false" context\="org.eclipse.cdt.core.asmSource.contenttype_context" deleted\="false" description\="" enabled\="true" name\="testing.asm">${filecomment}\n</template></templates>
+sourceHoverBackgroundColor=255,255,255
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

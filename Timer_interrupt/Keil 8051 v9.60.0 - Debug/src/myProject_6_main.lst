@@ -1,0 +1,237 @@
+C51 COMPILER V9.60.0.0   MYPROJECT_6_MAIN                                                  04/03/2021 15:16:05 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MYPROJECT_6_MAIN
+OBJECT MODULE PLACED IN .\src/myProject_6_main.OBJ
+COMPILER INVOKED BY: Z:\home\tadashi\Downloads\SimplicityStudio_v5\developer\toolchains\keil_8051\9.60\BIN\C51.exe /home
+                    -/tadashi/SimplicityStudio/v5_workspace/myProject_6/src/myProject_6_main.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNI
+                    -NGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(0,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/home/tadashi/SimplicityS
+                    -tudio/v5_workspace/myProject_6/inc;/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0//Device/shared
+                    -/si8051Base;/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0//Device/EFM8LB1/inc) PRINT(.\src/myPr
+                    -oject_6_main.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src/myProject_6_main.OBJ)
+
+line level    source
+
+   1          //-----------------------------------------------------------------------------
+   2          // Includes
+   3          //-----------------------------------------------------------------------------
+   4          #include <SI_EFM8LB1_Register_Enums.h>                // SFR declarations
+   5          #include <STDIO.H>
+   6          
+   7          uint32_t volatile msTicks = 0;
+   8          
+   9          //-----------------------------------------------------------------------------
+  10          // SiLabs_Startup() Routine
+  11          // ----------------------------------------------------------------------------
+  12          // This function is called immediately after reset, before the initialization
+  13          // code is run in SILABS_STARTUP.A51 (which runs before main() ). This is a
+  14          // useful place to disable the watchdog timer, which is enable by default
+  15          // and may trigger before main() in some instances.
+  16          //-----------------------------------------------------------------------------
+  17          void SiLabs_Startup (void)
+  18          {
+  19   1        // Disable the watchdog here
+  20   1        WDTCN = 0xDE;
+  21   1        WDTCN = 0xAD;
+  22   1      }
+  23          
+  24          /* Interrupt service routine **************************************************/
+  25          SI_INTERRUPT(TIMER0_ISR, TIMER0_IRQn)
+  26          {
+  27   1        msTicks += 10; // increase every 10 ms
+  28   1        // reload timer value
+  29   1        TH0 = 0x10;
+  30   1        TL0 = 0xBE;
+  31   1        // clear interrupt flag
+  32   1        TCON_TF0 = 0;
+  33   1      }
+  34          
+  35          /* Initialization functions ***************************************************/
+  36          void SYSCLK_Init()
+  37          {
+  38   1        /* set up SYSCLK to 24.5 MHz */
+  39   1        CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_1 | CLKSEL_CLKSL__HFOSC0;
+  40   1        while ((CLKSEL & CLKSEL_DIVRDY__BMASK) != CLKSEL_DIVRDY__READY);
+  41   1      }
+  42          
+  43          void XBAR_Init()
+  44          {
+  45   1        /* set up crossbar */
+  46   1        XBR2 |= XBR2_XBARE__ENABLED; // enable crossbar
+  47   1        // skip P0.0 - P0.3, P0.6 - P0.7, P1.0 - P1.2
+  48   1        P0SKIP = 0xCF; // 0b1100 1111
+  49   1        P1SKIP = 0x0B; // 0b0000 1011
+  50   1        // enable output compare CEX0 and UART0
+  51   1        XBR0 |= XBR0_URT0E__ENABLED;
+C51 COMPILER V9.60.0.0   MYPROJECT_6_MAIN                                                  04/03/2021 15:16:05 PAGE 2   
+
+  52   1        XBR1 |= XBR1_PCA0ME__CEX0;
+  53   1      
+  54   1        // set up UART0 TX pin (P0.4) as push-pull
+  55   1        P0MDOUT |= P0MDOUT_B4__PUSH_PULL;
+  56   1      
+  57   1        // set up P1.3 as push-pull
+  58   1       // P1MDOUT |= P1MDOUT_B3__PUSH_PULL;
+  59   1        P1MDOUT |= P1MDOUT_B2__PUSH_PULL;
+  60   1      }
+  61          
+  62          void PWM_Init()
+  63          {
+  64   1        /* setup 8-bit PWM on CEX0 */
+  65   1        PCA0CPM0 |= PCA0CPM0_PWM__ENABLED;
+  66   1        // write pwm to autoreload register
+  67   1        PCA0CPH0 = 0;
+  68   1        // start PCA
+  69   1        PCA0CN0 |= PCA0CN0_CR__RUN;
+  70   1      }
+  71          
+  72          void TIMER01_Init()
+  73          {
+  74   1        // set Timer0 clock prescaler to SYSCLK/4 = 6125000Hz
+  75   1        // set Timer1 clock to SYSCLK = 24500000HZ
+  76   1        CKCON0 = CKCON0_SCA__SYSCLK_DIV_4 | CKCON0_T1M__SYSCLK;
+  77   1      
+  78   1        // set Timer0 mode to 16-bit timer and Timer1 to 8-bit auto reload
+  79   1        TMOD = TMOD_T0M__MODE1 | TMOD_T1M__MODE2;
+  80   1        /* set up Timer0 interrupt for 10ms */
+  81   1        // write reload value to TH0 and TL0
+  82   1        // TH0:TL0 = 65536 - F_CLK/F_DESIRED
+  83   1        //         = 65536 - 6125000Hz/100Hz = 4286 or 0x10BE
+  84   1        TH0 = 0x10;
+  85   1        TL0 = 0xBE;
+  86   1      
+  87   1        // set up counter and reload value for Timer1
+  88   1        // this results in UART0 frequency of 230400Hz
+  89   1        // or baudrate of 115200 bps
+  90   1        // baudrate = 1/2 * SYSCLK/(256 - PRESCALER)
+  91   1        // PRESCALER = 256 - 1/2 * SYSCLK/baurate = 150 or 0x96
+  92   1        TL1 = 0x96;
+  93   1        TH1 = 0x96;
+  94   1      
+  95   1        // enable Timer0 overflow interrupt then run the timer
+  96   1        IE_ET0 = 1;
+  97   1        TCON_TR0 = 1;
+  98   1        TCON_TR1 = 1;
+  99   1      }
+ 100          
+ 101          void UART0_Init()
+ 102          {
+ 103   1        // configure this function if UART interrupt and/or 9-bit mode is required
+ 104   1        // otherwise, you can leave it blank
+ 105   1      }
+ 106          
+ 107          
+ 108          /* User-defined functions *****************************************************/
+ 109          void put_char(char c)
+ 110          {
+ 111   1        SBUF0 = c; // write character to buffer
+ 112   1        while (!SCON0_TI); // wait for Tx to be complete
+ 113   1        SCON0_TI = 0; // clear Tx flag
+ 114   1      }
+C51 COMPILER V9.60.0.0   MYPROJECT_6_MAIN                                                  04/03/2021 15:16:05 PAGE 3   
+
+ 115          
+ 116          void put_string(char* str)
+ 117          {
+ 118   1        // send character until null-termination is found
+ 119   1        while (*str != '\x0')
+ 120   1        {
+ 121   2          put_char(*(str++));
+ 122   2        }
+ 123   1      }
+ 124          
+ 125          //-----------------------------------------------------------------------------
+ 126          // main() Routine
+ 127          // ----------------------------------------------------------------------------
+ 128          // Note: the software watchdog timer is not disabled by default in this
+ 129          // example, so a long-running program will reset periodically unless
+ 130          // the timer is disabled or your program periodically writes to it.
+ 131          //
+ 132          // Review the "Watchdog Timer" section under the part family's datasheet
+ 133          // for details. To find the datasheet, select your part in the
+ 134          // Simplicity Launcher and click on "Data Sheet".
+ 135          //-----------------------------------------------------------------------------
+ 136          uint32_t t0_last, t1_last, t2_last;
+ 137          
+ 138          const uint16_t dt0 = 5000;
+ 139          const uint16_t dt1 = 1000;
+ 140          const uint16_t dt2 = 50;
+ 141          uint8_t pwm_val = 0;
+ 142          int8_t pwm_dir = 10;
+ 143          
+ 144          bit btn_now = 1;
+ 145          bit btn_last = 1;
+ 146          
+ 147          char xdata msg[64];
+ 148          
+ 149          int main (void)
+ 150          {
+ 151   1        /* device init */
+ 152   1        SYSCLK_Init();
+ 153   1        XBAR_Init();
+ 154   1        PWM_Init();
+ 155   1        TIMER01_Init();
+ 156   1        UART0_Init();
+ 157   1      
+ 158   1        /* enable all interrupt */
+ 159   1        IE_EA = 1;
+ 160   1      
+ 161   1        t0_last = msTicks;
+ 162   1        t1_last = msTicks;
+ 163   1        t2_last = msTicks;
+ 164   1      
+ 165   1        put_string("------ Application started ------\n");
+ 166   1        while (1) {
+ 167   2          /* task scheduling */
+ 168   2          if (msTicks - t0_last >= dt0)
+ 169   2          {
+ 170   3            t0_last = msTicks;
+ 171   3            /* breathing LED */
+ 172   3            if (pwm_val == 0) pwm_dir = 10;
+ 173   3            else if (pwm_val == 250) pwm_dir = -10;
+ 174   3            pwm_val += pwm_dir;
+ 175   3            PCA0CPH0 = pwm_val;
+ 176   3          }
+ 177   2      
+C51 COMPILER V9.60.0.0   MYPROJECT_6_MAIN                                                  04/03/2021 15:16:05 PAGE 4   
+
+ 178   2          if (msTicks - t1_last >= dt1)
+ 179   2          {
+ 180   3            t1_last = msTicks;
+ 181   3            /* print runtime every 1000 ms */
+ 182   3            sprintf(msg, "Runtime: %lu ms\n", msTicks);
+ 183   3            put_string(msg);
+ 184   3          }
+ 185   2      
+ 186   2          if (msTicks - t2_last >= dt2)
+ 187   2          {
+ 188   3            t2_last = msTicks;
+ 189   3            btn_now = P1_B4;
+ 190   3            if (btn_now == 0 && btn_last == 1) // falling edge
+ 191   3            {
+ 192   4              /* button press event */
+ 193   4              sprintf(msg, "Button is pressed at %lu ms\n", msTicks);
+ 194   4              put_string(msg);
+ 195   4            }
+ 196   3            btn_last = btn_now;
+ 197   3          }
+ 198   2        }                             // Spin forever
+ 199   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    576    ----
+   CONSTANT SIZE    =     81    ----
+   XDATA SIZE       =     64    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     28    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      2    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

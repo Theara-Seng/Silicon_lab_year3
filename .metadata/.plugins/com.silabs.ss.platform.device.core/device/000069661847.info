@@ -1,0 +1,4 @@
+protectFromDetectionUpdates=false
+label=J-Link CE (69661847)
+boardOverrides {
+}

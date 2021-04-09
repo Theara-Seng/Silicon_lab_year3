@@ -1,0 +1,24 @@
+10:44:40 **** Build of configuration Keil 8051 v9.60.0 - Debug for project myProject_7 ****
+make all 
+PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 
+Building target: myProject_7.omf
+Invoking: Keil 8051 Linker
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@myProject_7.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2019
+@myProject_7.lnp "./src/InitDevice.OBJ",
+"./src/SILABS_STARTUP.OBJ",
+"./src/myProject_7_main.OBJ"
+TO "MYPROJECT_7.OMF.CRBUILD" REMOVEUNUSED PRINT(.\myProject_7.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00C6H BYTE ( 9%) *
+******************************************************************************
+
+Program Size: data=22.0 xdata=0 const=0 code=294
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: myProject_7.omf
+
+10:44:43 Build Finished. 0 errors, 0 warnings. (took 3s.807ms)
+

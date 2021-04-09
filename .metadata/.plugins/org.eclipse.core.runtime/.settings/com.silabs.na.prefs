@@ -1,0 +1,6 @@
+//CONNECTIVITY/LOG={workspace}/.metadata/connectivity.log
+//CONNECTIVITY/LOG/BPS/PERIOD=5000
+//CONNECTIVITY/LOG/ENABLED=false
+//ENABLE/REMOTE/MONITORING=false
+//USE/PARALLEL/DECODING=true
+eclipse.preferences.version=1

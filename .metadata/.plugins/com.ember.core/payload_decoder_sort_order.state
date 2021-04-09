@@ -1,0 +1,1 @@
+<?xml version="1.0" ?><string-array><string>com.ember.workbench.ip.decoder.WakeupDecoder</string><string>com.ember.workbench.payload.SensorSinkDecoder</string><string>com.ember.workbench.payload.HttpDecoder</string><string>com.ember.workbench.payload.TestProfileDecoder</string><string>com.ember.workbench.zigbee.decoder.TunnelCommandDecoder</string></string-array>

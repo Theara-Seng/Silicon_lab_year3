@@ -1,0 +1,10 @@
+protectFromDetectionUpdates=false
+label=J-Link CE (69661676)
+targetPartOverride=mcu.8051.efm8.lb1.efm8lb12f64e-c-qsop24
+boardOverrides {
+}
+EXTENSION:com.silabs.ss.support.mcu.internal.api.part.core.MCUDeviceSettingExtension {
+  tifId:c2
+}
+EXTENSION:com.silabs.ss.support.jlink.internal.api.core.JLinkDeviceSettingsExtension {
+}

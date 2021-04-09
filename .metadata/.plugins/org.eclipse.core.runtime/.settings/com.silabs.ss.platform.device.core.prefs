@@ -1,0 +1,16 @@
+CONSOLIDATE_DEVICES=true
+DEVICE_CONFLICT_CONFIRM.000050120677.Simplicity\ Debugger.Simplicity\ Debugger=true
+DEVICE_CONFLICT_CONFIRM.000059418010.Simplicity\ Debugger.Simplicity\ Debugger=true
+DEVICE_CONFLICT_CONFIRM.000069661676.Simplicity\ Debugger.Simplicity\ Debugger=true
+DISABLE_OPTION=PROMPT
+DISPLAY_DEVICE_NUMBER=true
+ENABLE_LOGGING=false
+LOCATOR_THREADS_FEEDBACK=false
+LOG_FILE={workspace}/.metadata/device_manager.log
+SCAN_AT_STARTUP=true
+SCAN_RECURRENTLY=true
+com.ember.workbench.ethernet.discovery.EthernetTCPDiscovery\:enable=true
+com.silabs.ss.platform.api.apack.ip.EthernetDiscovery\:enable=true
+com.silabs.ss.platform.api.apack.ip.JLinkEthernetDiscovery\:enable=false
+com.silabs.ss.platform.internal.apack.device.AdapterPackDetectionLocator\:enable=true
+eclipse.preferences.version=1
