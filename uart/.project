@@ -24,11 +24,4 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/SILABS_STARTUP.A51</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/Device/shared/si8051Base/SILABS_STARTUP.A51</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>
