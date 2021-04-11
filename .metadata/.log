@@ -9036,3 +9036,114 @@ java.lang.Exception: The project description file (.project) for 'uart' is missi
 	at org.eclipse.core.internal.refresh.RefreshJob.runInWorkspace(RefreshJob.java:166)
 	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-09 09:45:30.964
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY org.eclipse.cdt.debug.edc 4 0 2021-04-09 09:45:32.907
+!MESSAGE Unknown context [rc.root.000050120677] is reported in suspended event. Make sure TCF agent has reported contextAdded event first.
+!SESSION 2021-04-10 15:46:17.100 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.5
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2021-04-10 15:46:20.067
+!MESSAGE ContentServer started at: 127.0.0.1, 39649
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2021-04-10 15:46:20.105
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-04-10 15:46:20.744
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2021-04-10 15:46:38.593
+!MESSAGE Local timestamp file does not exist: /home/tadashi/Downloads/SimplicityStudio_v5/offline/common/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2021-04-10 15:47:21.777
+!MESSAGE Local timestamp file does not exist: /home/tadashi/Downloads/SimplicityStudio_v5/offline/common/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+!SESSION 2021-04-11 19:32:11.324 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.5
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2021-04-11 19:32:14.939
+!MESSAGE ContentServer started at: 127.0.0.1, 36909
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2021-04-11 19:32:14.989
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-04-11 19:32:15.510
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2021-04-11 19:32:28.913
+!MESSAGE Local timestamp file does not exist: /home/tadashi/Downloads/SimplicityStudio_v5/offline/common/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2021-04-11 19:32:39.109
+!MESSAGE Local timestamp file does not exist: /home/tadashi/Downloads/SimplicityStudio_v5/offline/common/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.support.browser.html 1 0 2021-04-11 19:43:07.157
+!MESSAGE Browser workarea set to: /home/tadashi/SimplicityStudio/v5_workspace/.browser
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-04-11 19:44:13.284
+!MESSAGE Indexed 'Button_interrupt' (2 sources, 6 headers) in 1.06 sec: 471 declarations; 1,059 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.silabs.ss.framework.hwconfig.core 4 0 2021-04-11 19:54:57.118
+!MESSAGE Too many callbacks are registered to upgrade the document
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 20:15:27.149
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 20:16:23.553
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 20:18:19.228
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 20:19:46.590
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 20:51:55.198
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 20:52:53.368
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 20:53:18.645
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 20:55:22.171
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 20:59:05.837
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 21:02:36.229
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 21:04:39.224
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 21:05:15.353
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 21:08:42.282
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 21:09:21.372
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 21:10:03.895
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 21:14:20.279
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 21:29:25.405
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
+
+!ENTRY com.silabs.ss.framework.debugger.tcf.agent 1 0 2021-04-11 21:30:30.245
+!MESSAGE Launching SiAgent (Silicon Labs TCF Agent)
