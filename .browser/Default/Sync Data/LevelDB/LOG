@@ -1,3 +1,3 @@
-2021/04/12-11:28:26.695 1797 Reusing MANIFEST /home/tadashi/SimplicityStudio/v5_workspace/.browser/Default/Sync Data/LevelDB/MANIFEST-000001
-2021/04/12-11:28:26.695 1797 Recovering log #3
-2021/04/12-11:28:26.695 1797 Reusing old log /home/tadashi/SimplicityStudio/v5_workspace/.browser/Default/Sync Data/LevelDB/000003.log 
+2021/04/12-22:22:03.010 2bb1 Reusing MANIFEST /home/tadashi/SimplicityStudio/v5_workspace/.browser/Default/Sync Data/LevelDB/MANIFEST-000001
+2021/04/12-22:22:03.010 2bb1 Recovering log #3
+2021/04/12-22:22:03.010 2bb1 Reusing old log /home/tadashi/SimplicityStudio/v5_workspace/.browser/Default/Sync Data/LevelDB/000003.log 

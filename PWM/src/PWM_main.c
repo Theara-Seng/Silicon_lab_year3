@@ -25,12 +25,6 @@ void SiLabs_Startup (void)
 
 
 /* Initialization functions ***************************************************/
-void SYSCLK_Init()
-{
-  /* set up SYSCLK to 24.5 MHz */
-  CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_1 | CLKSEL_CLKSL__HFOSC0;
-  while ((CLKSEL & CLKSEL_DIVRDY__BMASK) != CLKSEL_DIVRDY__READY);
-}
 
 void XBAR_Init()
 {
@@ -41,7 +35,7 @@ void XBAR_Init()
   P1SKIP = 0x07; // 0b0000 0111
   // enable output compare CEX0 and UART0
   XBR0 |= XBR0_URT0E__ENABLED;
-  XBR1 |= XBR1_PCA0ME__CEX0_TO_CEX1;
+  XBR1 |= XBR1_PCA0ME__CEX0;
 
   // set up UART0 TX pin (P0.4) as push-pull
   P0MDOUT |= P0MDOUT_B4__PUSH_PULL;
@@ -54,16 +48,15 @@ void XBAR_Init()
 void PWM_Init()
 {
   /* setup 8-bit PWM on CEX0 */
-  PCA0CPM0 |= PCA0CPM0_PWM16__16_BIT;
+//  PCA0CPM0 |= PCA0CPM0_PWM16__16_BIT;
   PCA0CPM0 |=PCA0CPM0_PWM__ENABLED;
-  PCA0CPM1 |=PCA0CPM1_PWM__ENABLED;
+//  PCA0CPM1 |=PCA0CPM1_PWM__ENABLED;
   // write pwm to autoreload register
-  PCA0CPL0=0;
-  PCA0CPL1=0;
+
   PCA0CPH0 = 0;
-  PCA0CPH1= 0;
+ // PCA0CPH1= 0;
   // start PCA
-  PCA0CN0 |= PCA0CN0_CR__RUN;
+  PCA0CN0 = PCA0CN0_CR__RUN;
 }
 
 
@@ -107,7 +100,9 @@ char xdata msg[64];
 int main (void)
 {
   /* device init */
-  SYSCLK_Init();
+  CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_32 | CLKSEL_CLKSL__HFOSC0;
+   PCA0MD |=PCA0MD_CPS__SYSCLK_DIV_12;
+  //PCA0CPM0= PCA0CPM0_ECOM__ENABLED ;
   XBAR_Init();
   PWM_Init();
   //TIMER01_Init();
@@ -122,12 +117,11 @@ int main (void)
 
       /* breathing LED */
 
-      pwm_val = 300;
-      pwm_val1=40;
-      PCA0CPL0=0xff;
-      PCA0CPH0 = 0xff;
-      PCA0CPH1 =pwm_val1;
 
+      pwm_val=195;
+      PCA0CPH0 =pwm_val;
+     // pwm_val1=50;
+    //  PCA0CPH1 =pwm_val1;
 
   }                             // Spin forever
 }

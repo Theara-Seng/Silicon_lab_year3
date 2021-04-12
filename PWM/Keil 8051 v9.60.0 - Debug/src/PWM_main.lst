@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.0.0   PWM_MAIN                                                          04/12/2021 15:15:39 PAGE 1   
+C51 COMPILER V9.60.0.0   PWM_MAIN                                                          04/12/2021 22:15:37 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE PWM_MAIN
@@ -39,120 +39,114 @@ line level    source
   25          
   26          
   27          /* Initialization functions ***************************************************/
-  28          void SYSCLK_Init()
-  29          {
-  30   1        /* set up SYSCLK to 24.5 MHz */
-  31   1        CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_1 | CLKSEL_CLKSL__HFOSC0;
-  32   1        while ((CLKSEL & CLKSEL_DIVRDY__BMASK) != CLKSEL_DIVRDY__READY);
-  33   1      }
-  34          
-  35          void XBAR_Init()
-  36          {
-  37   1        /* set up crossbar */
-  38   1        XBR2 |= XBR2_XBARE__ENABLED; // enable crossbar
-  39   1        // skip P0.0 - P0.3, P0.6 - P0.7, P1.0 - P1.2
-  40   1        P0SKIP = 0xCF; // 0b1100 1111
-  41   1        P1SKIP = 0x07; // 0b0000 0111
-  42   1        // enable output compare CEX0 and UART0
-  43   1        XBR0 |= XBR0_URT0E__ENABLED;
-  44   1        XBR1 |= XBR1_PCA0ME__CEX0_TO_CEX1;
-  45   1      
-  46   1        // set up UART0 TX pin (P0.4) as push-pull
-  47   1        P0MDOUT |= P0MDOUT_B4__PUSH_PULL;
-  48   1      
-  49   1        // set up P1.3 as push-pull
-  50   1        P1MDOUT |= P1MDOUT_B3__PUSH_PULL;
-  51   1        P1MDOUT |= P1MDOUT_B4__PUSH_PULL;
-C51 COMPILER V9.60.0.0   PWM_MAIN                                                          04/12/2021 15:15:39 PAGE 2   
+  28          
+  29          void XBAR_Init()
+  30          {
+  31   1        /* set up crossbar */
+  32   1        XBR2 |= XBR2_XBARE__ENABLED; // enable crossbar
+  33   1        // skip P0.0 - P0.3, P0.6 - P0.7, P1.0 - P1.2
+  34   1        P0SKIP = 0xCF; // 0b1100 1111
+  35   1        P1SKIP = 0x07; // 0b0000 0111
+  36   1        // enable output compare CEX0 and UART0
+  37   1        XBR0 |= XBR0_URT0E__ENABLED;
+  38   1        XBR1 |= XBR1_PCA0ME__CEX0;
+  39   1      
+  40   1        // set up UART0 TX pin (P0.4) as push-pull
+  41   1        P0MDOUT |= P0MDOUT_B4__PUSH_PULL;
+  42   1      
+  43   1        // set up P1.3 as push-pull
+  44   1        P1MDOUT |= P1MDOUT_B3__PUSH_PULL;
+  45   1        P1MDOUT |= P1MDOUT_B4__PUSH_PULL;
+  46   1      }
+  47          
+  48          void PWM_Init()
+  49          {
+  50   1        /* setup 8-bit PWM on CEX0 */
+  51   1      //  PCA0CPM0 |= PCA0CPM0_PWM16__16_BIT;
+C51 COMPILER V9.60.0.0   PWM_MAIN                                                          04/12/2021 22:15:37 PAGE 2   
 
-  52   1      }
-  53          
-  54          void PWM_Init()
-  55          {
-  56   1        /* setup 8-bit PWM on CEX0 */
-  57   1        PCA0CPM0 |= PCA0CPM0_PWM16__16_BIT;
-  58   1       // PCA0CPM0 |=PCA0CPM0_PWM__ENABLED;
-  59   1        PCA0CPM1 |=PCA0CPM1_PWM__ENABLED;
-  60   1        // write pwm to autoreload register
-  61   1        PCA0CPL0=0;
-  62   1        PCA0CPL1=0;
-  63   1        PCA0CPH0 = 0;
-  64   1        PCA0CPH1= 0;
-  65   1        // start PCA
-  66   1        PCA0CN0 |= PCA0CN0_CR__RUN;
-  67   1      }
-  68          
-  69          
-  70          
-  71          
+  52   1        PCA0CPM0 |=PCA0CPM0_PWM__ENABLED;
+  53   1      //  PCA0CPM1 |=PCA0CPM1_PWM__ENABLED;
+  54   1        // write pwm to autoreload register
+  55   1      
+  56   1        PCA0CPH0 = 0;
+  57   1       // PCA0CPH1= 0;
+  58   1        // start PCA
+  59   1        PCA0CN0 = PCA0CN0_CR__RUN;
+  60   1      }
+  61          
+  62          
+  63          
+  64          
+  65          
+  66          
+  67          void UART0_Init()
+  68          {
+  69   1        // configure this function if UART interrupt and/or 9-bit mode is required
+  70   1        // otherwise, you can leave it blank
+  71   1      }
   72          
   73          
-  74          void UART0_Init()
-  75          {
-  76   1        // configure this function if UART interrupt and/or 9-bit mode is required
-  77   1        // otherwise, you can leave it blank
-  78   1      }
-  79          
-  80          
-  81          /* User-defined functions *****************************************************/
-  82          
-  83          //-----------------------------------------------------------------------------
-  84          // main() Routine
-  85          // ----------------------------------------------------------------------------
-  86          // Note: the software watchdog timer is not disabled by default in this
-  87          // example, so a long-running program will reset periodically unless
-  88          // the timer is disabled or your program_PWM__ENABLED periodically writes to it.
-  89          //
-  90          // Review the "Watchdog Timer" section under the part family's datasheet
-  91          // for details. To find the datasheet, select your part in the
-  92          // Simplicity Launcher and click on "Data Sheet".
-  93          //-----------------------------------------------------------------------------
-  94          uint32_t t0_last, t1_last, t2_last;
-  95          
-  96          const uint16_t dt0 = 50;
-  97          const uint16_t dt1 = 1000;
-  98          const uint16_t dt2 = 50;
-  99          uint8_t pwm_val = 0;
- 100          int8_t pwm_dir = 10;
- 101          uint8_t pwm_val1 = 0;
- 102          bit btn_now = 1;
- 103          bit btn_last = 1;
- 104          
- 105          char xdata msg[64];
- 106          
- 107          int main (void)
- 108          {
- 109   1        /* device init */
- 110   1        SYSCLK_Init();
- 111   1        XBAR_Init();
- 112   1        PWM_Init();
- 113   1        //TIMER01_Init();
- 114   1       // UART0_Init();
-C51 COMPILER V9.60.0.0   PWM_MAIN                                                          04/12/2021 15:15:39 PAGE 3   
+  74          /* User-defined functions *****************************************************/
+  75          
+  76          //-----------------------------------------------------------------------------
+  77          // main() Routine
+  78          // ----------------------------------------------------------------------------
+  79          // Note: the software watchdog timer is not disabled by default in this
+  80          // example, so a long-running program will reset periodically unless
+  81          // the timer is disabled or your program_PWM__ENABLED periodically writes to it.
+  82          //
+  83          // Review the "Watchdog Timer" section under the part family's datasheet
+  84          // for details. To find the datasheet, select your part in the
+  85          // Simplicity Launcher and click on "Data Sheet".
+  86          //-----------------------------------------------------------------------------
+  87          uint32_t t0_last, t1_last, t2_last;
+  88          
+  89          const uint16_t dt0 = 50;
+  90          const uint16_t dt1 = 1000;
+  91          const uint16_t dt2 = 50;
+  92          uint8_t pwm_val = 0;
+  93          int8_t pwm_dir = 10;
+  94          uint8_t pwm_val1 = 0;
+  95          bit btn_now = 1;
+  96          bit btn_last = 1;
+  97          
+  98          char xdata msg[64];
+  99          
+ 100          int main (void)
+ 101          {
+ 102   1        /* device init */
+ 103   1        CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_32 | CLKSEL_CLKSL__HFOSC0;
+ 104   1         PCA0MD |=PCA0MD_CPS__SYSCLK_DIV_12;
+ 105   1        //PCA0CPM0= PCA0CPM0_ECOM__ENABLED ;
+ 106   1        XBAR_Init();
+ 107   1        PWM_Init();
+ 108   1        //TIMER01_Init();
+ 109   1       // UART0_Init();
+ 110   1      
+ 111   1        /* enable all interrupt */
+ 112   1      
+ 113   1      
+ 114   1      
+C51 COMPILER V9.60.0.0   PWM_MAIN                                                          04/12/2021 22:15:37 PAGE 3   
 
- 115   1      
- 116   1        /* enable all interrupt */
- 117   1      
- 118   1      
- 119   1      
- 120   1        while (1) {
- 121   2          /* task scheduling */
- 122   2      
- 123   2            /* breathing LED */
- 124   2      
- 125   2            pwm_val = 300;
- 126   2            pwm_val1=40;
- 127   2            PCA0CPL0=0xff;
- 128   2            PCA0CPH0 = 0xff;
- 129   2            PCA0CPH1 =pwm_val1;
- 130   2      
- 131   2      
- 132   2        }                             // Spin forever
- 133   1      }
+ 115   1        while (1) {
+ 116   2          /* task scheduling */
+ 117   2      
+ 118   2            /* breathing LED */
+ 119   2      
+ 120   2      
+ 121   2            pwm_val=195;
+ 122   2            PCA0CPH0 =pwm_val;
+ 123   2           // pwm_val1=50;
+ 124   2          //  PCA0CPH1 =pwm_val1;
+ 125   2      
+ 126   2        }                             // Spin forever
+ 127   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =     99    ----
+   CODE SIZE        =     64    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =     64    ----
    PDATA SIZE       =   ----    ----

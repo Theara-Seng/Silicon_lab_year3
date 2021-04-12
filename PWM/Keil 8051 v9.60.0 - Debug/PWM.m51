@@ -1,4 +1,4 @@
-LX51 LINKER/LOCATER V4.66.97.0                                                          04/12/2021  15:15:39  PAGE 1
+LX51 LINKER/LOCATER V4.66.97.0                                                          04/12/2021  22:15:37  PAGE 1
 
 
 LX51 LINKER/LOCATER V4.66.97.0, INVOKED BY:
@@ -30,7 +30,7 @@ C:000000H   C:000000H   C:00FBFEH             ECODE
 C:000000H   C:000000H   C:00FBFEH             HCONST
 X:000000H   X:000000H   X:000FFFH   000040H   XDATA
 X:000000H   X:000000H   X:000FFFH             HDATA
-C:000000H   C:000000H   C:00FFFFH   000114H   CODE
+C:000000H   C:000000H   C:00FFFFH   0000F1H   CODE
 I:000000H   I:000000H   I:00007FH   000022H   DATA
 I:000020H.0 I:000020H.0 I:00002FH.7 000000H.2 BIT
 I:000000H   I:000000H   I:0000FFH   000001H   IDATA
@@ -54,18 +54,17 @@ START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
 * * * * * * * * * * *   C O D E   M E M O R Y   * * * * * * * * * * * * *
 000000H   000002H   000003H   ---    OFFS..   CODE           ?CO?SILABS_STARTUP?3
 000003H   000022H   000020H   BYTE   UNIT     CODE           ?C_INITSEG
-000023H   00003DH   00001BH   BYTE   UNIT     CODE           ?PR?MAIN?PWM_MAIN
-00003EH   000056H   000019H   BYTE   UNIT     CODE           ?PR?XBAR_INIT?PWM_MAIN
-000057H   00006CH   000016H   BYTE   UNIT     CODE           ?PR?PWM_INIT?PWM_MAIN
-00006DH   00007DH   000011H   BYTE   UNIT     CODE           ?PR?SYSCLK_INIT?PWM_MAIN
-00007EH   000084H   000007H   BYTE   UNIT     CODE           ?PR?SILABS_STARTUP?PWM_MAIN
-000085H   0007FFH   00077BH   ---    ---      **GAP**
+000023H   00003BH   000019H   BYTE   UNIT     CODE           ?PR?XBAR_INIT?PWM_MAIN
+00003CH   000050H   000015H   BYTE   UNIT     CODE           ?PR?MAIN?PWM_MAIN
+000051H   00005AH   00000AH   BYTE   UNIT     CODE           ?PR?PWM_INIT?PWM_MAIN
+00005BH   000061H   000007H   BYTE   UNIT     CODE           ?PR?SILABS_STARTUP?PWM_MAIN
+000062H   0007FFH   00079EH   ---    ---      **GAP**
 000800H   00088EH   00008FH   BYTE   UNIT     CODE           ?C_C51STARTUP
 
 * * * * * * * * * * *  X D A T A   M E M O R Y  * * * * * * * * * * * * *
 000000H   00003FH   000040H   BYTE   UNIT     XDATA          ?XD?PWM_MAIN
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 2
 
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 2
 
 
 * * * * * * * * *   R E M O V E D     S E G M E N T S   * * * * * * * *
@@ -88,11 +87,8 @@ FUNCTION/MODULE                               BIT_GROUP   DATA_GROUP
 SILABS_STARTUP/PWM_MAIN                      ----- -----  ----- -----
 
 MAIN/PWM_MAIN                                ----- -----  ----- -----
-  +--> SYSCLK_INIT/PWM_MAIN
   +--> XBAR_INIT/PWM_MAIN
   +--> PWM_INIT/PWM_MAIN
-
-SYSCLK_INIT/PWM_MAIN                         ----- -----  ----- -----
 
 XBAR_INIT/PWM_MAIN                           ----- -----  ----- -----
 
@@ -129,13 +125,13 @@ PUBLIC SYMBOLS OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000BCH   DATA     BYTE      ADC0CF0
 *SFR* 000000B9H   DATA     BYTE      ADC0CF1
 *SFR* 000000DFH   DATA     BYTE      ADC0CF2
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 3
-
-
 *SFR* 000000E8H   DATA     BYTE      ADC0CN0
 *SFR* 000000E8H.4 DATA     BIT       ADC0CN0_ADBUSY
 *SFR* 000000E8H.7 DATA     BIT       ADC0CN0_ADEN
 *SFR* 000000E8H.1 DATA     BIT       ADC0CN0_ADGN0
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 3
+
+
 *SFR* 000000E8H.2 DATA     BIT       ADC0CN0_ADGN1
 *SFR* 000000E8H.5 DATA     BIT       ADC0CN0_ADINT
 *SFR* 000000E8H.3 DATA     BIT       ADC0CN0_ADWINT
@@ -194,13 +190,13 @@ PUBLIC SYMBOLS OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 *SFR* 00000099H   DATA     BYTE      CMP0CN1
 *SFR* 0000009DH   DATA     BYTE      CMP0MD
 *SFR* 0000009FH   DATA     BYTE      CMP0MX
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 4
-
-
 *SFR* 000000BFH   DATA     BYTE      CMP1CN0
 *SFR* 000000ACH   DATA     BYTE      CMP1CN1
 *SFR* 000000ABH   DATA     BYTE      CMP1MD
 *SFR* 000000AAH   DATA     BYTE      CMP1MX
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 4
+
+
 *SFR* 000000CEH   DATA     BYTE      CRC0CN0
 *SFR* 00000086H   DATA     BYTE      CRC0CN1
 *SFR* 000000D3H   DATA     BYTE      CRC0CNT
@@ -259,13 +255,13 @@ PUBLIC SYMBOLS OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000C7H   DATA     BYTE      HFO0CAL
 *SFR* 000000D6H   DATA     BYTE      HFO1CAL
 *SFR* 000000EFH   DATA     BYTE      HFOCN
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 5
-
-
 *SFR* 000000FFH   DATA     BYTE      I2C0ADM
 *SFR* 000000BAH   DATA     BYTE      I2C0CN0
 *SFR* 000000BCH   DATA     BYTE      I2C0DIN
 *SFR* 000000BBH   DATA     BYTE      I2C0DOUT
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 5
+
+
 *SFR* 000000ADH   DATA     BYTE      I2C0FCN0
 *SFR* 000000ABH   DATA     BYTE      I2C0FCN1
 *SFR* 000000F5H   DATA     BYTE      I2C0FCT
@@ -291,7 +287,7 @@ PUBLIC SYMBOLS OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000F2H   DATA     BYTE      IPH
 *SFR* 000000E4H   DATA     BYTE      IT01CF
 *SFR* 000000B1H   DATA     BYTE      LFO0CN
-      01000023H   CODE     ---       main
+      0100003CH   CODE     ---       main
       02000000H   XDATA    ---       msg
       00000034H   DATA     DWORD     msTicks
 *SFR* 00000080H   DATA     BYTE      P0
@@ -324,13 +320,13 @@ PUBLIC SYMBOLS OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000D5H   DATA     BYTE      P1SKIP
 *SFR* 000000A0H   DATA     BYTE      P2
 *SFR* 000000A0H.0 DATA     BIT       P2_B0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 6
-
-
 *SFR* 000000A0H.1 DATA     BIT       P2_B1
 *SFR* 000000A0H.2 DATA     BIT       P2_B2
 *SFR* 000000A0H.3 DATA     BIT       P2_B3
 *SFR* 000000A0H.4 DATA     BIT       P2_B4
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 6
+
+
 *SFR* 000000A0H.5 DATA     BIT       P2_B5
 *SFR* 000000A0H.6 DATA     BIT       P2_B6
 *SFR* 000000FCH   DATA     BYTE      P2MASK
@@ -389,13 +385,13 @@ PUBLIC SYMBOLS OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 *SFR* 00000096H   DATA     BYTE      PCA0POL
 *SFR* 000000F7H   DATA     BYTE      PCA0PWM
 *SFR* 00000087H   DATA     BYTE      PCON0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 7
-
-
 *SFR* 000000CDH   DATA     BYTE      PCON1
 *SFR* 000000C1H   DATA     BYTE      PFE0CN
 *SFR* 000000A0H   DATA     BYTE      PPAGE_SFR
 *SFR* 000000F6H   DATA     BYTE      PRTDRV
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 7
+
+
 *SFR* 0000008FH   DATA     BYTE      PSCTL
 *SFR* 000000AAH   DATA     BYTE      PSTAT0
 *SFR* 000000D0H   DATA     BYTE      PSW
@@ -408,7 +404,7 @@ PUBLIC SYMBOLS OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000D0H.3 DATA     BIT       PSW_RS0
 *SFR* 000000D0H.4 DATA     BIT       PSW_RS1
       00000038H   DATA     CHAR      pwm_dir
-      01000057H   CODE     ---       PWM_Init
+      01000051H   CODE     ---       PWM_Init
       00000039H   DATA     BYTE      pwm_val
       00000027H   DATA     BYTE      pwm_val1
 *SFR* 000000D1H   DATA     BYTE      REF0CN
@@ -439,7 +435,7 @@ PUBLIC SYMBOLS OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000A7H   DATA     BYTE      SFRPAGE
 *SFR* 000000BCH   DATA     BYTE      SFRPGCN
 *SFR* 000000D7H   DATA     BYTE      SFRSTACK
-      0100007EH   CODE     ---       SiLabs_Startup
+      0100005BH   CODE     ---       SiLabs_Startup
 *SFR* 000000D6H   DATA     BYTE      SMB0ADM
 *SFR* 000000D7H   DATA     BYTE      SMB0ADR
 *SFR* 000000C1H   DATA     BYTE      SMB0CF
@@ -454,13 +450,13 @@ PUBLIC SYMBOLS OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000C0H.6 DATA     BIT       SMB0CN0_TXMODE
 *SFR* 000000C2H   DATA     BYTE      SMB0DAT
 *SFR* 000000C3H   DATA     BYTE      SMB0FCN0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 8
-
-
 *SFR* 000000C4H   DATA     BYTE      SMB0FCN1
 *SFR* 000000EFH   DATA     BYTE      SMB0FCT
 *SFR* 000000C5H   DATA     BYTE      SMB0RXLN
 *SFR* 000000ACH   DATA     BYTE      SMB0TC
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 8
+
+
 *SFR* 00000093H   DATA     BYTE      SMOD1
 *SFR* 00000081H   DATA     BYTE      SP
 *SFR* 000000A1H   DATA     BYTE      SPI0CFG
@@ -479,7 +475,6 @@ PUBLIC SYMBOLS OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 *SFR* 0000009BH   DATA     BYTE      SPI0FCN1
 *SFR* 000000F7H   DATA     BYTE      SPI0FCT
 *SFR* 000000DFH   DATA     BYTE      SPI0PCF
-      0100006DH   CODE     ---       SYSCLK_Init
       00000028H   DATA     DWORD     t0_last
       0000002CH   DATA     DWORD     t1_last
       00000030H   DATA     DWORD     t2_last
@@ -519,14 +514,14 @@ PUBLIC SYMBOLS OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 *SFR* 00000095H   DATA     BYTE      TMR3H
 *SFR* 00000094H   DATA     BYTE      TMR3L
 *SFR* 00000092H   DATA     WORD      TMR3RL
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 9
-
-
 *SFR* 00000093H   DATA     BYTE      TMR3RLH
 *SFR* 00000092H   DATA     BYTE      TMR3RLL
 *SFR* 000000A4H   DATA     WORD      TMR4
 *SFR* 00000098H   DATA     BYTE      TMR4CN0
 *SFR* 00000098H.3 DATA     BIT       TMR4CN0_T4SPLIT
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 9
+
+
 *SFR* 00000098H.0 DATA     BIT       TMR4CN0_T4XCLK0
 *SFR* 00000098H.1 DATA     BIT       TMR4CN0_T4XCLK1
 *SFR* 00000098H.4 DATA     BIT       TMR4CN0_TF4CEN
@@ -573,7 +568,7 @@ PUBLIC SYMBOLS OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000DAH   DATA     BYTE      UART1PCF
 *SFR* 000000FFH   DATA     BYTE      VDM0CN
 *SFR* 00000097H   DATA     BYTE      WDTCN
-      0100003EH   CODE     ---       XBAR_Init
+      01000023H   CODE     ---       XBAR_Init
 *SFR* 000000E1H   DATA     BYTE      XBR0
 *SFR* 000000E2H   DATA     BYTE      XBR1
 *SFR* 000000E3H   DATA     BYTE      XBR2
@@ -584,14 +579,14 @@ PUBLIC SYMBOLS OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
 
       VALUE       REP       CLASS    TYPE      SYMBOL NAME
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 10
-
-
       ====================================================
       ---         MODULE    ---      ---       INITDEVICE
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000C8H.6 SFRSYM    DATA     BIT       SCON1_PERR
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 10
+
+
       000000D0H.2 SFRSYM    DATA     BIT       PSW_OV
       00000086H   SFRSYM    DATA     BYTE      XOSC0CN
       00000090H   SFRSYM    DATA     BYTE      P1
@@ -649,14 +644,14 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       000000D9H   SFRSYM    DATA     BYTE      PCA0MD
       000000DAH   SFRSYM    DATA     BYTE      PCA0CPM0
       000000E9H   SFRSYM    DATA     BYTE      PCA0CPL1
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 11
-
-
       000000DEH   SFRSYM    DATA     BYTE      PCA0CPH5
       000000D8H.7 SFRSYM    DATA     BIT       UART1FCN1_TFRQ
       000000F0H.4 SFRSYM    DATA     BIT       B_B4
       000000DBH   SFRSYM    DATA     BYTE      PCA0CPM1
       000000EBH   SFRSYM    DATA     BYTE      PCA0CPL2
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 11
+
+
       000000A1H   SFRSYM    DATA     BYTE      ADC0ASCF
       000000B6H   SFRSYM    DATA     BYTE      ADC0ASAH
       000000F0H.5 SFRSYM    DATA     BIT       B_B5
@@ -714,14 +709,14 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       0000009AH   SFRSYM    DATA     BYTE      SPI0FCN0
       000000C7H   SFRSYM    DATA     BYTE      ADC0ASCT
       000000D8H.2 SFRSYM    DATA     BIT       PCA0CN0_CCF2
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 12
-
-
       000000E0H.7 SFRSYM    DATA     BIT       ACC_ACC7
       00000094H   SFRSYM    DATA     WORD      TMR3
       0000009BH   SFRSYM    DATA     BYTE      SPI0FCN1
       000000C0H.2 SFRSYM    DATA     BIT       TMR5CN0_TR5
       000000D8H.3 SFRSYM    DATA     BIT       PCA0CN0_CCF3
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 12
+
+
       000000A4H   SFRSYM    DATA     WORD      TMR4
       00000094H   SFRSYM    DATA     BYTE      SBCON1
       000000D8H.4 SFRSYM    DATA     BIT       PCA0CN0_CCF4
@@ -779,14 +774,14 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       0000009CH   SFRSYM    DATA     BYTE      DAC3CF1
       0000009FH   SFRSYM    DATA     BYTE      CMP0MX
       00000098H.0 SFRSYM    DATA     BIT       TMR4CN0_T4XCLK0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 13
-
-
       000000A8H.1 SFRSYM    DATA     BIT       IE_ET0
       000000AAH   SFRSYM    DATA     BYTE      CMP1MX
       00000098H.1 SFRSYM    DATA     BIT       TMR4CN0_T4XCLK1
       000000A8H.3 SFRSYM    DATA     BIT       IE_ET1
       000000D4H   SFRSYM    DATA     BYTE      P0SKIP
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 13
+
+
       000000D1H   SFRSYM    DATA     BYTE      CLOUT0
       000000D8H.0 SFRSYM    DATA     BIT       UART1FCN1_RIE
       000000C0H.0 SFRSYM    DATA     BIT       TMR5CN0_T5XCLK0
@@ -844,14 +839,14 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       000000BCH   SFRSYM    DATA     BYTE      I2C0DIN
       00000098H   SFRSYM    DATA     BYTE      DACGCF1
       000000CEH   SFRSYM    DATA     BYTE      CRC0CN0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 14
-
-
       000000F4H   SFRSYM    DATA     WORD      PCA0CP3
       0000008CH   SFRSYM    DATA     BYTE      TH0
       000000A2H   SFRSYM    DATA     BYTE      DACGCF2
       00000086H   SFRSYM    DATA     BYTE      CRC0CN1
       000000B8H.4 SFRSYM    DATA     BIT       IP_PS0
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 14
+
+
       00000084H   SFRSYM    DATA     WORD      PCA0CP4
       000000FAH   SFRSYM    DATA     BYTE      UART1FCT
       0000008DH   SFRSYM    DATA     BYTE      TH1
@@ -909,14 +904,14 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       000000A0H.4 SFRSYM    DATA     BIT       P2_B4
       00000090H.5 SFRSYM    DATA     BIT       P1_B5
       00000080H.6 SFRSYM    DATA     BIT       P0_B6
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 15
-
-
       00000098H.1 SFRSYM    DATA     BIT       DACGCF1_D1UDIS
       000000EEH   SFRSYM    DATA     BYTE      EIP1H
       000000D8H.2 SFRSYM    DATA     BIT       UART1FCN1_RXTO1
       000000B0H.4 SFRSYM    DATA     BIT       P3_B4
       000000A0H.5 SFRSYM    DATA     BIT       P2_B5
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 15
+
+
       00000090H.6 SFRSYM    DATA     BIT       P1_B6
       00000080H.7 SFRSYM    DATA     BIT       P0_B7
       00000098H.2 SFRSYM    DATA     BIT       DACGCF1_D2UDIS
@@ -974,14 +969,14 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       000000B8H.6 SFRSYM    DATA     BIT       IP_PSPI0
       000000E8H.1 SFRSYM    DATA     BIT       ADC0CN0_ADGN0
       0000009CH   SFRSYM    DATA     BYTE      PCA0CLR
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 16
-
-
       000000C0H.6 SFRSYM    DATA     BIT       TMR5CN0_TF5L
       000000E8H.2 SFRSYM    DATA     BIT       ADC0CN0_ADGN1
       000000C8H   SFRSYM    DATA     BYTE      TMR2CN0
       00000091H   SFRSYM    DATA     BYTE      TMR3CN0
       000000FDH   SFRSYM    DATA     BYTE      TMR2CN1
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 16
+
+
       00000098H   SFRSYM    DATA     BYTE      TMR4CN0
       000000FEH   SFRSYM    DATA     BYTE      TMR3CN1
       000000C0H   SFRSYM    DATA     BYTE      TMR5CN0
@@ -1039,23 +1034,22 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       00000039H   PUBLIC    DATA     BYTE      pwm_val
       00000038H   PUBLIC    DATA     CHAR      pwm_dir
       00000034H   PUBLIC    DATA     DWORD     msTicks
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 17
-
-
       00000020H.0 PUBLIC    BIT      BIT       btn_last
       02000000H   PUBLIC    XDATA    ---       msg
       00000030H   PUBLIC    DATA     DWORD     t2_last
       0000002CH   PUBLIC    DATA     DWORD     t1_last
       00000028H   PUBLIC    DATA     DWORD     t0_last
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 17
+
+
       00000027H   PUBLIC    DATA     BYTE      pwm_val1
       00000025H   PUBLIC    DATA     WORD      dt2
       00000023H   PUBLIC    DATA     WORD      dt1
       00000021H   PUBLIC    DATA     WORD      dt0
-      01000023H   PUBLIC    CODE     ---       main
-      01000057H   PUBLIC    CODE     ---       PWM_Init
-      0100003EH   PUBLIC    CODE     ---       XBAR_Init
-      0100006DH   PUBLIC    CODE     ---       SYSCLK_Init
-      0100007EH   PUBLIC    CODE     ---       SiLabs_Startup
+      0100003CH   PUBLIC    CODE     ---       main
+      01000051H   PUBLIC    CODE     ---       PWM_Init
+      01000023H   PUBLIC    CODE     ---       XBAR_Init
+      0100005BH   PUBLIC    CODE     ---       SiLabs_Startup
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000C8H.6 SFRSYM    DATA     BIT       SCON1_PERR
@@ -1104,15 +1098,15 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       000000ECH   SFRSYM    DATA     BYTE      PCA0CPH2
       000000F0H.1 SFRSYM    DATA     BIT       B_B1
       000000C3H   SFRSYM    DATA     WORD      ADC0GT
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 18
-
-
       000000D2H   SFRSYM    DATA     BYTE      TMR5RLL
       000000F5H   SFRSYM    DATA     BYTE      PCA0CPH3
       000000BDH   SFRSYM    DATA     BYTE      I2C0SLAD
       000000D8H.3 SFRSYM    DATA     BIT       UART1FCN1_RFRQ
       000000F0H.2 SFRSYM    DATA     BIT       B_B2
       000000BCH   SFRSYM    DATA     BYTE      SFRPGCN
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 18
+
+
       000000FBH   SFRSYM    DATA     BYTE      PCA0CPL0
       00000085H   SFRSYM    DATA     BYTE      PCA0CPH4
       000000F0H.3 SFRSYM    DATA     BIT       B_B3
@@ -1169,15 +1163,15 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       000000E0H.3 SFRSYM    DATA     BIT       ACC_ACC3
       00000081H   SFRSYM    DATA     BYTE      SP
       0000009DH   SFRSYM    DATA     BYTE      CMP0MD
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 19
-
-
       000000E0H.4 SFRSYM    DATA     BIT       ACC_ACC4
       000000B1H   SFRSYM    DATA     BYTE      LFO0CN
       000000ABH   SFRSYM    DATA     BYTE      CMP1MD
       000000D8H.0 SFRSYM    DATA     BIT       PCA0CN0_CCF0
       000000E0H.5 SFRSYM    DATA     BIT       ACC_ACC5
       00000098H.2 SFRSYM    DATA     BIT       TMR4CN0_TR4
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 19
+
+
       000000D8H.1 SFRSYM    DATA     BIT       PCA0CN0_CCF1
       000000E0H.6 SFRSYM    DATA     BIT       ACC_ACC6
       000000CEH   SFRSYM    DATA     WORD      TMR2
@@ -1234,15 +1228,15 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       000000C8H.3 SFRSYM    DATA     BIT       SCON1_TBX
       000000E8H.7 SFRSYM    DATA     BIT       ADC0CN0_ADEN
       00000089H   SFRSYM    DATA     BYTE      TMOD
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 20
-
-
       00000088H   SFRSYM    DATA     BYTE      TCON
       00000095H   SFRSYM    DATA     BYTE      DAC2CF0
       00000094H   SFRSYM    DATA     BYTE      DAC1CF1
       000000DFH   SFRSYM    DATA     BYTE      ADC0CF2
       0000009AH   SFRSYM    DATA     BYTE      DAC3CF0
       00000096H   SFRSYM    DATA     BYTE      DAC2CF1
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 20
+
+
       000000CFH   SFRSYM    DATA     BYTE      CRC0FLIP
       000000D0H.0 SFRSYM    DATA     BIT       PSW_PARITY
       000000A8H.4 SFRSYM    DATA     BIT       IE_ES0
@@ -1299,15 +1293,15 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       000000A2H   SFRSYM    DATA     WORD      TMR4RL
       000000D8H   SFRSYM    DATA     BYTE      PCA0CN0
       0000008BH   SFRSYM    DATA     BYTE      DAC2L
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 21
-
-
       000000E0H   SFRSYM    DATA     BYTE      ACC
       000000D2H   SFRSYM    DATA     WORD      TMR5RL
       000000D9H   SFRSYM    DATA     BYTE      UART0PCF
       0000008DH   SFRSYM    DATA     BYTE      DAC3L
       000000FBH   SFRSYM    DATA     WORD      PCA0CP0
       000000DAH   SFRSYM    DATA     BYTE      UART1PCF
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 21
+
+
       000000E9H   SFRSYM    DATA     WORD      PCA0CP1
       00000088H   SFRSYM    DATA     BYTE      DACGCF0
       000000EBH   SFRSYM    DATA     WORD      PCA0CP2
@@ -1364,15 +1358,15 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       000000ACH   SFRSYM    DATA     BYTE      CMP1CN1
       000000B0H.1 SFRSYM    DATA     BIT       P3_B1
       000000A0H.2 SFRSYM    DATA     BIT       P2_B2
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 22
-
-
       00000090H.3 SFRSYM    DATA     BIT       P1_B3
       00000080H.4 SFRSYM    DATA     BIT       P0_B4
       000000B0H.2 SFRSYM    DATA     BIT       P3_B2
       000000A0H.3 SFRSYM    DATA     BIT       P2_B3
       00000090H.4 SFRSYM    DATA     BIT       P1_B4
       00000080H.5 SFRSYM    DATA     BIT       P0_B5
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 22
+
+
       00000098H.0 SFRSYM    DATA     BIT       DACGCF1_D0UDIS
       000000D8H.1 SFRSYM    DATA     BIT       UART1FCN1_RXTO0
       000000B0H.3 SFRSYM    DATA     BIT       P3_B3
@@ -1429,15 +1423,15 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       00000098H   SFRSYM    DATA     BYTE      SCON0
       000000F6H   SFRSYM    DATA     BYTE      PRTDRV
       000000EDH   SFRSYM    DATA     BYTE      P1MAT
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 23
-
-
       000000E8H.3 SFRSYM    DATA     BIT       ADC0CN0_ADWINT
       00000093H   SFRSYM    DATA     BYTE      SMOD1
       000000C8H   SFRSYM    DATA     BYTE      SCON1
       000000FBH   SFRSYM    DATA     BYTE      P2MAT
       00000098H.6 SFRSYM    DATA     BIT       TMR4CN0_TF4L
       000000E8H.4 SFRSYM    DATA     BIT       ADC0CN0_ADBUSY
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 23
+
+
       000000D6H   SFRSYM    DATA     BYTE      SMB0ADM
       000000C5H   SFRSYM    DATA     BYTE      ADC0LTL
       000000F8H.5 SFRSYM    DATA     BIT       SPI0CN0_MODF
@@ -1494,74 +1488,57 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       000000D0H   SFRSYM    DATA     BYTE      PSW
       000000F7H   SFRSYM    DATA     BYTE      PCA0PWM
       000000E8H.4 SFRSYM    DATA     BIT       CLIF0_C2FIF
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 24
-
-
       000000F7H   SFRSYM    DATA     BYTE      SPI0FCT
       000000B6H   SFRSYM    DATA     BYTE      REVID
       000000C0H.5 SFRSYM    DATA     BIT       TMR5CN0_TF5LEN
       000000E8H.6 SFRSYM    DATA     BIT       CLIF0_C3FIF
       000000B7H   SFRSYM    DATA     BYTE      FLKEY
 
-      0100007EH   BLOCK     CODE     ---       LVL=0
-      0100007EH   LINE      CODE     ---       #17
-      0100007EH   LINE      CODE     ---       #18
-      0100007EH   LINE      CODE     ---       #20
-      01000081H   LINE      CODE     ---       #21
-      01000084H   LINE      CODE     ---       #22
-      ---         BLOCKEND  ---      ---       LVL=0
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 24
 
-      0100006DH   BLOCK     CODE     ---       LVL=0
-      0100006DH   LINE      CODE     ---       #28
-      0100006DH   LINE      CODE     ---       #29
-      0100006DH   LINE      CODE     ---       #31
-      01000070H   LINE      CODE     ---       #32
-      0100007DH   LINE      CODE     ---       #33
-      ---         BLOCKEND  ---      ---       LVL=0
 
-      0100003EH   BLOCK     CODE     ---       LVL=0
-      0100003EH   LINE      CODE     ---       #35
-      0100003EH   LINE      CODE     ---       #36
-      0100003EH   LINE      CODE     ---       #38
-      01000041H   LINE      CODE     ---       #40
-      01000044H   LINE      CODE     ---       #41
-      01000047H   LINE      CODE     ---       #43
-      0100004AH   LINE      CODE     ---       #44
-      0100004DH   LINE      CODE     ---       #47
-      01000050H   LINE      CODE     ---       #50
-      01000053H   LINE      CODE     ---       #51
-      01000056H   LINE      CODE     ---       #52
-      ---         BLOCKEND  ---      ---       LVL=0
-
-      01000057H   BLOCK     CODE     ---       LVL=0
-      01000057H   LINE      CODE     ---       #54
-      01000057H   LINE      CODE     ---       #55
-      01000057H   LINE      CODE     ---       #57
-      0100005AH   LINE      CODE     ---       #59
-      0100005DH   LINE      CODE     ---       #61
-      01000060H   LINE      CODE     ---       #62
-      01000063H   LINE      CODE     ---       #63
-      01000066H   LINE      CODE     ---       #64
-      01000069H   LINE      CODE     ---       #66
-      0100006CH   LINE      CODE     ---       #67
+      0100005BH   BLOCK     CODE     ---       LVL=0
+      0100005BH   LINE      CODE     ---       #17
+      0100005BH   LINE      CODE     ---       #18
+      0100005BH   LINE      CODE     ---       #20
+      0100005EH   LINE      CODE     ---       #21
+      01000061H   LINE      CODE     ---       #22
       ---         BLOCKEND  ---      ---       LVL=0
 
       01000023H   BLOCK     CODE     ---       LVL=0
-      01000023H   LINE      CODE     ---       #107
-      01000023H   LINE      CODE     ---       #108
-      01000023H   LINE      CODE     ---       #110
-      01000026H   LINE      CODE     ---       #111
-      01000029H   LINE      CODE     ---       #112
-      0100002CH   LINE      CODE     ---       #120
-      0100002CH   LINE      CODE     ---       #125
-      0100002FH   LINE      CODE     ---       #126
-      01000032H   LINE      CODE     ---       #127
-      01000035H   LINE      CODE     ---       #128
-      01000038H   LINE      CODE     ---       #129
-      0100003BH   LINE      CODE     ---       #132
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  15:15:39  PAGE 25
+      01000023H   LINE      CODE     ---       #29
+      01000023H   LINE      CODE     ---       #30
+      01000023H   LINE      CODE     ---       #32
+      01000026H   LINE      CODE     ---       #34
+      01000029H   LINE      CODE     ---       #35
+      0100002CH   LINE      CODE     ---       #37
+      0100002FH   LINE      CODE     ---       #38
+      01000032H   LINE      CODE     ---       #41
+      01000035H   LINE      CODE     ---       #44
+      01000038H   LINE      CODE     ---       #45
+      0100003BH   LINE      CODE     ---       #46
+      ---         BLOCKEND  ---      ---       LVL=0
 
+      01000051H   BLOCK     CODE     ---       LVL=0
+      01000051H   LINE      CODE     ---       #48
+      01000051H   LINE      CODE     ---       #49
+      01000051H   LINE      CODE     ---       #52
+      01000054H   LINE      CODE     ---       #56
+      01000057H   LINE      CODE     ---       #59
+      0100005AH   LINE      CODE     ---       #60
+      ---         BLOCKEND  ---      ---       LVL=0
 
+      0100003CH   BLOCK     CODE     ---       LVL=0
+      0100003CH   LINE      CODE     ---       #100
+      0100003CH   LINE      CODE     ---       #101
+      0100003CH   LINE      CODE     ---       #103
+      0100003FH   LINE      CODE     ---       #104
+      01000042H   LINE      CODE     ---       #106
+      01000045H   LINE      CODE     ---       #107
+      01000048H   LINE      CODE     ---       #115
+      01000048H   LINE      CODE     ---       #121
+      0100004BH   LINE      CODE     ---       #122
+      0100004EH   LINE      CODE     ---       #126
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       ?C_STARTUP
@@ -1582,6 +1559,9 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       00000000H   SYMBOL    NUMBER   ---       PDATASTART
       00000000H   SYMBOL    NUMBER   ---       PPAGE
       00000000H   SYMBOL    NUMBER   ---       PPAGEENABLE
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:15:37  PAGE 25
+
+
       01000800H   SYMBOL    CODE     NEAR LAB  STARTUP1
       00000000H   SYMBOL    NUMBER   ---       XBPSTACK
       00010000H   SYMBOL    NUMBER   ---       XBPSTACKTOP
@@ -1606,8 +1586,8 @@ SYMBOL TABLE OF MODULE:  PWM.OMF.CRBUILD (INITDEVICE)
       0100084AH   PUBLIC    CODE     ---       ?C_START
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 009BH BYTE ( 7%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0078H BYTE ( 5%) *
 ******************************************************************************
 
-Program Size: data=35.2 xdata=64 const=0 code=276
+Program Size: data=35.2 xdata=64 const=0 code=241
 LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
