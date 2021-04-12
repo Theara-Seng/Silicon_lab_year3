@@ -20,24 +20,24 @@ RM := rm -rf
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: myProject_6.omf
+all: Timer_interrupt.omf
 
 # Tool invocations
-myProject_6.omf: echo_path $(OBJS)
+Timer_interrupt.omf: echo_path $(OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Keil 8051 Linker'
-	wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@myProject_6.lnp" || $(RC)
+	wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@Timer_interrupt.lnp" || $(RC)
 	@echo 'Finished building target: $@'
 
 # Change from all upper case to the expected case
-	@-mv "MYPROJECT_6.OMF.CRBUILD" "$@"
+	@-mv "TIMER_INTERRUPT.OMF.CRBUILD" "$@"
 
-# Generate hex file: myProject_6.hex
-	@wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/Ohx51" "myProject_6.omf" "HEXFILE (myProject_6.hex)" "H386" 2>&1 >/dev/null
+# Generate hex file: Timer_interrupt.hex
+	@wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/Ohx51" "Timer_interrupt.omf" "HEXFILE (Timer_interrupt.hex)" "H386" 2>&1 >/dev/null
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS) myProject_6.omf
+	-$(RM) $(EXECUTABLES)$(OBJS) Timer_interrupt.omf
 	-@echo ' '
 
 .PHONY: all clean dependents

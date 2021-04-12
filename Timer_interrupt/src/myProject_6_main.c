@@ -46,7 +46,7 @@ void XBAR_Init()
   XBR2 |= XBR2_XBARE__ENABLED; // enable crossbar
   // skip P0.0 - P0.3, P0.6 - P0.7, P1.0 - P1.2
   P0SKIP = 0xCF; // 0b1100 1111
-  P1SKIP = 0x0B; // 0b0000 1011
+  P1SKIP = 0x07; // 0b0000 1011
   // enable output compare CEX0 and UART0
   XBR0 |= XBR0_URT0E__ENABLED;
   XBR1 |= XBR1_PCA0ME__CEX0;
@@ -56,7 +56,7 @@ void XBAR_Init()
 
   // set up P1.3 as push-pull
  // P1MDOUT |= P1MDOUT_B3__PUSH_PULL;
-  P1MDOUT |= P1MDOUT_B2__PUSH_PULL;
+  P1MDOUT |= P1MDOUT_B3__PUSH_PULL;
 }
 
 void PWM_Init()
@@ -169,9 +169,9 @@ int main (void)
     {
       t0_last = msTicks;
       /* breathing LED */
-      if (pwm_val == 0) pwm_dir = 10;
-      else if (pwm_val == 250) pwm_dir = -10;
-      pwm_val += pwm_dir;
+    //  if (pwm_val == 0) pwm_dir = 10;
+     // else if (pwm_val == 250) pwm_dir = -10;
+      pwm_val = 200;
       PCA0CPH0 = pwm_val;
     }
 
