@@ -62,9 +62,9 @@ main (void)
   while (1)
     {
       led = ~led;   //change state of led  0->1
-      for (i=0;i<3;i++){
-          timer_delay ();
-      }
+
+      timer_delay ();
+
        //delay 1 second
 // $[Generated Run-time code]
 // [Generated Run-time code]$

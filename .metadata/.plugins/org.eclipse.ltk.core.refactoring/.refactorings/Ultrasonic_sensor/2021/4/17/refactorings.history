@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Ultrasonic_sensor/src/serail.h&apos; to &apos;serial.h&apos;" description="Rename resource &apos;serail.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/serail.h" name="serial.h" stamp="1618834024979" updateReferences="true"/>
+</session>

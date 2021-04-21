@@ -1,4 +1,8 @@
-22:32:45 **** Build of configuration Keil 8051 v9.60.0 - Debug for project Servo_motor ****
+21:57:23 **** Clean-only build of configuration Keil 8051 v9.60.0 - Debug for project SMBUS ****
+make clean 
+rm -rf  ./src/InitDevice.OBJ ./src/SILABS_STARTUP.OBJ ./src/SMBUS_main.OBJ  SMBUS.omf
+ 
+21:57:24 **** Incremental Build of configuration Keil 8051 v9.60.0 - Debug for project SMBUS ****
 make all 
 PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
  
@@ -18,35 +22,56 @@ wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051
 
 MACRO ASSEMBLER AX51 V3.15.3.0
 COPYRIGHT ARM Germany GmbH 2016
-"Z:\home\tadashi\Downloads\SimplicityStudio_v5\developer\toolchains\keil_8051\9.60\BIN\AX51.exe" "/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/Device/shared/si8051Base/SILABS_STARTUP.A51" ERRORPRINT SET (SMALL,SILABS_STARTUP=1) DEBUG MACRO NOMOD51 INCDIR(/home/tadashi/SimplicityStudio/v5_workspace/Servo_motor/inc;/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0//Device/shared/si8051Base;/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0//Device/EFM8LB1/inc) PRINT(.\src/SILABS_STARTUP.lst) COND SYMBOLS PAGEWIDTH (120) PAGELENGTH (65) OBJECT(.\src/SILABS_STARTUP.OBJ)
+"Z:\home\tadashi\Downloads\SimplicityStudio_v5\developer\toolchains\keil_8051\9.60\BIN\AX51.exe" "/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/Device/shared/si8051Base/SILABS_STARTUP.A51" ERRORPRINT SET (SMALL,SILABS_STARTUP=1) DEBUG MACRO NOMOD51 INCDIR(/home/tadashi/SimplicityStudio/v5_workspace/SMBUS/inc;/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0//Device/shared/si8051Base;/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0//Device/EFM8LB1/inc) PRINT(.\src/SILABS_STARTUP.lst) COND SYMBOLS PAGEWIDTH (120) PAGELENGTH (65) OBJECT(.\src/SILABS_STARTUP.OBJ)
 
 ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S).
 Finished building: /home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/Device/shared/si8051Base/SILABS_STARTUP.A51
  
-Building file: ../src/Servo_motor_main.c
+Building file: ../src/SMBUS_main.c
 Invoking: Keil 8051 Compiler
-wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/Servo_motor_main.__i" || test $? -lt 2
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/SMBUS_main.__i" || test $? -lt 2
 
 C51 COMPILER V9.60.0.0 - SN: Eval Version
 COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
 
 C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
-Finished building: ../src/Servo_motor_main.c
+Finished building: ../src/SMBUS_main.c
  
-Building target: Servo_motor.omf
+Building target: SMBUS.omf
 Invoking: Keil 8051 Linker
-wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@Servo_motor.lnp" || test $? -lt 2
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@SMBUS.lnp" || test $? -lt 2
 
 LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
 COPYRIGHT ARM Germany GmbH 1995 - 2019
-@Servo_motor.lnp "./src/InitDevice.OBJ",
+@SMBUS.lnp "./src/InitDevice.OBJ",
 "./src/SILABS_STARTUP.OBJ",
-"./src/Servo_motor_main.OBJ"
-TO "SERVO_MOTOR.OMF.CRBUILD" REMOVEUNUSED PRINT(.\Servo_motor.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
+"./src/SMBUS_main.OBJ"
+TO "SMBUS.OMF.CRBUILD" REMOVEUNUSED PRINT(.\SMBUS.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0067H BYTE ( 5%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00A2H BYTE ( 7%) *
 ******************************************************************************
 
-Program Size: data=11.0 xdata=0 const=0 code=225
+Program Size: data=14.1 xdata=0 const=0 code=179
 LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
-Finished building target: Servo_motor.omf
+Finished building target: SMBUS.omf
+22:38:14 **** Build of configuration Keil 8051 v9.60.0 - Debug for project Timer ****
+make all 
+PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 
+Building target: Timer.omf
+Invoking: Keil 8051 Linker
+wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@Timer.lnp" || test $? -lt 2
+
+LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1995 - 2019
+@Timer.lnp "./src/InitDevice.OBJ",
+"./src/SILABS_STARTUP.OBJ",
+"./src/Timer_main.OBJ"
+TO "TIMER.OMF.CRBUILD" REMOVEUNUSED PRINT(.\Timer.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00BEH BYTE ( 9%) *
+******************************************************************************
+
+Program Size: data=15.0 xdata=0 const=13 code=324
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Finished building target: Timer.omf
