@@ -1,31 +1,10 @@
-22:32:45 **** Build of configuration Keil 8051 v9.60.0 - Debug for project Servo_motor ****
+22:37:40 **** Incremental Build of configuration Keil 8051 v9.60.0 - Debug for project Servo_motor ****
 make all 
-PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
- 
-Building file: ../src/InitDevice.c
-Invoking: Keil 8051 Compiler
-wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/InitDevice.__i" || test $? -lt 2
-
-C51 COMPILER V9.60.0.0 - SN: Eval Version
-COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
-
-C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
-Finished building: ../src/InitDevice.c
- 
-Building file: /home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/Device/shared/si8051Base/SILABS_STARTUP.A51
-Invoking: Keil 8051 Assembler
-wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/AX51" "@src/SILABS_STARTUP.__ia" || test $? -lt 2
-
-MACRO ASSEMBLER AX51 V3.15.3.0
-COPYRIGHT ARM Germany GmbH 2016
-"Z:\home\tadashi\Downloads\SimplicityStudio_v5\developer\toolchains\keil_8051\9.60\BIN\AX51.exe" "/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/Device/shared/si8051Base/SILABS_STARTUP.A51" ERRORPRINT SET (SMALL,SILABS_STARTUP=1) DEBUG MACRO NOMOD51 INCDIR(/home/tadashi/SimplicityStudio/v5_workspace/Servo_motor/inc;/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0//Device/shared/si8051Base;/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0//Device/EFM8LB1/inc) PRINT(.\src/SILABS_STARTUP.lst) COND SYMBOLS PAGEWIDTH (120) PAGELENGTH (65) OBJECT(.\src/SILABS_STARTUP.OBJ)
-
-ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S).
-Finished building: /home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/Device/shared/si8051Base/SILABS_STARTUP.A51
+PATH=/c/SiliconLabs/SimplicityStudio/v5/developer/toolchains/keil_8051/9.60/BIN:/c/SiliconLabs/SimplicityStudio/v5/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v5/features/com.silabs.external.java.windows.x86_64.feature_11.0.5/jre/bin/server:/c/SiliconLabs/SimplicityStudio/v5/features/com.silabs.external.java.windows.x86_64.feature_11.0.5/jre/bin:/c/Program Files/Microsoft MPI/Bin/:/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.1/bin:/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.1/libnvvp:/c/Program Files (x86)/Common Files/Intel/Shared Files/cpp/bin/Intel64:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/Program Files/Common Files/Oracle/Java/javapath:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/:/c/Windows/System32/OpenSSH/:/c/Program Files/MATLAB/R2014b/runtime/win64:/c/Program Files/MATLAB/R2014b/bin:/c/Program Files/Git/cmd:/c/Program Files/Calibre2/:/c/Program Files/Intel/CalibrationToolAPI/2.11.0.0/bin:/c/Program Files/NVIDIA Corporation/Nsight Compute 2019.4.0/:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/c/Program Files/dotnet/:/c/Users/sengt/AppData/Local/Microsoft/WindowsApps:/c/texlive/2019/bin/win32:/c/intelFPGA_lite/18.1/modelsim_ase/win32aloem:/c/Users/sengt/AppData/Local/Pandoc/pandoc.exe:.:/c/Users/sengt/AppData/Local/Programs/Microsoft VS Code/bin:/c/SiliconLabs/SimplicityStudio/v5
  
 Building file: ../src/Servo_motor_main.c
 Invoking: Keil 8051 Compiler
-wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/Servo_motor_main.__i" || test $? -lt 2
+C51 "@src/Servo_motor_main.__i" || test $? -lt 2
 
 C51 COMPILER V9.60.0.0 - SN: Eval Version
 COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
@@ -35,7 +14,7 @@ Finished building: ../src/Servo_motor_main.c
  
 Building target: Servo_motor.omf
 Invoking: Keil 8051 Linker
-wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@Servo_motor.lnp" || test $? -lt 2
+LX51 "@Servo_motor.lnp" || test $? -lt 2
 
 LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
 COPYRIGHT ARM Germany GmbH 1995 - 2019
@@ -44,12 +23,12 @@ COPYRIGHT ARM Germany GmbH 1995 - 2019
 "./src/Servo_motor_main.OBJ"
 TO "SERVO_MOTOR.OMF.CRBUILD" REMOVEUNUSED PRINT(.\Servo_motor.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0067H BYTE ( 5%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0061H BYTE ( 4%) *
 ******************************************************************************
 
-Program Size: data=11.0 xdata=0 const=0 code=225
+Program Size: data=11.0 xdata=0 const=0 code=219
 LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
 Finished building target: Servo_motor.omf
 
-22:32:49 Build Finished. 0 errors, 0 warnings. (took 3s.747ms)
+22:37:41 Build Finished. 0 errors, 0 warnings. (took 887ms)
 

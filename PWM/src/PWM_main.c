@@ -118,7 +118,7 @@ int main (void)
       /* breathing LED */
 
 
-      pwm_val=195;
+      pwm_val=255;
       PCA0CPH0 =pwm_val;
      // pwm_val1=50;
     //  PCA0CPH1 =pwm_val1;

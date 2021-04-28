@@ -13,10 +13,16 @@
 #include "InitDevice.h"
 #include "serial.h"
 #include "delay.h"
+#include "pin.h"
+#include "HC-SR04.h"
+#include "stdint.h"
+#include "STDIO.H"
 // $[Generated Includes]
 // [Generated Includes]$
 sbit led = P1 ^ 3;
-//-----------------------------------------------------------------------------
+uint16_t distance;
+char msg[60];
+//------------------------------------------------------                      -----------------------
 // SiLabs_Startup() Routine
 // ----------------------------------------------------------------------------
 // This function is called immediately after reset, before the initialization
@@ -29,6 +35,8 @@ SiLabs_Startup (void)
 {
   // $[SiLabs Startup]
   // [SiLabs Startup]$
+//  WDTCN = 0xDE;
+ // WDTCN = 0xAD;
 }
 
 //-----------------------------------------------------------------------------
@@ -40,21 +48,49 @@ main (void)
   // Call hardware initialization routine
   //enter_DefaultMode_from_RESET ();
   CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_1 | CLKSEL_CLKSL__HFOSC0;
-
+  CKCON0 =CKCON0_T0M__PRESCALE | CKCON0_SCA__SYSCLK_DIV_48;
+  CKCON0 = CKCON0_T1M__SYSCLK;
   XBR2 |= XBR2_XBARE__ENABLED;
-
+  XBR0 |= XBR0_URT0E__ENABLED;
+  P0MDOUT |= P0MDOUT_B4__PUSH_PULL;
   Uart_timer ();
-  P1MDOUT = P1MDOUT_B3__PUSH_PULL;
+  P1MDOUT |= P1MDOUT_B3__PUSH_PULL;
+//  P0MDOUT = P0MDOUT_B4__PUSH_PULL;
+ // P0MDOUT |= P0MDOUT_B0__PUSH_PULL;
+  P0MDOUT |= P0MDOUT_B1__PUSH_PULL;
   while (1)
     {
-      put_string ("hello world\n");
-      delay_ms (1000);
-      led = 0;
-      delay_ms (4000);
-      led = 1;
-      delay_ms (4000);
+      //   HC_SR04_TRIGGER=1;
+//      led=1;
+//      delay_ms(100);
+//      led=0;
+//      delay_ms(100);
+//         HC_SR04_TRIGGER=0;
+//       put_string ("hello world\n");
+//        delay_ms (100);
+//      distance = 10;
+//      put_string("hello world\n");
+      //delay_ms(100);
+  //    sprintf(msg, "distance=%d\n" ,distance);
+  //    put_string(msg);
+  //    delay_ms(100);
+      if (hc_sr04_get_distance (&distance) == HC_SR04_SUCCESS)
+        {
+         sprintf (msg, "the distance is %d\n", distance);
+          put_string (msg);
+        }
+      else
+       {
+          put_string ("out of range");
+        }
+      //  delay_ms (1000);
+      //  led = 0;
+      // delay_ms (8000);
+      //  led = 1;
+      //  delay_ms (8000);
 
 // $[Generated Run-time code]
 // [Generated Run-time code]$
+       //   delay_ms (400);
     }
 }

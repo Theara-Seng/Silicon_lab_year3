@@ -1,14 +1,14 @@
-C51 COMPILER V9.60.0.0   ULTRASONIC_SENSOR_MAIN                                            04/20/2021 21:38:01 PAGE 1   
+C51 COMPILER V9.60.0.0   ULTRASONIC_SENSOR_MAIN                                            04/24/2021 16:59:31 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE ULTRASONIC_SENSOR_MAIN
-OBJECT MODULE PLACED IN .\src/Ultrasonic_sensor_main.OBJ
-COMPILER INVOKED BY: Z:\home\tadashi\Downloads\SimplicityStudio_v5\developer\toolchains\keil_8051\9.60\BIN\C51.exe /home
-                    -/tadashi/SimplicityStudio/v5_workspace/Ultrasonic_sensor/src/Ultrasonic_sensor_main.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(
-                    -LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(0,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/home/tadashi
-                    -/SimplicityStudio/v5_workspace/Ultrasonic_sensor/inc;/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.
-                    -2.0//Device/shared/si8051Base;/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0//Device/EFM8LB1/inc
-                    -) PRINT(.\src/Ultrasonic_sensor_main.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src/Ultrasonic_sensor_main.OBJ)
+OBJECT MODULE PLACED IN .\src\Ultrasonic_sensor_main.OBJ
+COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v5\developer\toolchains\keil_8051\9.60\BIN\C51.exe D:\year4-semeste
+                    -r2\Silicon_lab_year3\Ultrasonic_sensor\src\Ultrasonic_sensor_main.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVE
+                    -L(2) FLOATFUZZY(3) OPTIMIZE(0,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(D:\year4-semester2\Silicon_lab_
+                    -year3\Ultrasonic_sensor\inc;C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/8051/v4.2.0//Device/shared/si8051Base;C:/S
+                    -iliconLabs/SimplicityStudio/v5/developer/sdks/8051/v4.2.0//Device/EFM8LB1/inc) PRINT(.\src\Ultrasonic_sensor_main.lst) C
+                    -OND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src\Ultrasonic_sensor_main.OBJ)
 
 line level    source
 
@@ -27,61 +27,97 @@ line level    source
   13          #include "InitDevice.h"
   14          #include "serial.h"
   15          #include "delay.h"
-  16          // $[Generated Includes]
-  17          // [Generated Includes]$
-  18          sbit led = P1 ^ 3;
-  19          //-----------------------------------------------------------------------------
-  20          // SiLabs_Startup() Routine
-  21          // ----------------------------------------------------------------------------
-  22          // This function is called immediately after reset, before the initialization
-  23          // code is run in SILABS_STARTUP.A51 (which runs before main() ). This is a
-  24          // useful place to disable the watchdog timer, which is enable by default
-  25          // and may trigger before main() in some instances.
-  26          //-----------------------------------------------------------------------------
-  27          void
-  28          SiLabs_Startup (void)
-  29          {
-  30   1        // $[SiLabs Startup]
-  31   1        // [SiLabs Startup]$
-  32   1      }
-  33          
-  34          //-----------------------------------------------------------------------------
-  35          // main() Routine
-  36          // ----------------------------------------------------------------------------
-  37          int
-  38          main (void)
-  39          {
-  40   1        // Call hardware initialization routine
-  41   1        //enter_DefaultMode_from_RESET ();
-  42   1        CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_1 | CLKSEL_CLKSL__HFOSC0;
-  43   1      
-  44   1        XBR2 |= XBR2_XBARE__ENABLED;
-  45   1      
-  46   1        Uart_timer ();
-  47   1        P1MDOUT = P1MDOUT_B3__PUSH_PULL;
-  48   1        while (1)
-  49   1          {
-  50   2            put_string ("hello world\n");
-  51   2            delay_ms (1000);
-C51 COMPILER V9.60.0.0   ULTRASONIC_SENSOR_MAIN                                            04/20/2021 21:38:01 PAGE 2   
+  16          #include "pin.h"
+  17          #include "HC-SR04.h"
+  18          #include "stdint.h"
+  19          #include "STDIO.H"
+  20          // $[Generated Includes]
+  21          // [Generated Includes]$
+  22          sbit led = P1 ^ 3;
+  23          uint16_t distance;
+  24          char msg[60];
+  25          //-----------------------------------------------------------------------------
+  26          // SiLabs_Startup() Routine
+  27          // ----------------------------------------------------------------------------
+  28          // This function is called immediately after reset, before the initialization
+  29          // code is run in SILABS_STARTUP.A51 (which runs before main() ). This is a
+  30          // useful place to disable the watchdog timer, which is enable by default
+  31          // and may trigger before main() in some instances.
+  32          //-----------------------------------------------------------------------------
+  33          void
+  34          SiLabs_Startup (void)
+  35          {
+  36   1        // $[SiLabs Startup]
+  37   1        // [SiLabs Startup]$
+  38   1      //  WDTCN = 0xDE;
+  39   1       // WDTCN = 0xAD;
+  40   1      }
+  41          
+  42          //-----------------------------------------------------------------------------
+  43          // main() Routine
+  44          // ----------------------------------------------------------------------------
+  45          int
+  46          main (void)
+  47          {
+  48   1        // Call hardware initialization routine
+  49   1        //enter_DefaultMode_from_RESET ();
+  50   1        CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_1 | CLKSEL_CLKSL__HFOSC0;
+  51   1        CKCON0 =CKCON0_T0M__PRESCALE | CKCON0_SCA__SYSCLK_DIV_48;
+C51 COMPILER V9.60.0.0   ULTRASONIC_SENSOR_MAIN                                            04/24/2021 16:59:31 PAGE 2   
 
-  52   2            led = 0;
-  53   2            delay_ms (4000);
-  54   2            led = 1;
-  55   2            delay_ms (4000);
-  56   2      
-  57   2      // $[Generated Run-time code]
-  58   2      // [Generated Run-time code]$
-  59   2          }
-  60   1      }
+  52   1        CKCON0 = CKCON0_T1M__SYSCLK;
+  53   1        XBR2 |= XBR2_XBARE__ENABLED;
+  54   1        XBR0 |= XBR0_URT0E__ENABLED;
+  55   1        P0MDOUT |= P0MDOUT_B4__PUSH_PULL;
+  56   1        Uart_timer ();
+  57   1        P1MDOUT |= P1MDOUT_B3__PUSH_PULL;
+  58   1      //  P0MDOUT = P0MDOUT_B4__PUSH_PULL;
+  59   1       // P0MDOUT |= P0MDOUT_B0__PUSH_PULL;
+  60   1        P0MDOUT |= P0MDOUT_B1__PUSH_PULL;
+  61   1        while (1)
+  62   1          {
+  63   2            //   HC_SR04_TRIGGER=1;
+  64   2      //      led=1;
+  65   2      //      delay_ms(100);
+  66   2      //      led=0;
+  67   2      //      delay_ms(100);
+  68   2      //         HC_SR04_TRIGGER=0;
+  69   2      //       put_string ("hello world\n");
+  70   2      //        delay_ms (100);
+  71   2      //      distance = 10;
+  72   2      //      put_string("hello world\n");
+  73   2            //delay_ms(100);
+  74   2        //    sprintf(msg, "distance=%d\n" ,distance);
+  75   2        //    put_string(msg);
+  76   2        //    delay_ms(100);
+  77   2            if (hc_sr04_get_distance (&distance) == HC_SR04_SUCCESS)
+  78   2              {
+  79   3               sprintf (msg, "the distance is %d\n", distance);
+  80   3                put_string (msg);
+  81   3              }
+  82   2            else
+  83   2             {
+  84   3                put_string ("out of range");
+  85   3              }
+  86   2            //  delay_ms (1000);
+  87   2            //  led = 0;
+  88   2            // delay_ms (8000);
+  89   2            //  led = 1;
+  90   2            //  delay_ms (8000);
+  91   2      
+  92   2      // $[Generated Run-time code]
+  93   2      // [Generated Run-time code]$
+  94   2             //   delay_ms (400);
+  95   2          }
+  96   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =     62    ----
-   CONSTANT SIZE    =     13    ----
+   CODE SIZE        =    105    ----
+   CONSTANT SIZE    =     33    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =   ----    ----
+   DATA SIZE        =     62    ----
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
    EDATA SIZE       =   ----    ----

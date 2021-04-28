@@ -1,0 +1,14 @@
+/*
+ * pin.h
+ *
+ *  Created on: Apr 22, 2021
+ *      Author: sengt
+ */
+
+#ifndef INC_PIN_H_
+#define INC_PIN_H_
+
+#define HC_SR04_ECHO      P2_1
+#define HC_SR04_TRIGGER   P2_0
+
+#endif /* INC_PIN_H_ */

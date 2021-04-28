@@ -1,3 +1,4 @@
+"./src/HC-SR04.OBJ",
 "./src/InitDevice.OBJ",
 "./src/SILABS_STARTUP.OBJ",
 "./src/Ultrasonic_sensor_main.OBJ",
