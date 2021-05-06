@@ -47,8 +47,8 @@ void pwm_init(){
    PCA0PWM   |=PCA0PWM_CLSEL__10_BITS | PCA0PWM_ARSEL__AUTORELOAD;
 
 
-   PCA0CPL0 = 100;
-   PCA0CPH0 = 255;
+   PCA0CPL0 =110;// 14;
+   PCA0CPH0 =246; //238;
 
    PCA0CPL1=255;
    PCA0CPH1=2;
@@ -69,10 +69,10 @@ main (void)
 {
   // Call hardware initialization routine
  // enter_DefaultMode_from_RESET ();
-  CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_32 | CLKSEL_CLKSL__HFOSC0;
+  CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_8 | CLKSEL_CLKSL__HFOSC0;
   cross_bar_init();
   pwm_init();
-  PCA0MD  |=PCA0MD_CPS__SYSCLK_DIV_12;
+  PCA0MD  |=PCA0MD_CPS__SYSCLK;
   P0MDOUT |=P0MDOUT_B0__PUSH_PULL;
   P0MDOUT |=P0MDOUT_B1__PUSH_PULL;
   while (1)

@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.0.0   LED_PWM_MAIN                                                      04/29/2021 10:49:57 PAGE 1   
+C51 COMPILER V9.60.0.0   LED_PWM_MAIN                                                      05/06/2021 10:43:09 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE LED_PWM_MAIN
@@ -63,43 +63,50 @@ line level    source
   49   1        PCA0CPM1 |= PCA0CPM1_PWM__ENABLED;
   50   1        PCA0CPH0 = 128;   //duty cycle= (2^8 -128)/2^8)
   51   1        PCA0CPH1 = 20;    //duty cycle= (2^8-20)/2^8
-C51 COMPILER V9.60.0.0   LED_PWM_MAIN                                                      04/29/2021 10:49:57 PAGE 2   
+C51 COMPILER V9.60.0.0   LED_PWM_MAIN                                                      05/06/2021 10:43:09 PAGE 2   
 
   52   1        PCA0CN0 = PCA0CN0_CR__RUN;
   53   1      }
   54          void pwm_10bit(){
   55   1        PCA0CPM0 = PCA0CPM0_PWM__ENABLED | PCA0CPM0_ECOM__ENABLED;
   56   1        PCA0PWM =  PCA0PWM_ARSEL__AUTORELOAD | PCA0PWM_CLSEL__10_BITS;  //10 Bit PWM mode
-  57   1        PCA0CPL0= 0;
-  58   1        PCA0CPH0= 2;
+  57   1        PCA0CPL0= 0;  //0b00000000   2^8-> 0-256
+  58   1        PCA0CPH0= 2;  //0b00000010   2^8=256    2^9=512
   59   1      
   60   1        PCA0CN0 = PCA0CN0_CR__RUN;
   61   1      
   62   1      
   63   1      }
-  64          //-----------------------------------------------------------------------------
-  65          // main() Routine
-  66          // ----------------------------------------------------------------------------
-  67          int
-  68          main (void)
-  69          {
-  70   1        // Call hardware initialization routine
-  71   1        //enter_DefaultMode_from_RESET ();
-  72   1        CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_8 | CLKSEL_CLKSL__HFOSC0; // CLK=24.5Mhz divide by 8
-  73   1        PCA0MD |= PCA0MD_CPS__SYSCLK; //Select PCA clock default mode from system clock 3.0625Mhz
-  74   1        crossbar_init ();
-  75   1        pwm_10bit ();
-  76   1      
-  77   1        while (1)
-  78   1          {
-  79   2      // $[Generated Run-time code]
-  80   2      // [Generated Run-time code]$
-  81   2          }
-  82   1      }
+  64          void pwm_16bit(){
+  65   1        PCA0CPM0 = PCA0CPM0_PWM16__16_BIT | PCA0CPM0_ECOM__ENABLED | PCA0CPM0_PWM__ENABLED;
+  66   1        PCA0CPL0 = 9;  //LOW byte 8 bit
+  67   1        PCA0CPH0 = 244;  //High byte 8 bit
+  68   1      
+  69   1        PCA0CN0 = PCA0CN0_CR__RUN;
+  70   1      }
+  71          //-----------------------------------------------------------------------------
+  72          // main() Routine
+  73          // ----------------------------------------------------------------------------
+  74          int
+  75          main (void)
+  76          {
+  77   1        // Call hardware initialization routine
+  78   1        //enter_DefaultMode_from_RESET ();
+  79   1        CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_8 | CLKSEL_CLKSL__HFOSC0; // CLK=24.5Mhz divide by 8
+  80   1        PCA0MD |= PCA0MD_CPS__SYSCLK; //Select PCA clock default mode from system clock 3.0625Mhz
+  81   1        crossbar_init ();
+  82   1        pwm_16bit ();
+  83   1      
+  84   1        while (1)
+  85   1          {
+  86   2      // $[Generated Run-time code]
+  87   2      // [Generated Run-time code]$
+  88   2          }
+  89   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =     76    ----
+   CODE SIZE        =     89    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

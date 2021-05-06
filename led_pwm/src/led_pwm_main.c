@@ -61,6 +61,13 @@ void pwm_10bit(){
 
 
 }
+void pwm_16bit(){
+  PCA0CPM0 = PCA0CPM0_PWM16__16_BIT | PCA0CPM0_ECOM__ENABLED | PCA0CPM0_PWM__ENABLED;
+  PCA0CPL0 = 9;  //LOW byte 8 bit
+  PCA0CPH0 = 244;  //High byte 8 bit
+
+  PCA0CN0 = PCA0CN0_CR__RUN;
+}
 //-----------------------------------------------------------------------------
 // main() Routine
 // ----------------------------------------------------------------------------
@@ -72,7 +79,7 @@ main (void)
   CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_8 | CLKSEL_CLKSL__HFOSC0; // CLK=24.5Mhz divide by 8
   PCA0MD |= PCA0MD_CPS__SYSCLK; //Select PCA clock default mode from system clock 3.0625Mhz
   crossbar_init ();
-  pwm_10bit ();
+  pwm_16bit ();
 
   while (1)
     {
