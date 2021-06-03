@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.0.0   ULTRASONIC_SENSOR_MAIN                                            04/24/2021 16:59:31 PAGE 1   
+C51 COMPILER V9.60.0.0   ULTRASONIC_SENSOR_MAIN                                            05/10/2021 19:00:08 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE ULTRASONIC_SENSOR_MAIN
@@ -35,89 +35,86 @@ line level    source
   21          // [Generated Includes]$
   22          sbit led = P1 ^ 3;
   23          uint16_t distance;
-  24          char msg[60];
-  25          //-----------------------------------------------------------------------------
-  26          // SiLabs_Startup() Routine
-  27          // ----------------------------------------------------------------------------
-  28          // This function is called immediately after reset, before the initialization
-  29          // code is run in SILABS_STARTUP.A51 (which runs before main() ). This is a
-  30          // useful place to disable the watchdog timer, which is enable by default
-  31          // and may trigger before main() in some instances.
-  32          //-----------------------------------------------------------------------------
-  33          void
-  34          SiLabs_Startup (void)
-  35          {
-  36   1        // $[SiLabs Startup]
-  37   1        // [SiLabs Startup]$
-  38   1      //  WDTCN = 0xDE;
-  39   1       // WDTCN = 0xAD;
-  40   1      }
-  41          
-  42          //-----------------------------------------------------------------------------
-  43          // main() Routine
-  44          // ----------------------------------------------------------------------------
-  45          int
-  46          main (void)
-  47          {
-  48   1        // Call hardware initialization routine
-  49   1        //enter_DefaultMode_from_RESET ();
-  50   1        CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_1 | CLKSEL_CLKSL__HFOSC0;
-  51   1        CKCON0 =CKCON0_T0M__PRESCALE | CKCON0_SCA__SYSCLK_DIV_48;
-C51 COMPILER V9.60.0.0   ULTRASONIC_SENSOR_MAIN                                            04/24/2021 16:59:31 PAGE 2   
+  24          char r;
+  25          char string[6];
+  26          char msg[60];
+  27          //------------------------------------------------------                      -----------------------
+  28          // SiLabs_Startup() Routine
+  29          // ----------------------------------------------------------------------------
+  30          // This function is called immediately after reset, before the initialization
+  31          // code is run in SILABS_STARTUP.A51 (which runs before main() ). This is a
+  32          // useful place to disable the watchdog timer, which is enable by default
+  33          // and may trigger before main() in some instances.
+  34          //-----------------------------------------------------------------------------
+  35          void
+  36          SiLabs_Startup (void)
+  37          {
+  38   1        // $[SiLabs Startup]
+  39   1        // [SiLabs Startup]$
+  40   1        WDTCN = 0xDE;
+  41   1        WDTCN = 0xAD;
+  42   1      }
+  43          
+  44          //-----------------------------------------------------------------------------
+  45          // main() Routine
+  46          // ----------------------------------------------------------------------------
+  47          int
+  48          main (void)
+  49          {
+  50   1        // Call hardware initialization routine
+  51   1        //enter_DefaultMode_from_RESET ();
+C51 COMPILER V9.60.0.0   ULTRASONIC_SENSOR_MAIN                                            05/10/2021 19:00:08 PAGE 2   
 
-  52   1        CKCON0 = CKCON0_T1M__SYSCLK;
-  53   1        XBR2 |= XBR2_XBARE__ENABLED;
-  54   1        XBR0 |= XBR0_URT0E__ENABLED;
-  55   1        P0MDOUT |= P0MDOUT_B4__PUSH_PULL;
-  56   1        Uart_timer ();
-  57   1        P1MDOUT |= P1MDOUT_B3__PUSH_PULL;
-  58   1      //  P0MDOUT = P0MDOUT_B4__PUSH_PULL;
-  59   1       // P0MDOUT |= P0MDOUT_B0__PUSH_PULL;
-  60   1        P0MDOUT |= P0MDOUT_B1__PUSH_PULL;
-  61   1        while (1)
-  62   1          {
-  63   2            //   HC_SR04_TRIGGER=1;
-  64   2      //      led=1;
-  65   2      //      delay_ms(100);
-  66   2      //      led=0;
-  67   2      //      delay_ms(100);
-  68   2      //         HC_SR04_TRIGGER=0;
-  69   2      //       put_string ("hello world\n");
-  70   2      //        delay_ms (100);
-  71   2      //      distance = 10;
-  72   2      //      put_string("hello world\n");
-  73   2            //delay_ms(100);
-  74   2        //    sprintf(msg, "distance=%d\n" ,distance);
-  75   2        //    put_string(msg);
-  76   2        //    delay_ms(100);
-  77   2            if (hc_sr04_get_distance (&distance) == HC_SR04_SUCCESS)
-  78   2              {
-  79   3               sprintf (msg, "the distance is %d\n", distance);
-  80   3                put_string (msg);
-  81   3              }
-  82   2            else
-  83   2             {
-  84   3                put_string ("out of range");
-  85   3              }
-  86   2            //  delay_ms (1000);
-  87   2            //  led = 0;
-  88   2            // delay_ms (8000);
-  89   2            //  led = 1;
-  90   2            //  delay_ms (8000);
-  91   2      
-  92   2      // $[Generated Run-time code]
-  93   2      // [Generated Run-time code]$
-  94   2             //   delay_ms (400);
-  95   2          }
-  96   1      }
+  52   1        CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_1 | CLKSEL_CLKSL__HFOSC0;
+  53   1        CKCON0 |=CKCON0_T0M__PRESCALE | CKCON0_SCA__SYSCLK_DIV_48|CKCON0_T1M__SYSCLK;
+  54   1        XBR2 |= XBR2_XBARE__ENABLED;
+  55   1        XBR0 |= XBR0_URT0E__ENABLED;
+  56   1        P0MDOUT |= P0MDOUT_B4__PUSH_PULL |P0MDOUT_B5__PUSH_PULL;
+  57   1        Uart_timer ();
+  58   1        P1MDOUT |= P1MDOUT_B3__PUSH_PULL;
+  59   1      //  P0MDOUT = P0MDOUT_B4__PUSH_PULL;
+  60   1       // P0MDOUT |= P0MDOUT_B0__PUSH_PULL;
+  61   1        P0MDOUT |= P0MDOUT_B1__PUSH_PULL;
+  62   1        P0MDOUT |= P0MDOUT_B0__PUSH_PULL;
+  63   1        led=0;
+  64   1        while (1)
+  65   1          {
+  66   2      
+  67   2      
+  68   2            if (hc_sr04_get_distance (&distance) == HC_SR04_SUCCESS)
+  69   2              {
+  70   3               sprintf (msg, "the distance is %d\n", distance);
+  71   3                put_string (msg);
+  72   3              }
+  73   2            else
+  74   2             {
+  75   3                put_string ("out of range");
+  76   3              }
+  77   2              delay_ms (1000);
+  78   2      
+  79   2      //    r=receive_char();
+  80   2      //    if (r=='h'){
+  81   2      //        led=0;
+  82   2      //       put_char(r);
+  83   2      //    }
+  84   2      //    else if (r=='i'){
+  85   2      //        led=1;
+  86   2      //        put_char(r);
+  87   2      //    }
+  88   2      
+  89   2      // $[Generated Run-time code]
+  90   2      // [Generated Run-time code]$
+  91   2             //   delay_ms (400);
+  92   2          }
+  93   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    105    ----
+   CODE SIZE        =    124    ----
    CONSTANT SIZE    =     33    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =     62    ----
+   DATA SIZE        =     69    ----
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
    EDATA SIZE       =   ----    ----

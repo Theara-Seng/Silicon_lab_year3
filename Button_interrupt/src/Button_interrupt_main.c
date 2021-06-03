@@ -29,6 +29,8 @@ SiLabs_Startup (void)
 {
   // $[SiLabs Startup]
   // [SiLabs Startup]$
+  WDTCN = 0xDE;
+  WDTCN = 0xAD;
 }
 
 //-----------------------------------------------------------------------------
@@ -42,7 +44,7 @@ main (void)
   XBR2 |= XBR2_XBARE__ENABLED;
   IE_EA = 1;
   IE_EX0 = 1;
-  // P1MDIN |= P1MDIN_B4__DIGITAL;
+  P1MDIN |= P1MDIN_B4__DIGITAL;
   P1MDOUT |= P1MDOUT_B3__PUSH_PULL;
   // INT0=button;
   //led = 0;

@@ -1,4 +1,4 @@
-LX51 LINKER/LOCATER V4.66.97.0                                                          04/22/2021  21:41:53  PAGE 1
+LX51 LINKER/LOCATER V4.66.97.0                                                          06/02/2021  10:49:17  PAGE 1
 
 
 LX51 LINKER/LOCATER V4.66.97.0, INVOKED BY:
@@ -47,7 +47,7 @@ C:000000H   C:000000H   C:00FBFEH             ECODE
 C:000000H   C:000000H   C:00FBFEH             HCONST
 X:000000H   X:000000H   X:000FFFH   000040H   XDATA
 X:000000H   X:000000H   X:000FFFH             HDATA
-C:000000H   C:000000H   C:00FFFFH   0006F4H   CODE
+C:000000H   C:000000H   C:00FFFFH   000711H   CODE
 I:000000H   I:000000H   I:00007FH   000039H   DATA
 I:000000H   I:000000H   I:0000FFH   000001H   IDATA
 C:000000H   C:000000H   C:00FFFFH   000051H   CONST
@@ -64,7 +64,7 @@ START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
 000000H   000007H   000008H   ---    AT..     DATA           "REG BANK 0"
 000008H   00001FH   000018H   BYTE   UNIT     DATA           ?DT?MYPROJECT_6_MAIN
 000020H.0 000021H.0 000001H.1 BIT    UNIT     BIT            _BIT_GROUP_
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 2
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 2
 
 
 000021H.1 000021H.2 000000H.2 BIT    UNIT     BIT            ?BI?MYPROJECT_6_MAIN
@@ -80,22 +80,22 @@ START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
 000003H   000009H   000007H   BYTE   UNIT     CODE           ?PR?SILABS_STARTUP?MYPROJECT_6_MAIN
 00000AH   00000AH   000001H   BYTE   UNIT     CODE           ?PR?UART0_INIT?MYPROJECT_6_MAIN
 00000BH   00000DH   000003H   BYTE   OFFS..   CODE           ?MYPROJECT_6_MAIN?0000B
-00000EH   00017CH   00016FH   BYTE   UNIT     CODE           ?PR?MAIN?MYPROJECT_6_MAIN
-00017DH   00021BH   00009FH   BYTE   UNIT     CODE           ?C?LIB_CODE
-00021CH   000246H   00002BH   BYTE   UNIT     CODE           ?PR?_PUT_STRING?MYPROJECT_6_MAIN
-000247H   00026FH   000029H   BYTE   UNIT     CODE           ?PR?TIMER0_ISR?MYPROJECT_6_MAIN
-000270H   000296H   000027H   BYTE   UNIT     CODE           ?PR?PUTCHAR?PUTCHAR
-000297H   0002B3H   00001DH   BYTE   UNIT     CODE           ?C_INITSEG
-0002B4H   0002CCH   000019H   BYTE   UNIT     CODE           ?PR?TIMER01_INIT?MYPROJECT_6_MAIN
-0002CDH   0002E2H   000016H   BYTE   UNIT     CODE           ?PR?XBAR_INIT?MYPROJECT_6_MAIN
-0002E3H   0002F3H   000011H   BYTE   UNIT     CODE           ?PR?SYSCLK_INIT?MYPROJECT_6_MAIN
-0002F4H   0002FEH   00000BH   BYTE   UNIT     CODE           ?PR?_PUT_CHAR?MYPROJECT_6_MAIN
-0002FFH   000308H   00000AH   BYTE   UNIT     CODE           ?PR?PWM_INIT?MYPROJECT_6_MAIN
-000309H   000359H   000051H   BYTE   UNIT     CONST          ?CO?MYPROJECT_6_MAIN
-00035AH   0007FFH   0004A6H   ---    ---      **GAP**
+00000EH   000199H   00018CH   BYTE   UNIT     CODE           ?PR?MAIN?MYPROJECT_6_MAIN
+00019AH   000238H   00009FH   BYTE   UNIT     CODE           ?C?LIB_CODE
+000239H   000263H   00002BH   BYTE   UNIT     CODE           ?PR?_PUT_STRING?MYPROJECT_6_MAIN
+000264H   00028CH   000029H   BYTE   UNIT     CODE           ?PR?TIMER0_ISR?MYPROJECT_6_MAIN
+00028DH   0002B3H   000027H   BYTE   UNIT     CODE           ?PR?PUTCHAR?PUTCHAR
+0002B4H   0002D0H   00001DH   BYTE   UNIT     CODE           ?C_INITSEG
+0002D1H   0002E9H   000019H   BYTE   UNIT     CODE           ?PR?TIMER01_INIT?MYPROJECT_6_MAIN
+0002EAH   0002FFH   000016H   BYTE   UNIT     CODE           ?PR?XBAR_INIT?MYPROJECT_6_MAIN
+000300H   000310H   000011H   BYTE   UNIT     CODE           ?PR?SYSCLK_INIT?MYPROJECT_6_MAIN
+000311H   00031BH   00000BH   BYTE   UNIT     CODE           ?PR?_PUT_CHAR?MYPROJECT_6_MAIN
+00031CH   000325H   00000AH   BYTE   UNIT     CODE           ?PR?PWM_INIT?MYPROJECT_6_MAIN
+000326H   000376H   000051H   BYTE   UNIT     CONST          ?CO?MYPROJECT_6_MAIN
+000377H   0007FFH   000489H   ---    ---      **GAP**
 000800H   000B5BH   00035CH   BYTE   UNIT     CODE           ?PR?PRINTF?PRINTF
-000B5CH   000D69H   00020EH   ---    ---      **GAP**
-000D6AH   000DF8H   00008FH   BYTE   UNIT     CODE           ?C_C51STARTUP
+000B5CH   000D86H   00022BH   ---    ---      **GAP**
+000D87H   000E15H   00008FH   BYTE   UNIT     CODE           ?C_C51STARTUP
 
 * * * * * * * * * * *  X D A T A   M E M O R Y  * * * * * * * * * * * * *
 000000H   00003FH   000040H   BYTE   UNIT     XDATA          ?XD?MYPROJECT_6_MAIN
@@ -129,7 +129,7 @@ MAIN/MYPROJECT_6_MAIN                         ----- -----  ----- -----
   +--> _PUT_STRING/MYPROJECT_6_MAIN
   +--> PRINTF/PRINTF
 
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 3
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 3
 
 
 SYSCLK_INIT/MYPROJECT_6_MAIN                  ----- -----  ----- -----
@@ -169,21 +169,21 @@ PUBLIC SYMBOLS OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       00000022H   DATA     ---       ?_PRINTF?BYTE
       00000022H   DATA     ---       ?_SPRINTF517?BYTE
       00000022H   DATA     ---       ?_SPRINTF?BYTE
-      010001F6H   CODE     ---       ?C?CCASE
-      010001A7H   CODE     ---       ?C?CLDOPTR
-      0100017DH   CODE     ---       ?C?CLDPTR
+      01000213H   CODE     ---       ?C?CCASE
+      010001C4H   CODE     ---       ?C?CLDOPTR
+      0100019AH   CODE     ---       ?C?CLDPTR
       00000000H   NUMBER   ---       ?C?CODESEG
-      010001D4H   CODE     ---       ?C?CSTPTR
-      010001E6H   CODE     ---       ?C?PLDIIDATA
-      01000196H   CODE     ---       ?C?ULCMP
+      010001F1H   CODE     ---       ?C?CSTPTR
+      01000203H   CODE     ---       ?C?PLDIIDATA
+      010001B3H   CODE     ---       ?C?ULCMP
       00000000H   NUMBER   ---       ?C?XDATASEG
-      01000DB4H   CODE     ---       ?C_START
+      01000DD1H   CODE     ---       ?C_START
       01000000H   CODE     NEAR LAB  ?C_STARTUP
       01000862H   CODE     ---       _PRINTF
       01000862H   CODE     ---       _PRINTF517
-      010002F4H   CODE     ---       _put_char
-      0100021CH   CODE     ---       _put_string
-      01000270H   CODE     ---       _PUTCHAR
+      01000311H   CODE     ---       _put_char
+      01000239H   CODE     ---       _put_string
+      0100028DH   CODE     ---       _PUTCHAR
       0100085CH   CODE     ---       _SPRINTF
       0100085CH   CODE     ---       _SPRINTF517
 *SFR* 000000E0H   DATA     BYTE      ACC
@@ -194,7 +194,7 @@ PUBLIC SYMBOLS OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000E0H.4 DATA     BIT       ACC_ACC4
 *SFR* 000000E0H.5 DATA     BIT       ACC_ACC5
 *SFR* 000000E0H.6 DATA     BIT       ACC_ACC6
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 4
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 4
 
 
 *SFR* 000000E0H.7 DATA     BIT       ACC_ACC7
@@ -259,7 +259,7 @@ PUBLIC SYMBOLS OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000B3H   DATA     BYTE      CLU1CF
 *SFR* 000000B2H   DATA     BYTE      CLU1FN
 *SFR* 00000085H   DATA     BYTE      CLU1MX
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 5
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 5
 
 
 *SFR* 000000B6H   DATA     BYTE      CLU2CF
@@ -324,7 +324,7 @@ PUBLIC SYMBOLS OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       0000000CH   DATA     WORD      dt2
 *SFR* 000000E6H   DATA     BYTE      EIE1
 *SFR* 000000F3H   DATA     BYTE      EIE2
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 6
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 6
 
 
 *SFR* 000000BBH   DATA     BYTE      EIP1
@@ -389,7 +389,7 @@ PUBLIC SYMBOLS OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
 *SFR* 00000090H.2 DATA     BIT       P1_B2
 *SFR* 00000090H.3 DATA     BIT       P1_B3
 *SFR* 00000090H.4 DATA     BIT       P1_B4
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 7
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 7
 
 
 *SFR* 00000090H.5 DATA     BIT       P1_B5
@@ -454,7 +454,7 @@ PUBLIC SYMBOLS OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
 *SFR* 00000084H   DATA     BYTE      PCA0CPL4
 *SFR* 000000DDH   DATA     BYTE      PCA0CPL5
 *SFR* 000000DAH   DATA     BYTE      PCA0CPM0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 8
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 8
 
 
 *SFR* 000000DBH   DATA     BYTE      PCA0CPM1
@@ -485,7 +485,7 @@ PUBLIC SYMBOLS OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000D0H.3 DATA     BIT       PSW_RS0
 *SFR* 000000D0H.4 DATA     BIT       PSW_RS1
       0000001EH   DATA     CHAR      pwm_dir
-      010002FFH   CODE     ---       PWM_Init
+      0100031CH   CODE     ---       PWM_Init
       0000001FH   DATA     BYTE      pwm_val
 *SFR* 000000D1H   DATA     BYTE      REF0CN
 *SFR* 000000C9H   DATA     BYTE      REG0CN
@@ -519,7 +519,7 @@ PUBLIC SYMBOLS OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000D6H   DATA     BYTE      SMB0ADM
 *SFR* 000000D7H   DATA     BYTE      SMB0ADR
 *SFR* 000000C1H   DATA     BYTE      SMB0CF
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 9
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 9
 
 
 *SFR* 000000C0H   DATA     BYTE      SMB0CN0
@@ -555,7 +555,7 @@ PUBLIC SYMBOLS OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
 *SFR* 0000009BH   DATA     BYTE      SPI0FCN1
 *SFR* 000000F7H   DATA     BYTE      SPI0FCT
 *SFR* 000000DFH   DATA     BYTE      SPI0PCF
-      010002E3H   CODE     ---       SYSCLK_Init
+      01000300H   CODE     ---       SYSCLK_Init
       0000000EH   DATA     DWORD     t0_last
       00000012H   DATA     DWORD     t1_last
       00000016H   DATA     DWORD     t2_last
@@ -570,8 +570,8 @@ PUBLIC SYMBOLS OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
 *SFR* 00000088H.6 DATA     BIT       TCON_TR1
 *SFR* 0000008CH   DATA     BYTE      TH0
 *SFR* 0000008DH   DATA     BYTE      TH1
-      010002B4H   CODE     ---       TIMER01_Init
-      01000247H   CODE     ---       TIMER0_ISR
+      010002D1H   CODE     ---       TIMER01_Init
+      01000264H   CODE     ---       TIMER0_ISR
 *SFR* 0000008AH   DATA     BYTE      TL0
 *SFR* 0000008BH   DATA     BYTE      TL1
 *SFR* 00000089H   DATA     BYTE      TMOD
@@ -584,7 +584,7 @@ PUBLIC SYMBOLS OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000C8H.7 DATA     BIT       TMR2CN0_TF2H
 *SFR* 000000C8H.6 DATA     BIT       TMR2CN0_TF2L
 *SFR* 000000C8H.5 DATA     BIT       TMR2CN0_TF2LEN
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 10
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 10
 
 
 *SFR* 000000C8H.2 DATA     BIT       TMR2CN0_TR2
@@ -649,12 +649,12 @@ PUBLIC SYMBOLS OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000FAH   DATA     BYTE      UART1FCT
 *SFR* 0000009EH   DATA     BYTE      UART1LIN
 *SFR* 000000DAH   DATA     BYTE      UART1PCF
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 11
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 11
 
 
 *SFR* 000000FFH   DATA     BYTE      VDM0CN
 *SFR* 00000097H   DATA     BYTE      WDTCN
-      010002CDH   CODE     ---       XBAR_Init
+      010002EAH   CODE     ---       XBAR_Init
 *SFR* 000000E1H   DATA     BYTE      XBR0
 *SFR* 000000E2H   DATA     BYTE      XBR1
 *SFR* 000000E3H   DATA     BYTE      XBR2
@@ -714,7 +714,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       000000A2H   SFRSYM    DATA     BYTE      TMR4RLL
       000000ECH   SFRSYM    DATA     BYTE      PCA0CPH2
       000000F0H.1 SFRSYM    DATA     BIT       B_B1
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 12
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 12
 
 
       000000C3H   SFRSYM    DATA     WORD      ADC0GT
@@ -779,7 +779,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       000000BFH   SFRSYM    DATA     BYTE      CLU3CF
       000000E0H.3 SFRSYM    DATA     BIT       ACC_ACC3
       00000081H   SFRSYM    DATA     BYTE      SP
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 13
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 13
 
 
       0000009DH   SFRSYM    DATA     BYTE      CMP0MD
@@ -844,7 +844,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       000000C8H.1 SFRSYM    DATA     BIT       TMR2CN0_T2XCLK1
       000000C8H.3 SFRSYM    DATA     BIT       SCON1_TBX
       000000E8H.7 SFRSYM    DATA     BIT       ADC0CN0_ADEN
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 14
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 14
 
 
       00000089H   SFRSYM    DATA     BYTE      TMOD
@@ -909,7 +909,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       00000089H   SFRSYM    DATA     BYTE      DAC1L
       000000A2H   SFRSYM    DATA     WORD      TMR4RL
       000000D8H   SFRSYM    DATA     BYTE      PCA0CN0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 15
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 15
 
 
       0000008BH   SFRSYM    DATA     BYTE      DAC2L
@@ -974,7 +974,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       000000C0H   SFRSYM    DATA     BYTE      SMB0CN0
       000000ACH   SFRSYM    DATA     BYTE      CMP1CN1
       000000B0H.1 SFRSYM    DATA     BIT       P3_B1
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 16
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 16
 
 
       000000A0H.2 SFRSYM    DATA     BIT       P2_B2
@@ -1039,7 +1039,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       000000D7H   SFRSYM    DATA     BYTE      SFRSTACK
       00000098H   SFRSYM    DATA     BYTE      SCON0
       000000F6H   SFRSYM    DATA     BYTE      PRTDRV
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 17
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 17
 
 
       000000EDH   SFRSYM    DATA     BYTE      P1MAT
@@ -1104,7 +1104,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       000000E8H.2 SFRSYM    DATA     BIT       CLIF0_C1FIF
       000000D0H   SFRSYM    DATA     BYTE      PSW
       000000F7H   SFRSYM    DATA     BYTE      PCA0PWM
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 18
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 18
 
 
       000000E8H.4 SFRSYM    DATA     BIT       CLIF0_C2FIF
@@ -1126,14 +1126,14 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       00000000H   SYMBOL    NUMBER   ---       IBPSTACK
       00000100H   SYMBOL    NUMBER   ---       IBPSTACKTOP
       00000080H   SYMBOL    NUMBER   ---       IDATALEN
-      01000D70H   SYMBOL    CODE     NEAR LAB  IDATALOOP
+      01000D8DH   SYMBOL    CODE     NEAR LAB  IDATALOOP
       00000000H   SYMBOL    NUMBER   ---       PBPSTACK
       00000100H   SYMBOL    NUMBER   ---       PBPSTACKTOP
       00000000H   SYMBOL    NUMBER   ---       PDATALEN
       00000000H   SYMBOL    NUMBER   ---       PDATASTART
       00000000H   SYMBOL    NUMBER   ---       PPAGE
       00000000H   SYMBOL    NUMBER   ---       PPAGEENABLE
-      01000D6AH   SYMBOL    CODE     NEAR LAB  STARTUP1
+      01000D87H   SYMBOL    CODE     NEAR LAB  STARTUP1
       00000000H   SYMBOL    NUMBER   ---       XBPSTACK
       00010000H   SYMBOL    NUMBER   ---       XBPSTACKTOP
       00000000H   SYMBOL    NUMBER   ---       XDATALEN
@@ -1143,14 +1143,14 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       01000000H   LINE      CODE     ---       #126
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000D6AH   BLOCK     CODE     NEAR LAB  LVL=0
-      01000D6AH   LINE      CODE     ---       #134
-      01000D6DH   LINE      CODE     ---       #138
-      01000D6FH   LINE      CODE     ---       #139
-      01000D70H   LINE      CODE     ---       #140
-      01000D71H   LINE      CODE     ---       #141
-      01000D73H   LINE      CODE     ---       #190
-      01000D76H   LINE      CODE     ---       #201
+      01000D87H   BLOCK     CODE     NEAR LAB  LVL=0
+      01000D87H   LINE      CODE     ---       #134
+      01000D8AH   LINE      CODE     ---       #138
+      01000D8CH   LINE      CODE     ---       #139
+      01000D8DH   LINE      CODE     ---       #140
+      01000D8EH   LINE      CODE     ---       #141
+      01000D90H   LINE      CODE     ---       #190
+      01000D93H   LINE      CODE     ---       #201
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       MYPROJECT_6_MAIN
@@ -1167,17 +1167,17 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       0000000AH   PUBLIC    DATA     WORD      dt1
       00000008H   PUBLIC    DATA     WORD      dt0
       0100000EH   PUBLIC    CODE     ---       main
-      0100021CH   PUBLIC    CODE     ---       _put_string
-      010002F4H   PUBLIC    CODE     ---       _put_char
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 19
+      01000239H   PUBLIC    CODE     ---       _put_string
+      01000311H   PUBLIC    CODE     ---       _put_char
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 19
 
 
       0100000AH   PUBLIC    CODE     ---       UART0_Init
-      010002B4H   PUBLIC    CODE     ---       TIMER01_Init
-      010002FFH   PUBLIC    CODE     ---       PWM_Init
-      010002CDH   PUBLIC    CODE     ---       XBAR_Init
-      010002E3H   PUBLIC    CODE     ---       SYSCLK_Init
-      01000247H   PUBLIC    CODE     ---       TIMER0_ISR
+      010002D1H   PUBLIC    CODE     ---       TIMER01_Init
+      0100031CH   PUBLIC    CODE     ---       PWM_Init
+      010002EAH   PUBLIC    CODE     ---       XBAR_Init
+      01000300H   PUBLIC    CODE     ---       SYSCLK_Init
+      01000264H   PUBLIC    CODE     ---       TIMER0_ISR
       01000003H   PUBLIC    CODE     ---       SiLabs_Startup
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
@@ -1234,7 +1234,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       000000F0H.2 SFRSYM    DATA     BIT       B_B2
       000000BCH   SFRSYM    DATA     BYTE      SFRPGCN
       000000FBH   SFRSYM    DATA     BYTE      PCA0CPL0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 20
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 20
 
 
       00000085H   SFRSYM    DATA     BYTE      PCA0CPH4
@@ -1299,7 +1299,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       000000E0H.5 SFRSYM    DATA     BIT       ACC_ACC5
       00000098H.2 SFRSYM    DATA     BIT       TMR4CN0_TR4
       000000D8H.1 SFRSYM    DATA     BIT       PCA0CN0_CCF1
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 21
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 21
 
 
       000000E0H.6 SFRSYM    DATA     BIT       ACC_ACC6
@@ -1364,7 +1364,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       0000009AH   SFRSYM    DATA     BYTE      DAC3CF0
       00000096H   SFRSYM    DATA     BYTE      DAC2CF1
       000000CFH   SFRSYM    DATA     BYTE      CRC0FLIP
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 22
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 22
 
 
       000000D0H.0 SFRSYM    DATA     BIT       PSW_PARITY
@@ -1429,7 +1429,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       000000FBH   SFRSYM    DATA     WORD      PCA0CP0
       000000DAH   SFRSYM    DATA     BYTE      UART1PCF
       000000E9H   SFRSYM    DATA     WORD      PCA0CP1
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 23
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 23
 
 
       00000088H   SFRSYM    DATA     BYTE      DACGCF0
@@ -1494,7 +1494,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       00000090H.4 SFRSYM    DATA     BIT       P1_B4
       00000080H.5 SFRSYM    DATA     BIT       P0_B5
       00000098H.0 SFRSYM    DATA     BIT       DACGCF1_D0UDIS
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 24
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 24
 
 
       000000D8H.1 SFRSYM    DATA     BIT       UART1FCN1_RXTO0
@@ -1559,7 +1559,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       00000098H.6 SFRSYM    DATA     BIT       TMR4CN0_TF4L
       000000E8H.4 SFRSYM    DATA     BIT       ADC0CN0_ADBUSY
       000000D6H   SFRSYM    DATA     BYTE      SMB0ADM
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 25
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 25
 
 
       000000C5H   SFRSYM    DATA     BYTE      ADC0LTL
@@ -1624,7 +1624,7 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       000000B7H   SFRSYM    DATA     BYTE      FLKEY
 
       01000003H   BLOCK     CODE     ---       LVL=0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 26
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 26
 
 
       01000003H   LINE      CODE     ---       #17
@@ -1634,62 +1634,62 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       01000009H   LINE      CODE     ---       #22
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000247H   BLOCK     CODE     ---       LVL=0
-      01000247H   LINE      CODE     ---       #25
-      0100024BH   LINE      CODE     ---       #27
-      01000263H   LINE      CODE     ---       #29
-      01000266H   LINE      CODE     ---       #30
-      01000269H   LINE      CODE     ---       #32
-      0100026BH   LINE      CODE     ---       #33
+      01000264H   BLOCK     CODE     ---       LVL=0
+      01000264H   LINE      CODE     ---       #25
+      01000268H   LINE      CODE     ---       #27
+      01000280H   LINE      CODE     ---       #29
+      01000283H   LINE      CODE     ---       #30
+      01000286H   LINE      CODE     ---       #32
+      01000288H   LINE      CODE     ---       #33
       ---         BLOCKEND  ---      ---       LVL=0
 
-      010002E3H   BLOCK     CODE     ---       LVL=0
-      010002E3H   LINE      CODE     ---       #36
-      010002E3H   LINE      CODE     ---       #37
-      010002E3H   LINE      CODE     ---       #39
-      010002E6H   LINE      CODE     ---       #40
-      010002F3H   LINE      CODE     ---       #41
+      01000300H   BLOCK     CODE     ---       LVL=0
+      01000300H   LINE      CODE     ---       #36
+      01000300H   LINE      CODE     ---       #37
+      01000300H   LINE      CODE     ---       #39
+      01000303H   LINE      CODE     ---       #40
+      01000310H   LINE      CODE     ---       #41
       ---         BLOCKEND  ---      ---       LVL=0
 
-      010002CDH   BLOCK     CODE     ---       LVL=0
-      010002CDH   LINE      CODE     ---       #43
-      010002CDH   LINE      CODE     ---       #44
-      010002CDH   LINE      CODE     ---       #46
-      010002D0H   LINE      CODE     ---       #48
-      010002D3H   LINE      CODE     ---       #49
-      010002D6H   LINE      CODE     ---       #51
-      010002D9H   LINE      CODE     ---       #52
-      010002DCH   LINE      CODE     ---       #55
-      010002DFH   LINE      CODE     ---       #59
-      010002E2H   LINE      CODE     ---       #60
+      010002EAH   BLOCK     CODE     ---       LVL=0
+      010002EAH   LINE      CODE     ---       #43
+      010002EAH   LINE      CODE     ---       #44
+      010002EAH   LINE      CODE     ---       #46
+      010002EDH   LINE      CODE     ---       #48
+      010002F0H   LINE      CODE     ---       #49
+      010002F3H   LINE      CODE     ---       #51
+      010002F6H   LINE      CODE     ---       #52
+      010002F9H   LINE      CODE     ---       #55
+      010002FCH   LINE      CODE     ---       #59
+      010002FFH   LINE      CODE     ---       #60
       ---         BLOCKEND  ---      ---       LVL=0
 
-      010002FFH   BLOCK     CODE     ---       LVL=0
-      010002FFH   LINE      CODE     ---       #62
-      010002FFH   LINE      CODE     ---       #63
-      010002FFH   LINE      CODE     ---       #65
-      01000302H   LINE      CODE     ---       #67
-      01000305H   LINE      CODE     ---       #69
-      01000308H   LINE      CODE     ---       #70
+      0100031CH   BLOCK     CODE     ---       LVL=0
+      0100031CH   LINE      CODE     ---       #62
+      0100031CH   LINE      CODE     ---       #63
+      0100031CH   LINE      CODE     ---       #65
+      0100031FH   LINE      CODE     ---       #67
+      01000322H   LINE      CODE     ---       #69
+      01000325H   LINE      CODE     ---       #70
       ---         BLOCKEND  ---      ---       LVL=0
 
-      010002B4H   BLOCK     CODE     ---       LVL=0
-      010002B4H   LINE      CODE     ---       #72
-      010002B4H   LINE      CODE     ---       #73
-      010002B4H   LINE      CODE     ---       #76
-      010002B7H   LINE      CODE     ---       #79
-      010002BAH   LINE      CODE     ---       #84
-      010002BDH   LINE      CODE     ---       #85
-      010002C0H   LINE      CODE     ---       #92
-      010002C3H   LINE      CODE     ---       #93
-      010002C6H   LINE      CODE     ---       #96
-      010002C8H   LINE      CODE     ---       #97
-      010002CAH   LINE      CODE     ---       #98
-      010002CCH   LINE      CODE     ---       #99
+      010002D1H   BLOCK     CODE     ---       LVL=0
+      010002D1H   LINE      CODE     ---       #72
+      010002D1H   LINE      CODE     ---       #73
+      010002D1H   LINE      CODE     ---       #76
+      010002D4H   LINE      CODE     ---       #79
+      010002D7H   LINE      CODE     ---       #84
+      010002DAH   LINE      CODE     ---       #85
+      010002DDH   LINE      CODE     ---       #92
+      010002E0H   LINE      CODE     ---       #93
+      010002E3H   LINE      CODE     ---       #96
+      010002E5H   LINE      CODE     ---       #97
+      010002E7H   LINE      CODE     ---       #98
+      010002E9H   LINE      CODE     ---       #99
       ---         BLOCKEND  ---      ---       LVL=0
 
       0100000AH   BLOCK     CODE     ---       LVL=0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 27
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 27
 
 
       0100000AH   LINE      CODE     ---       #101
@@ -1697,25 +1697,25 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       0100000AH   LINE      CODE     ---       #105
       ---         BLOCKEND  ---      ---       LVL=0
 
-      010002F4H   BLOCK     CODE     ---       LVL=0
+      01000311H   BLOCK     CODE     ---       LVL=0
       0000003AH   SYMBOL    DATA     CHAR      c
-      010002F4H   LINE      CODE     ---       #109
-      010002F6H   LINE      CODE     ---       #110
-      010002F6H   LINE      CODE     ---       #111
-      010002F9H   LINE      CODE     ---       #112
-      010002FCH   LINE      CODE     ---       #113
-      010002FEH   LINE      CODE     ---       #114
+      01000311H   LINE      CODE     ---       #109
+      01000313H   LINE      CODE     ---       #110
+      01000313H   LINE      CODE     ---       #111
+      01000316H   LINE      CODE     ---       #112
+      01000319H   LINE      CODE     ---       #113
+      0100031BH   LINE      CODE     ---       #114
       ---         BLOCKEND  ---      ---       LVL=0
 
-      0100021CH   BLOCK     CODE     ---       LVL=0
+      01000239H   BLOCK     CODE     ---       LVL=0
       00000036H   SYMBOL    DATA     ---       str
-      0100021CH   LINE      CODE     ---       #116
-      01000222H   LINE      CODE     ---       #117
-      01000222H   LINE      CODE     ---       #119
-      0100022FH   LINE      CODE     ---       #120
-      0100022FH   LINE      CODE     ---       #121
-      01000244H   LINE      CODE     ---       #122
-      01000246H   LINE      CODE     ---       #123
+      01000239H   LINE      CODE     ---       #116
+      0100023FH   LINE      CODE     ---       #117
+      0100023FH   LINE      CODE     ---       #119
+      0100024CH   LINE      CODE     ---       #120
+      0100024CH   LINE      CODE     ---       #121
+      01000261H   LINE      CODE     ---       #122
+      01000263H   LINE      CODE     ---       #123
       ---         BLOCKEND  ---      ---       LVL=0
 
       0100000EH   BLOCK     CODE     ---       LVL=0
@@ -1735,40 +1735,42 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       01000058H   LINE      CODE     ---       #168
       0100007AH   LINE      CODE     ---       #169
       0100007AH   LINE      CODE     ---       #170
-      0100008AH   LINE      CODE     ---       #174
-      0100008DH   LINE      CODE     ---       #175
-      01000090H   LINE      CODE     ---       #176
-      01000090H   LINE      CODE     ---       #178
-      010000B2H   LINE      CODE     ---       #179
-      010000B2H   LINE      CODE     ---       #180
-      010000C2H   LINE      CODE     ---       #182
-      010000F3H   LINE      CODE     ---       #183
-      010000FCH   LINE      CODE     ---       #184
-      010000FCH   LINE      CODE     ---       #186
-      01000121H   LINE      CODE     ---       #187
-      01000121H   LINE      CODE     ---       #188
-      01000131H   LINE      CODE     ---       #189
-      01000135H   LINE      CODE     ---       #190
-      0100013BH   LINE      CODE     ---       #191
-      0100013BH   LINE      CODE     ---       #193
-      0100016CH   LINE      CODE     ---       #194
-      01000175H   LINE      CODE     ---       #195
-      01000175H   LINE      CODE     ---       #196
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/22/2021  21:41:53  PAGE 28
+      0100008AH   LINE      CODE     ---       #172
+      01000097H   LINE      CODE     ---       #173
+      010000A4H   LINE      CODE     ---       #174
+      010000AAH   LINE      CODE     ---       #175
+      010000ADH   LINE      CODE     ---       #176
+      010000ADH   LINE      CODE     ---       #178
+      010000CFH   LINE      CODE     ---       #179
+      010000CFH   LINE      CODE     ---       #180
+      010000DFH   LINE      CODE     ---       #182
+      01000110H   LINE      CODE     ---       #183
+      01000119H   LINE      CODE     ---       #184
+      01000119H   LINE      CODE     ---       #186
+      0100013EH   LINE      CODE     ---       #187
+      0100013EH   LINE      CODE     ---       #188
+      0100014EH   LINE      CODE     ---       #189
+      01000152H   LINE      CODE     ---       #190
+      01000158H   LINE      CODE     ---       #191
+      01000158H   LINE      CODE     ---       #193
+      01000189H   LINE      CODE     ---       #194
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/02/2021  10:49:17  PAGE 28
 
 
-      01000179H   LINE      CODE     ---       #197
-      01000179H   LINE      CODE     ---       #198
+      01000192H   LINE      CODE     ---       #195
+      01000192H   LINE      CODE     ---       #196
+      01000196H   LINE      CODE     ---       #197
+      01000196H   LINE      CODE     ---       #198
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       ?C_INIT
-      01000DB4H   PUBLIC    CODE     ---       ?C_START
+      01000DD1H   PUBLIC    CODE     ---       ?C_START
 
       ---         MODULE    ---      ---       ?C?CLDPTR
-      0100017DH   PUBLIC    CODE     ---       ?C?CLDPTR
+      0100019AH   PUBLIC    CODE     ---       ?C?CLDPTR
 
       ---         MODULE    ---      ---       ?C?ULCMP
-      01000196H   PUBLIC    CODE     ---       ?C?ULCMP
+      010001B3H   PUBLIC    CODE     ---       ?C?ULCMP
 
       ---         MODULE    ---      ---       PRINTF
       00000022H   PUBLIC    DATA     ---       ?_PRINTF517?BYTE
@@ -1781,23 +1783,23 @@ SYMBOL TABLE OF MODULE:  TIMER_INTERRUPT.OMF.CRBUILD (INITDEVICE)
       0100085CH   PUBLIC    CODE     ---       _SPRINTF517
 
       ---         MODULE    ---      ---       ?C?CLDOPTR
-      010001A7H   PUBLIC    CODE     ---       ?C?CLDOPTR
+      010001C4H   PUBLIC    CODE     ---       ?C?CLDOPTR
 
       ---         MODULE    ---      ---       ?C?CSTPTR
-      010001D4H   PUBLIC    CODE     ---       ?C?CSTPTR
+      010001F1H   PUBLIC    CODE     ---       ?C?CSTPTR
 
       ---         MODULE    ---      ---       ?C?PLDIIDATA
-      010001E6H   PUBLIC    CODE     ---       ?C?PLDIIDATA
+      01000203H   PUBLIC    CODE     ---       ?C?PLDIIDATA
 
       ---         MODULE    ---      ---       ?C?CCASE
-      010001F6H   PUBLIC    CODE     ---       ?C?CCASE
+      01000213H   PUBLIC    CODE     ---       ?C?CCASE
 
       ---         MODULE    ---      ---       PUTCHAR
-      01000270H   PUBLIC    CODE     ---       _PUTCHAR
+      0100028DH   PUBLIC    CODE     ---       _PUTCHAR
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 02BAH BYTE (34%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 02D7H BYTE (35%) *
 ******************************************************************************
 
-Program Size: data=59.3 xdata=64 const=81 code=1780
+Program Size: data=59.3 xdata=64 const=81 code=1809
 LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

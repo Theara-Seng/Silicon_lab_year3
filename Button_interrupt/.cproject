@@ -279,7 +279,7 @@
         	
     </storageModule>
     	
-    <storageModule moduleId="com.silabs.ss.framework.ide.project.core.cpp" project.generation="42" projectCommon.boardIds="com.silabs.board.none:0.0.0" projectCommon.buildArtifactType="EXE" projectCommon.copiedFiles="[{&quot;generated&quot;:false,&quot;projectPath&quot;:&quot;src/Button_interrupt_main.c&quot;,&quot;originalPath&quot;:&quot;/tmp/expandedFile9702431538962477525&quot;,&quot;content&quot;:-105717608}]" projectCommon.ideId="simplicity-ide" projectCommon.importModeId="LINK_LIBRARIES" projectCommon.partId="mcu.8051.efm8.lb1.efm8lb12f64e-c-qsop24" projectCommon.sdkId="com.silabs.sdk.8051:4.2.0.0_1279911441" projectCommon.toolchainId="com.silabs.ss.tool.ide.c8051.toolchain.keil.cdt:9.60.0"/>
+    <storageModule moduleId="com.silabs.ss.framework.ide.project.core.cpp" project.generation="1" projectCommon.boardIds="com.silabs.board.none:0.0.0" projectCommon.buildArtifactType="EXE" projectCommon.copiedFiles="[{&quot;generated&quot;:false,&quot;projectPath&quot;:&quot;src/Button_interrupt_main.c&quot;,&quot;originalPath&quot;:&quot;/tmp/expandedFile9702431538962477525&quot;,&quot;content&quot;:-105717608}]" projectCommon.ideId="simplicity-ide" projectCommon.importModeId="LINK_LIBRARIES" projectCommon.partId="mcu.8051.efm8.lb1.efm8lb12f64e-c-qsop24" projectCommon.sdkId="com.silabs.sdk.8051:4.2.0.0_1279911441" projectCommon.toolchainId="com.silabs.ss.tool.ide.c8051.toolchain.keil.cdt:9.60.0"/>
     	
     <storageModule moduleId="cdtBuildSystem" version="4.0.0">
         		

@@ -34,21 +34,21 @@ void
 crossbar_init ()
 {
   XBR2 |= XBR2_XBARE__ENABLED;  //Enable pin
-  P0SKIP = 0XFF;  //0B11111111
-  P1SKIP = 0X07;     //0B00000111  P1.0 P1.1 P1.2
+ // P0SKIP = 0XFF;  //0B11111111
+ //P1SKIP = 0X07;     //0B00000111  P1.0 P1.1 P1.2
   XBR1 |= XBR1_PCA0ME__CEX0;    //Enable PCA  PORT 1 BIT 3
   XBR1 |= XBR1_PCA0ME__CEX0_TO_CEX1; //Enable PCA Port 1 Bit 4
 
-  P1MDOUT |= P1MDOUT_B3__PUSH_PULL;
-  P1MDOUT |= P1MDOUT_B4__PUSH_PULL;
+  P0MDOUT |= P0MDOUT_B0__PUSH_PULL;
+  P0MDOUT |= P0MDOUT_B1__PUSH_PULL;
 }
 void
 pwm ()
 {
   PCA0CPM0 |= PCA0CPM0_PWM__ENABLED;  // 8 bit resolution
   PCA0CPM1 |= PCA0CPM1_PWM__ENABLED;
-  PCA0CPH0 = 128;   //duty cycle= (2^8 -128)/2^8)
-  PCA0CPH1 = 20;    //duty cycle= (2^8-20)/2^8
+  PCA0CPH0 = 150;   //duty cycle= (2^8 -128)/2^8)
+  PCA0CPH1 = 140;    //duty cycle= (2^8-20)/2^8
   PCA0CN0 = PCA0CN0_CR__RUN;
 }
 void pwm_10bit(){
@@ -79,7 +79,7 @@ main (void)
   CLKSEL = CLKSEL_CLKDIV__SYSCLK_DIV_8 | CLKSEL_CLKSL__HFOSC0; // CLK=24.5Mhz divide by 8
   PCA0MD |= PCA0MD_CPS__SYSCLK; //Select PCA clock default mode from system clock 3.0625Mhz
   crossbar_init ();
-  pwm_16bit ();
+  pwm ();
 
   while (1)
     {

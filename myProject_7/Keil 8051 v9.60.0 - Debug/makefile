@@ -26,14 +26,14 @@ all: myProject_7.omf
 myProject_7.omf: echo_path $(OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Keil 8051 Linker'
-	wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@myProject_7.lnp" || $(RC)
+	LX51 "@myProject_7.lnp" || $(RC)
 	@echo 'Finished building target: $@'
 
 # Change from all upper case to the expected case
 	@-mv "MYPROJECT_7.OMF.CRBUILD" "$@"
 
 # Generate hex file: myProject_7.hex
-	@wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/Ohx51" "myProject_7.omf" "HEXFILE (myProject_7.hex)" "H386" 2>&1 >/dev/null
+	@Ohx51 "myProject_7.omf" "HEXFILE (myProject_7.hex)" "H386" 2>&1 >/dev/null
 
 # Other Targets
 clean:

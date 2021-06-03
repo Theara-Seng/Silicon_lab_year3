@@ -1,10 +1,10 @@
-21:57:24 **** Incremental Build of configuration Keil 8051 v9.60.0 - Debug for project SMBUS ****
+21:03:50 **** Build of configuration Keil 8051 v9.60.0 - Debug for project SMBUS ****
 make all 
-PATH=/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN:/home/tadashi/Downloads/SimplicityStudio_v5/support/8051:/usr/bin:/home/tadashi/Downloads/SimplicityStudio_v5/support/common/build:/home/tadashi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH=/c/SiliconLabs/SimplicityStudio/v5/developer/toolchains/keil_8051/9.60/BIN:/c/SiliconLabs/SimplicityStudio/v5/support/8051:/usr/bin:/c/SiliconLabs/SimplicityStudio/v5/features/com.silabs.external.java.windows.x86_64.feature_11.0.5/jre/bin/server:/c/SiliconLabs/SimplicityStudio/v5/features/com.silabs.external.java.windows.x86_64.feature_11.0.5/jre/bin:/c/Python39/Scripts/:/c/Python39/:/c/Program Files/Microsoft MPI/Bin/:/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.1/bin:/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.1/libnvvp:/c/Program Files (x86)/Common Files/Intel/Shared Files/cpp/bin/Intel64:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/Program Files/Common Files/Oracle/Java/javapath:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/:/c/Windows/System32/OpenSSH/:/c/Program Files/MATLAB/R2014b/runtime/win64:/c/Program Files/MATLAB/R2014b/bin:/c/Program Files/Git/cmd:/c/Program Files/Calibre2/:/c/Program Files/Intel/CalibrationToolAPI/2.11.0.0/bin:/c/Program Files/NVIDIA Corporation/Nsight Compute 2019.4.0/:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/c/Program Files/dotnet/:/c/Program Files/nodejs/:/c/ProgramData/chocolatey/bin:/c/Users/sengt/AppData/Local/Microsoft/WindowsApps:/c/texlive/2019/bin/win32:/c/intelFPGA_lite/18.1/modelsim_ase/win32aloem:/c/Users/sengt/AppData/Local/Pandoc/pandoc.exe:.:/c/Users/sengt/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/sengt/AppData/Roaming/npm:/c/SiliconLabs/SimplicityStudio/v5
  
 Building file: ../src/InitDevice.c
 Invoking: Keil 8051 Compiler
-wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/InitDevice.__i" || test $? -lt 2
+C51 "@src/InitDevice.__i" || test $? -lt 2
 
 C51 COMPILER V9.60.0.0 - SN: Eval Version
 COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
@@ -12,20 +12,20 @@ COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights res
 C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
 Finished building: ../src/InitDevice.c
  
-Building file: /home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/Device/shared/si8051Base/SILABS_STARTUP.A51
+Building file: C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/8051/v4.2.0/Device/shared/si8051Base/SILABS_STARTUP.A51
 Invoking: Keil 8051 Assembler
-wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/AX51" "@src/SILABS_STARTUP.__ia" || test $? -lt 2
+AX51 "@src/SILABS_STARTUP.__ia" || test $? -lt 2
 
 MACRO ASSEMBLER AX51 V3.15.3.0
 COPYRIGHT ARM Germany GmbH 2016
-"Z:\home\tadashi\Downloads\SimplicityStudio_v5\developer\toolchains\keil_8051\9.60\BIN\AX51.exe" "/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/Device/shared/si8051Base/SILABS_STARTUP.A51" ERRORPRINT SET (SMALL,SILABS_STARTUP=1) DEBUG MACRO NOMOD51 INCDIR(/home/tadashi/SimplicityStudio/v5_workspace/SMBUS/inc;/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0//Device/shared/si8051Base;/home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0//Device/EFM8LB1/inc) PRINT(.\src/SILABS_STARTUP.lst) COND SYMBOLS PAGEWIDTH (120) PAGELENGTH (65) OBJECT(.\src/SILABS_STARTUP.OBJ)
+"c:\SiliconLabs\SimplicityStudio\v5\developer\toolchains\keil_8051\9.60\BIN\AX51.exe" "C:\SiliconLabs\SimplicityStudio\v5\developer\sdks\8051\v4.2.0\Device\shared\si8051Base\SILABS_STARTUP.A51" ERRORPRINT SET (SMALL,SILABS_STARTUP=1) DEBUG MACRO NOMOD51 INCDIR(D:\year4-semester2\Silicon_lab_year3\SMBUS\inc;C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/8051/v4.2.0//Device/shared/si8051Base;C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/8051/v4.2.0//Device/EFM8LB1/inc) PRINT(.\src\SILABS_STARTUP.lst) COND SYMBOLS PAGEWIDTH (120) PAGELENGTH (65) OBJECT(.\src\SILABS_STARTUP.OBJ)
 
 ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S).
-Finished building: /home/tadashi/Downloads/SimplicityStudio_v5/developer/sdks/8051/v4.2.0/Device/shared/si8051Base/SILABS_STARTUP.A51
+Finished building: C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/8051/v4.2.0/Device/shared/si8051Base/SILABS_STARTUP.A51
  
 Building file: ../src/SMBUS_main.c
 Invoking: Keil 8051 Compiler
-wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/C51" "@src/SMBUS_main.__i" || test $? -lt 2
+C51 "@src/SMBUS_main.__i" || test $? -lt 2
 
 C51 COMPILER V9.60.0.0 - SN: Eval Version
 COPYRIGHT Copyright (C) 2012 - 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
@@ -35,7 +35,7 @@ Finished building: ../src/SMBUS_main.c
  
 Building target: SMBUS.omf
 Invoking: Keil 8051 Linker
-wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@SMBUS.lnp" || test $? -lt 2
+LX51 "@SMBUS.lnp" || test $? -lt 2
 
 LX51 LINKER/LOCATER V4.66.97.0 - SN: Eval Version
 COPYRIGHT ARM Germany GmbH 1995 - 2019
@@ -44,12 +44,12 @@ COPYRIGHT ARM Germany GmbH 1995 - 2019
 "./src/SMBUS_main.OBJ"
 TO "SMBUS.OMF.CRBUILD" REMOVEUNUSED PRINT(.\SMBUS.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00A2H BYTE ( 7%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00D3H BYTE (10%) *
 ******************************************************************************
 
-Program Size: data=14.1 xdata=0 const=0 code=179
+Program Size: data=15.1 xdata=0 const=0 code=228
 LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
 Finished building target: SMBUS.omf
 
-21:57:28 Build Finished. 0 errors, 0 warnings. (took 3s.802ms)
+21:03:52 Build Finished. 0 errors, 0 warnings. (took 1s.262ms)
 

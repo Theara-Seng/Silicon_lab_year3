@@ -12,6 +12,9 @@
 #include "stdint.h"
 #include "pin.h"
 #include "serial.h"
+#include "MATH.H"
+#include "delay.h"
+
 #define HC_SR04_SUCCESS         0
 #define HC_SR04_OUT_OF_RANGE    1
 

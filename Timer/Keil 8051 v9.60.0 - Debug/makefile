@@ -26,14 +26,14 @@ all: Timer.omf
 Timer.omf: echo_path $(OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Keil 8051 Linker'
-	wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@Timer.lnp" || $(RC)
+	LX51 "@Timer.lnp" || $(RC)
 	@echo 'Finished building target: $@'
 
 # Change from all upper case to the expected case
 	@-mv "TIMER.OMF.CRBUILD" "$@"
 
 # Generate hex file: Timer.hex
-	@wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/Ohx51" "Timer.omf" "HEXFILE (Timer.hex)" "H386" 2>&1 >/dev/null
+	@Ohx51 "Timer.omf" "HEXFILE (Timer.hex)" "H386" 2>&1 >/dev/null
 
 # Other Targets
 clean:

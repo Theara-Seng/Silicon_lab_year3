@@ -1,0 +1,4 @@
+"./src/InitDevice.OBJ",
+"./src/SILABS_STARTUP.OBJ",
+"./src/myProject_2_main.OBJ"
+TO "BUTTON_LED_STATE.OMF.CRBUILD" REMOVEUNUSED PRINT(.\button_led_state.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES( ECODE(C:0x0 - C:0xfbfe), HCONST(C:0x0 - C:0xfbfe), XDATA(X:0x0 - X:0xfff), HDATA(X:0x0 - X:0xfff))

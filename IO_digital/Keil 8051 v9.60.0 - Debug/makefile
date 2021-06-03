@@ -20,24 +20,24 @@ RM := rm -rf
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: port_DIO.omf
+all: IO_digital.omf
 
 # Tool invocations
-port_DIO.omf: echo_path $(OBJS)
+IO_digital.omf: echo_path $(OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Keil 8051 Linker'
-	wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@port_DIO.lnp" || $(RC)
+	LX51 "@IO_digital.lnp" || $(RC)
 	@echo 'Finished building target: $@'
 
 # Change from all upper case to the expected case
-	@-mv "PORT_DIO.OMF.CRBUILD" "$@"
+	@-mv "IO_DIGITAL.OMF.CRBUILD" "$@"
 
-# Generate hex file: port_DIO.hex
-	@wine "/home/tadashi/Downloads/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/Ohx51" "port_DIO.omf" "HEXFILE (port_DIO.hex)" "H386" 2>&1 >/dev/null
+# Generate hex file: IO_digital.hex
+	@Ohx51 "IO_digital.omf" "HEXFILE (IO_digital.hex)" "H386" 2>&1 >/dev/null
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS) port_DIO.omf
+	-$(RM) $(EXECUTABLES)$(OBJS) IO_digital.omf
 	-@echo ' '
 
 .PHONY: all clean dependents

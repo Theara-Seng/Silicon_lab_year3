@@ -3,5 +3,8 @@
 	<section name="com.silabs.ss.framework.ide.project.core.cdtMbsProjectType">
 		<item key="projectTypeId" value="com.silabs.ss.framework.ide.project.ui.emptyCProjectWizard"/>
 		<item key="settingImportModeOption" value="LINK_LIBRARIES"/>
+		<item key="importOption" value="LINK"/>
+		<list key="fileLocationHistory">
+		</list>
 	</section>
 </section>

@@ -10,14 +10,13 @@
 
 uint8_t  hc_sr04_get_distance(uint16_t *distance){
   uint16_t duration;
-   uint16_t i=0;
-  // uint16_t time;
-   uint16_t frequency;
-   uint16_t sound_duration;
-
-  TMOD |= TMOD_T0M__MODE1;
-  TH0=0X00;
-  TL0=0X00;
+   uint8_t i=0;
+//   float sound_duration;
+  // float sound_velocity=17;
+  // float clock_period=1.95*pow(10,-3);
+   TMOD |= TMOD_T0M__MODE1;
+   TH0=0X00;
+   TL0=0X00;
 
 
   HC_SR04_TRIGGER=0;
@@ -29,7 +28,7 @@ uint8_t  hc_sr04_get_distance(uint16_t *distance){
    HC_SR04_TRIGGER=0;
 
    while (!HC_SR04_ECHO)
-  TCON_TR0=1;
+   TCON_TR0=1;
    while(HC_SR04_ECHO);
    TCON_TR0=0;
    if (TCON_TF0){
@@ -37,10 +36,9 @@ uint8_t  hc_sr04_get_distance(uint16_t *distance){
        return HC_SR04_OUT_OF_RANGE;
    }
 
-   duration=(((uint16_t)TH0)<<8)| TL0;
-   frequency=(510,416/(65536-duration));
-   sound_duration=(1/frequency);
-   *distance=(sound_duration*170*1000);
+   duration=(TH0<<8)|TL0;
+ //  sound_duration=clock_period*sound_velocity;
+   *distance=(int)(duration*17*195);
 
     return HC_SR04_SUCCESS;
 }

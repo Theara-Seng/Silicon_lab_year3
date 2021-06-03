@@ -1,11 +1,11 @@
-LX51 LINKER/LOCATER V4.66.97.0                                                          04/12/2021  22:08:48  PAGE 1
+LX51 LINKER/LOCATER V4.66.97.0                                                          06/01/2021  11:29:49  PAGE 1
 
 
 LX51 LINKER/LOCATER V4.66.97.0, INVOKED BY:
-Z:\HOME\TADASHI\DOWNLOADS\SIMPLICITYSTUDIO_V5\DEVELOPER\TOOLCHAINS\KEIL_8051\9.60\BIN\LX51.EXE ./src/Button_interrupt_ma
->> in.OBJ, ./src/InitDevice.OBJ, ./src/Interrupts.OBJ, ./src/SILABS_STARTUP.OBJ TO BUTTON_INTERRUPT.OMF.CRBUILD REMOVEUN
->> USED PRINT (.\Button_interrupt.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES (ECODE (C:0X0-C:0XFBFE), HCONST (C:0X0-C:
->> 0XFBFE), XDATA (X:0X0-X:0XFFF), HDATA (X:0X0-X:0XFFF))
+C:\SILICONLABS\SIMPLICITYSTUDIO\V5\DEVELOPER\TOOLCHAINS\KEIL_8051\9.60\BIN\LX51.EXE ./src/Button_interrupt_main.OBJ, ./s
+>> rc/InitDevice.OBJ, ./src/Interrupts.OBJ, ./src/SILABS_STARTUP.OBJ TO BUTTON_INTERRUPT.OMF.CRBUILD REMOVEUNUSED PRINT 
+>> (.\Button_interrupt.m51) PAGEWIDTH (120) PAGELENGTH (65) CLASSES (ECODE (C:0X0-C:0XFBFE), HCONST (C:0X0-C:0XFBFE), XD
+>> ATA (X:0X0-X:0XFFF), HDATA (X:0X0-X:0XFFF))
 
 
 CPU MODE:     8051 MODE
@@ -21,9 +21,9 @@ INPUT MODULES INCLUDED:
          COMMENT TYPE 0: C51 V9.60.0.0
   ./src/SILABS_STARTUP.OBJ (?C_STARTUP)
          COMMENT TYPE 0: AX51 V3.15.3.0
-  /HOME/TADASHI/DOWNLOADS/SIMPLICITYSTUDIO_V5/DEVELOPER/TOOLCHAINS/KEIL_8051/9.60/LIB\C51S.LIB (?C_INIT)
+  C:\SILICONLABS\SIMPLICITYSTUDIO\V5\DEVELOPER\TOOLCHAINS\KEIL_8051\9.60\LIB\C51S.LIB (?C_INIT)
          COMMENT TYPE 1: A51 / ASM51 Assembler
-  /HOME/TADASHI/DOWNLOADS/SIMPLICITYSTUDIO_V5/DEVELOPER/TOOLCHAINS/KEIL_8051/9.60/LIB\C51S.LIB (?C?ULCMP)
+  C:\SILICONLABS\SIMPLICITYSTUDIO\V5\DEVELOPER\TOOLCHAINS\KEIL_8051\9.60\LIB\C51S.LIB (?C?ULCMP)
          COMMENT TYPE 1: A51 / ASM51 Assembler
 
 
@@ -35,7 +35,7 @@ C:000000H   C:000000H   C:00FBFEH             ECODE
 C:000000H   C:000000H   C:00FBFEH             HCONST
 X:000000H   X:000000H   X:000FFFH             XDATA
 X:000000H   X:000000H   X:000FFFH             HDATA
-C:000000H   C:000000H   C:00FFFFH   0001CAH   CODE
+C:000000H   C:000000H   C:00FFFFH   0001D3H   CODE
 I:000000H   I:000000H   I:00007FH   000011H   DATA
 I:000020H.0 I:000020H.0 I:00002FH.7 000000H.1 BIT
 I:000000H   I:000000H   I:0000FFH   000001H   IDATA
@@ -63,19 +63,19 @@ START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
 000006H   000085H   000080H   BYTE   UNIT     CODE           ?PR?INT0_ISR?INTERRUPTS
 000086H   0000E1H   00005CH   BYTE   UNIT     CODE           ?PR?WDT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
 0000E2H   0000FAH   000019H   BYTE   UNIT     CODE           ?PR?ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-0000FBH   00010BH   000011H   BYTE   UNIT     CODE           ?C?LIB_CODE
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 2
+0000FBH   00010DH   000013H   BYTE   UNIT     CODE           ?PR?MAIN?BUTTON_INTERRUPT_MAIN
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 2
 
 
-00010CH   00011BH   000010H   BYTE   UNIT     CODE           ?PR?MAIN?BUTTON_INTERRUPT_MAIN
-00011CH   000122H   000007H   BYTE   UNIT     CODE           ?PR?PORTS_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000123H   000129H   000007H   BYTE   UNIT     CODE           ?PR?PORTS_1_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-00012AH   000130H   000007H   BYTE   UNIT     CODE           ?C_INITSEG
-000131H   000134H   000004H   BYTE   UNIT     CODE           ?PR?EXTINT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000135H   000138H   000004H   BYTE   UNIT     CODE           ?PR?INTERRUPT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000139H   000139H   000001H   BYTE   UNIT     CODE           ?PR?SILABS_STARTUP?BUTTON_INTERRUPT_MAIN
-00013AH   00013AH   000001H   BYTE   UNIT     CODE           ?PR?PBCFG_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-00013BH   0007FFH   0006C5H   ---    ---      **GAP**
+00010EH   00011EH   000011H   BYTE   UNIT     CODE           ?C?LIB_CODE
+00011FH   000125H   000007H   BYTE   UNIT     CODE           ?PR?SILABS_STARTUP?BUTTON_INTERRUPT_MAIN
+000126H   00012CH   000007H   BYTE   UNIT     CODE           ?PR?PORTS_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+00012DH   000133H   000007H   BYTE   UNIT     CODE           ?PR?PORTS_1_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000134H   00013AH   000007H   BYTE   UNIT     CODE           ?C_INITSEG
+00013BH   00013EH   000004H   BYTE   UNIT     CODE           ?PR?EXTINT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+00013FH   000142H   000004H   BYTE   UNIT     CODE           ?PR?INTERRUPT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000143H   000143H   000001H   BYTE   UNIT     CODE           ?PR?PBCFG_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000144H   0007FFH   0006BCH   ---    ---      **GAP**
 000800H   00088EH   00008FH   BYTE   UNIT     CODE           ?C_C51STARTUP
 
 
@@ -129,7 +129,7 @@ INTERRUPT_0_ENTER_DEFAULTMODE_FROM_RESET+     ----- -----  ----- -----
 ?C_INITSEG                                    ----- -----  ----- -----
 
 
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 3
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 3
 
 
 
@@ -139,7 +139,7 @@ PUBLIC SYMBOLS OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       VALUE       CLASS    TYPE      PUBLIC SYMBOL NAME
       =================================================
       00000000H   NUMBER   ---       ?C?CODESEG
-      010000FBH   CODE     ---       ?C?ULCMP
+      0100010EH   CODE     ---       ?C?ULCMP
       00000000H   NUMBER   ---       ?C?XDATASEG
       0100084AH   CODE     ---       ?C_START
       01000000H   CODE     NEAR LAB  ?C_STARTUP
@@ -194,7 +194,7 @@ PUBLIC SYMBOLS OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
 *SFR* 0000008EH   DATA     BYTE      CKCON0
 *SFR* 000000A6H   DATA     BYTE      CKCON1
 *SFR* 000000C6H   DATA     BYTE      CLEN0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 4
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 4
 
 
 *SFR* 000000C7H   DATA     BYTE      CLIE0
@@ -259,7 +259,7 @@ PUBLIC SYMBOLS OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
 *SFR* 00000088H.1 DATA     BIT       DACGCF0_D1SRC1
 *SFR* 00000088H.7 DATA     BIT       DACGCF0_D23REFSL
 *SFR* 00000088H.6 DATA     BIT       DACGCF0_D3AMEN
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 5
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 5
 
 
 *SFR* 00000088H.4 DATA     BIT       DACGCF0_D3SRC0
@@ -283,7 +283,7 @@ PUBLIC SYMBOLS OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
 *SFR* 000000F6H   DATA     BYTE      EIP2H
 *SFR* 000000E7H   DATA     BYTE      EMI0CN
       010000E2H   CODE     ---       enter_DefaultMode_from_RESET
-      01000131H   CODE     ---       EXTINT_0_enter_DefaultMode_from_RESET
+      0100013BH   CODE     ---       EXTINT_0_enter_DefaultMode_from_RESET
 *SFR* 000000B7H   DATA     BYTE      FLKEY
 *SFR* 000000C7H   DATA     BYTE      HFO0CAL
 *SFR* 000000D6H   DATA     BYTE      HFO1CAL
@@ -308,7 +308,7 @@ PUBLIC SYMBOLS OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
 *SFR* 000000A8H.0 DATA     BIT       IE_EX0
 *SFR* 000000A8H.2 DATA     BIT       IE_EX1
       01000006H   CODE     ---       INT0_ISR
-      01000135H   CODE     ---       INTERRUPT_0_enter_DefaultMode_from_RESET
+      0100013FH   CODE     ---       INTERRUPT_0_enter_DefaultMode_from_RESET
 *SFR* 000000B8H   DATA     BYTE      IP
 *SFR* 000000B8H.4 DATA     BIT       IP_PS0
 *SFR* 000000B8H.6 DATA     BIT       IP_PSPI0
@@ -321,10 +321,10 @@ PUBLIC SYMBOLS OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
 *SFR* 000000E4H   DATA     BYTE      IT01CF
 *SFR* 00000090H.3 DATA     BIT       led
 *SFR* 000000B1H   DATA     BYTE      LFO0CN
-      0100010CH   CODE     ---       main
+      010000FBH   CODE     ---       main
 *SFR* 00000080H   DATA     BYTE      P0
 *SFR* 00000080H.0 DATA     BIT       P0_B0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 6
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 6
 
 
 *SFR* 00000080H.1 DATA     BIT       P0_B1
@@ -375,7 +375,7 @@ PUBLIC SYMBOLS OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
 *SFR* 000000B0H.7 DATA     BIT       P3_B7
 *SFR* 000000F4H   DATA     BYTE      P3MDIN
 *SFR* 0000009CH   DATA     BYTE      P3MDOUT
-      0100013AH   CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
+      01000143H   CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
 *SFR* 000000F9H   DATA     WORD      PCA0
 *SFR* 0000009EH   DATA     BYTE      PCA0CENT
 *SFR* 0000009CH   DATA     BYTE      PCA0CLR
@@ -389,7 +389,7 @@ PUBLIC SYMBOLS OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
 *SFR* 000000D8H.7 DATA     BIT       PCA0CN0_CF
 *SFR* 000000D8H.6 DATA     BIT       PCA0CN0_CR
 *SFR* 000000FBH   DATA     WORD      PCA0CP0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 7
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 7
 
 
 *SFR* 000000E9H   DATA     WORD      PCA0CP1
@@ -423,8 +423,8 @@ PUBLIC SYMBOLS OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
 *SFR* 00000087H   DATA     BYTE      PCON0
 *SFR* 000000CDH   DATA     BYTE      PCON1
 *SFR* 000000C1H   DATA     BYTE      PFE0CN
-      0100011CH   CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
-      01000123H   CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
+      01000126H   CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
+      0100012DH   CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
 *SFR* 000000A0H   DATA     BYTE      PPAGE_SFR
 *SFR* 000000F6H   DATA     BYTE      PRTDRV
 *SFR* 0000008FH   DATA     BYTE      PSCTL
@@ -454,7 +454,7 @@ PUBLIC SYMBOLS OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
 *SFR* 00000098H.0 DATA     BIT       SCON0_RI
 *SFR* 00000098H.7 DATA     BIT       SCON0_SMODE
 *SFR* 00000098H.3 DATA     BIT       SCON0_TB8
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 8
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 8
 
 
 *SFR* 00000098H.1 DATA     BIT       SCON0_TI
@@ -469,7 +469,7 @@ PUBLIC SYMBOLS OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
 *SFR* 000000A7H   DATA     BYTE      SFRPAGE
 *SFR* 000000BCH   DATA     BYTE      SFRPGCN
 *SFR* 000000D7H   DATA     BYTE      SFRSTACK
-      01000139H   CODE     ---       SiLabs_Startup
+      0100011FH   CODE     ---       SiLabs_Startup
 *SFR* 000000D6H   DATA     BYTE      SMB0ADM
 *SFR* 000000D7H   DATA     BYTE      SMB0ADR
 *SFR* 000000C1H   DATA     BYTE      SMB0CF
@@ -519,7 +519,7 @@ PUBLIC SYMBOLS OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
 *SFR* 0000008DH   DATA     BYTE      TH1
 *SFR* 0000008AH   DATA     BYTE      TL0
 *SFR* 0000008BH   DATA     BYTE      TL1
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 9
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 9
 
 
 *SFR* 00000089H   DATA     BYTE      TMOD
@@ -584,7 +584,7 @@ PUBLIC SYMBOLS OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
 *SFR* 000000D8H   DATA     BYTE      UART1FCN1
 *SFR* 000000D8H.3 DATA     BIT       UART1FCN1_RFRQ
 *SFR* 000000D8H.0 DATA     BIT       UART1FCN1_RIE
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 10
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 10
 
 
 *SFR* 000000D8H.1 DATA     BIT       UART1FCN1_RXTO0
@@ -611,8 +611,8 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       VALUE       REP       CLASS    TYPE      SYMBOL NAME
       ====================================================
       ---         MODULE    ---      ---       BUTTON_INTERRUPT_MAIN
-      0100010CH   PUBLIC    CODE     ---       main
-      01000139H   PUBLIC    CODE     ---       SiLabs_Startup
+      010000FBH   PUBLIC    CODE     ---       main
+      0100011FH   PUBLIC    CODE     ---       SiLabs_Startup
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000C8H.6 SFRSYM    DATA     BIT       SCON1_PERR
@@ -649,7 +649,7 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000BBH   SFRSYM    DATA     BYTE      EIP1
       000000D3H   SFRSYM    DATA     BYTE      TMR5RLH
       000000EDH   SFRSYM    DATA     BYTE      EIP2
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 11
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 11
 
 
       00000098H.2 SFRSYM    DATA     BIT       SCON0_RB8
@@ -714,7 +714,7 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       00000090H.4 SFRSYM    DATA     BIT       button
       000000E0H.0 SFRSYM    DATA     BIT       ACC_ACC0
       000000D1H   SFRSYM    DATA     BYTE      REF0CN
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 12
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 12
 
 
       000000B3H   SFRSYM    DATA     BYTE      CLU1CF
@@ -779,7 +779,7 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000BAH   SFRSYM    DATA     BYTE      I2C0CN0
       000000D2H   SFRSYM    DATA     BYTE      CRC0ST
       000000F8H.4 SFRSYM    DATA     BIT       SPI0CN0_RXOVRN
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 13
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 13
 
 
       000000D0H.4 SFRSYM    DATA     BIT       PSW_RS1
@@ -844,7 +844,7 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000F0H   SFRSYM    DATA     BYTE      B
       000000BEH   SFRSYM    DATA     BYTE      ADC0H
       000000FFH   SFRSYM    DATA     BYTE      I2C0ADM
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 14
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 14
 
 
       0000008AH   SFRSYM    DATA     BYTE      DAC1H
@@ -909,7 +909,7 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000C6H   SFRSYM    DATA     BYTE      CLEN0
       00000088H.1 SFRSYM    DATA     BIT       TCON_IE0
       000000A0H.0 SFRSYM    DATA     BIT       P2_B0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 15
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 15
 
 
       00000090H.1 SFRSYM    DATA     BIT       P1_B1
@@ -974,7 +974,7 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       00000098H.1 SFRSYM    DATA     BIT       SCON0_TI
       00000092H   SFRSYM    DATA     BYTE      SBUF1
       000000CDH   SFRSYM    DATA     BYTE      PCON1
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 16
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 16
 
 
       000000C6H   SFRSYM    DATA     BYTE      ADC0LTH
@@ -1039,7 +1039,7 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000F8H.2 SFRSYM    DATA     BIT       SPI0CN0_NSSMD0
       000000D0H.7 SFRSYM    DATA     BIT       PSW_CY
       0000009DH   SFRSYM    DATA     BYTE      UART1FCN0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 17
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 17
 
 
       000000DFH   SFRSYM    DATA     BYTE      SPI0PCF
@@ -1061,32 +1061,35 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000E8H.6 SFRSYM    DATA     BIT       CLIF0_C3FIF
       000000B7H   SFRSYM    DATA     BYTE      FLKEY
 
-      01000139H   BLOCK     CODE     ---       LVL=0
-      01000139H   LINE      CODE     ---       #28
-      01000139H   LINE      CODE     ---       #29
-      01000139H   LINE      CODE     ---       #32
+      0100011FH   BLOCK     CODE     ---       LVL=0
+      0100011FH   LINE      CODE     ---       #28
+      0100011FH   LINE      CODE     ---       #29
+      0100011FH   LINE      CODE     ---       #32
+      01000122H   LINE      CODE     ---       #33
+      01000125H   LINE      CODE     ---       #34
       ---         BLOCKEND  ---      ---       LVL=0
 
-      0100010CH   BLOCK     CODE     ---       LVL=0
-      0100010CH   LINE      CODE     ---       #38
-      0100010CH   LINE      CODE     ---       #39
-      0100010CH   LINE      CODE     ---       #41
-      0100010FH   LINE      CODE     ---       #42
-      01000112H   LINE      CODE     ---       #43
-      01000114H   LINE      CODE     ---       #44
-      01000116H   LINE      CODE     ---       #46
-      01000119H   LINE      CODE     ---       #49
-      01000119H   LINE      CODE     ---       #50
-      01000119H   LINE      CODE     ---       #54
+      010000FBH   BLOCK     CODE     ---       LVL=0
+      010000FBH   LINE      CODE     ---       #40
+      010000FBH   LINE      CODE     ---       #41
+      010000FBH   LINE      CODE     ---       #43
+      010000FEH   LINE      CODE     ---       #44
+      01000101H   LINE      CODE     ---       #45
+      01000103H   LINE      CODE     ---       #46
+      01000105H   LINE      CODE     ---       #47
+      01000108H   LINE      CODE     ---       #48
+      0100010BH   LINE      CODE     ---       #51
+      0100010BH   LINE      CODE     ---       #52
+      0100010BH   LINE      CODE     ---       #56
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       INITDEVICE
-      01000123H   PUBLIC    CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
+      0100012DH   PUBLIC    CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
       01000086H   PUBLIC    CODE     ---       WDT_0_enter_DefaultMode_from_RESET
-      0100013AH   PUBLIC    CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
-      0100011CH   PUBLIC    CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
-      01000135H   PUBLIC    CODE     ---       INTERRUPT_0_enter_DefaultMode_from_RESET
-      01000131H   PUBLIC    CODE     ---       EXTINT_0_enter_DefaultMode_from_RESET
+      01000143H   PUBLIC    CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
+      01000126H   PUBLIC    CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
+      0100013FH   PUBLIC    CODE     ---       INTERRUPT_0_enter_DefaultMode_from_RESET
+      0100013BH   PUBLIC    CODE     ---       EXTINT_0_enter_DefaultMode_from_RESET
       010000E2H   PUBLIC    CODE     ---       enter_DefaultMode_from_RESET
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
@@ -1101,12 +1104,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000C0H.7 SFRSYM    DATA     BIT       SMB0CN0_MASTER
       000000F9H   SFRSYM    DATA     WORD      PCA0
       000000E6H   SFRSYM    DATA     BYTE      EIE1
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 18
+
+
       000000C0H.1 SFRSYM    DATA     BIT       SMB0CN0_ACK
       000000E8H.1 SFRSYM    DATA     BIT       CLIF0_C0RIF
       000000F3H   SFRSYM    DATA     BYTE      EIE2
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 18
-
-
       000000E8H.3 SFRSYM    DATA     BIT       CLIF0_C1RIF
       000000E8H.5 SFRSYM    DATA     BIT       CLIF0_C2RIF
       0000008FH   SFRSYM    DATA     BYTE      PSCTL
@@ -1166,12 +1169,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000B8H   SFRSYM    DATA     BYTE      IP
       000000F0H.6 SFRSYM    DATA     BIT       B_B6
       000000C5H   SFRSYM    DATA     WORD      ADC0LT
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 19
+
+
       000000AEH   SFRSYM    DATA     BYTE      PCA0CPM3
       00000084H   SFRSYM    DATA     BYTE      PCA0CPL4
       000000D8H.6 SFRSYM    DATA     BIT       UART1FCN1_TXNF
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 19
-
-
       00000098H.5 SFRSYM    DATA     BIT       SCON0_MCE
       000000F0H.7 SFRSYM    DATA     BIT       B_B7
       000000AFH   SFRSYM    DATA     BYTE      PCA0CPM4
@@ -1231,12 +1234,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000F1H   SFRSYM    DATA     BYTE      P0MDIN
       000000AFH   SFRSYM    DATA     BYTE      CLU0FN
       00000098H.4 SFRSYM    DATA     BIT       SCON0_REN
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 20
+
+
       000000ACH   SFRSYM    DATA     BYTE      SMB0TC
       000000F2H   SFRSYM    DATA     BYTE      P1MDIN
       000000B2H   SFRSYM    DATA     BYTE      CLU1FN
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 20
-
-
       000000C8H.4 SFRSYM    DATA     BIT       SCON1_REN
       000000F3H   SFRSYM    DATA     BYTE      P2MDIN
       000000B5H   SFRSYM    DATA     BYTE      CLU2FN
@@ -1296,12 +1299,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       00000088H.1 SFRSYM    DATA     BIT       DACGCF0_D1SRC1
       000000CCH   SFRSYM    DATA     BYTE      P2SKIP
       00000084H   SFRSYM    DATA     BYTE      CLU0MX
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 21
+
+
       000000E8H   SFRSYM    DATA     BYTE      ADC0CN0
       000000D8H.4 SFRSYM    DATA     BIT       UART1FCN1_TIE
       000000A8H.0 SFRSYM    DATA     BIT       IE_EX0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 21
-
-
       00000088H.4 SFRSYM    DATA     BIT       DACGCF0_D3SRC0
       00000085H   SFRSYM    DATA     BYTE      CLU1MX
       000000B2H   SFRSYM    DATA     BYTE      ADC0CN1
@@ -1361,12 +1364,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000C7H   SFRSYM    DATA     BYTE      CLIE0
       000000B8H.3 SFRSYM    DATA     BIT       IP_PT1
       00000088H.3 SFRSYM    DATA     BIT       DACGCF0_D01REFSL
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 22
+
+
       000000B5H   SFRSYM    DATA     WORD      ADC0ASA
       000000E8H   SFRSYM    DATA     BYTE      CLIF0
       000000C0H.2 SFRSYM    DATA     BIT       SMB0CN0_ARBLOST
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 22
-
-
       000000B8H.5 SFRSYM    DATA     BIT       IP_PT2
       0000008AH   SFRSYM    DATA     BYTE      TL0
       000000D0H.5 SFRSYM    DATA     BIT       PSW_F0
@@ -1426,12 +1429,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       00000098H.3 SFRSYM    DATA     BIT       DACGCF1_D3UDIS
       000000B0H.7 SFRSYM    DATA     BIT       P3_B7
       00000083H   SFRSYM    DATA     BYTE      DPH
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 23
+
+
       000000C4H   SFRSYM    DATA     BYTE      ADC0GTH
       000000C8H.7 SFRSYM    DATA     BIT       TMR2CN0_TF2H
       000000C8H.3 SFRSYM    DATA     BIT       TMR2CN0_T2SPLIT
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 23
-
-
       000000D0H.6 SFRSYM    DATA     BIT       PSW_AC
       000000F8H   SFRSYM    DATA     BYTE      SPI0CN0
       000000C7H   SFRSYM    DATA     BYTE      HFO0CAL
@@ -1491,12 +1494,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000C8H.4 SFRSYM    DATA     BIT       TMR2CN0_TF2CEN
       00000088H.6 SFRSYM    DATA     BIT       TCON_TR1
       000000C2H   SFRSYM    DATA     BYTE      SMB0DAT
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 24
+
+
       000000CFH   SFRSYM    DATA     BYTE      TMR2H
       000000A1H   SFRSYM    DATA     BYTE      SPI0CFG
       00000095H   SFRSYM    DATA     BYTE      TMR3H
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 24
-
-
       000000EFH   SFRSYM    DATA     BYTE      HFOCN
       000000D3H   SFRSYM    DATA     BYTE      CRC0CNT
       000000A5H   SFRSYM    DATA     BYTE      TMR4H
@@ -1552,35 +1555,35 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       010000FAH   LINE      CODE     ---       #38
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000131H   BLOCK     CODE     ---       LVL=0
-      01000131H   LINE      CODE     ---       #41
-      01000131H   LINE      CODE     ---       #42
-      01000131H   LINE      CODE     ---       #51
-      01000134H   LINE      CODE     ---       #55
+      0100013BH   BLOCK     CODE     ---       LVL=0
+      0100013BH   LINE      CODE     ---       #41
+      0100013BH   LINE      CODE     ---       #42
+      0100013BH   LINE      CODE     ---       #51
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 25
+
+
+      0100013EH   LINE      CODE     ---       #55
       ---         BLOCKEND  ---      ---       LVL=0
 
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 25
-
-
-      01000135H   BLOCK     CODE     ---       LVL=0
-      01000135H   LINE      CODE     ---       #58
-      01000135H   LINE      CODE     ---       #59
-      01000135H   LINE      CODE     ---       #89
-      01000138H   LINE      CODE     ---       #100
+      0100013FH   BLOCK     CODE     ---       LVL=0
+      0100013FH   LINE      CODE     ---       #58
+      0100013FH   LINE      CODE     ---       #59
+      0100013FH   LINE      CODE     ---       #89
+      01000142H   LINE      CODE     ---       #100
       ---         BLOCKEND  ---      ---       LVL=0
 
-      0100011CH   BLOCK     CODE     ---       LVL=0
-      0100011CH   LINE      CODE     ---       #103
-      0100011CH   LINE      CODE     ---       #104
-      0100011CH   LINE      CODE     ---       #119
-      0100011FH   LINE      CODE     ---       #139
-      01000122H   LINE      CODE     ---       #150
+      01000126H   BLOCK     CODE     ---       LVL=0
+      01000126H   LINE      CODE     ---       #103
+      01000126H   LINE      CODE     ---       #104
+      01000126H   LINE      CODE     ---       #119
+      01000129H   LINE      CODE     ---       #139
+      0100012CH   LINE      CODE     ---       #150
       ---         BLOCKEND  ---      ---       LVL=0
 
-      0100013AH   BLOCK     CODE     ---       LVL=0
-      0100013AH   LINE      CODE     ---       #153
-      0100013AH   LINE      CODE     ---       #154
-      0100013AH   LINE      CODE     ---       #167
+      01000143H   BLOCK     CODE     ---       LVL=0
+      01000143H   LINE      CODE     ---       #153
+      01000143H   LINE      CODE     ---       #154
+      01000143H   LINE      CODE     ---       #167
       ---         BLOCKEND  ---      ---       LVL=0
 
       01000086H   BLOCK     CODE     ---       LVL=0
@@ -1604,12 +1607,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       010000E1H   LINE      CODE     ---       #202
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000123H   BLOCK     CODE     ---       LVL=0
-      01000123H   LINE      CODE     ---       #205
-      01000123H   LINE      CODE     ---       #206
-      01000123H   LINE      CODE     ---       #221
-      01000126H   LINE      CODE     ---       #241
-      01000129H   LINE      CODE     ---       #252
+      0100012DH   BLOCK     CODE     ---       LVL=0
+      0100012DH   LINE      CODE     ---       #205
+      0100012DH   LINE      CODE     ---       #206
+      0100012DH   LINE      CODE     ---       #221
+      01000130H   LINE      CODE     ---       #241
+      01000133H   LINE      CODE     ---       #252
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       INTERRUPTS
@@ -1621,12 +1624,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000D0H.2 SFRSYM    DATA     BIT       PSW_OV
       00000086H   SFRSYM    DATA     BYTE      XOSC0CN
       00000090H   SFRSYM    DATA     BYTE      P1
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 26
+
+
       000000F8H.1 SFRSYM    DATA     BIT       SPI0CN0_TXNF
       00000097H   SFRSYM    DATA     BYTE      WDTCN
       000000A0H   SFRSYM    DATA     BYTE      P2
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 26
-
-
       000000B0H   SFRSYM    DATA     BYTE      P3
       000000C0H.7 SFRSYM    DATA     BIT       SMB0CN0_MASTER
       000000F9H   SFRSYM    DATA     WORD      PCA0
@@ -1686,12 +1689,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000A1H   SFRSYM    DATA     BYTE      ADC0ASCF
       000000B6H   SFRSYM    DATA     BYTE      ADC0ASAH
       000000F0H.5 SFRSYM    DATA     BIT       B_B5
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 27
+
+
       000000E8H.6 SFRSYM    DATA     BIT       ADC0CN0_IPOEN
       000000E8H.0 SFRSYM    DATA     BIT       ADC0CN0_TEMPE
       000000DCH   SFRSYM    DATA     BYTE      PCA0CPM2
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 27
-
-
       000000F4H   SFRSYM    DATA     BYTE      PCA0CPL3
       000000B8H   SFRSYM    DATA     BYTE      IP
       000000F0H.6 SFRSYM    DATA     BIT       B_B6
@@ -1751,12 +1754,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000A4H   SFRSYM    DATA     WORD      TMR4
       00000094H   SFRSYM    DATA     BYTE      SBCON1
       000000D8H.4 SFRSYM    DATA     BIT       PCA0CN0_CCF4
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 28
+
+
       000000D4H   SFRSYM    DATA     WORD      TMR5
       000000C0H.3 SFRSYM    DATA     BIT       SMB0CN0_ACKRQ
       000000D8H.5 SFRSYM    DATA     BIT       PCA0CN0_CCF5
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 28
-
-
       000000FFH   SFRSYM    DATA     BYTE      VDM0CN
       000000F1H   SFRSYM    DATA     BYTE      P0MDIN
       000000AFH   SFRSYM    DATA     BYTE      CLU0FN
@@ -1816,12 +1819,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000D4H   SFRSYM    DATA     BYTE      P0SKIP
       000000D1H   SFRSYM    DATA     BYTE      CLOUT0
       000000D8H.0 SFRSYM    DATA     BIT       UART1FCN1_RIE
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 29
+
+
       000000C0H.0 SFRSYM    DATA     BIT       TMR5CN0_T5XCLK0
       000000A8H.5 SFRSYM    DATA     BIT       IE_ET2
       00000088H.0 SFRSYM    DATA     BIT       DACGCF0_D1SRC0
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 29
-
-
       000000D5H   SFRSYM    DATA     BYTE      P1SKIP
       000000C0H.1 SFRSYM    DATA     BIT       TMR5CN0_T5XCLK1
       00000088H.1 SFRSYM    DATA     BIT       DACGCF0_D1SRC1
@@ -1881,12 +1884,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000B8H.4 SFRSYM    DATA     BIT       IP_PS0
       00000084H   SFRSYM    DATA     WORD      PCA0CP4
       000000FAH   SFRSYM    DATA     BYTE      UART1FCT
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 30
+
+
       0000008DH   SFRSYM    DATA     BYTE      TH1
       000000FAH   SFRSYM    DATA     BYTE      PCA0H
       000000F5H   SFRSYM    DATA     BYTE      I2C0FCT
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 30
-
-
       000000B8H.1 SFRSYM    DATA     BIT       IP_PT0
       000000DDH   SFRSYM    DATA     WORD      PCA0CP5
       000000C7H   SFRSYM    DATA     BYTE      CLIE0
@@ -1946,12 +1949,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000A0H.5 SFRSYM    DATA     BIT       P2_B5
       00000090H.6 SFRSYM    DATA     BIT       P1_B6
       00000080H.7 SFRSYM    DATA     BIT       P0_B7
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 31
+
+
       00000098H.2 SFRSYM    DATA     BIT       DACGCF1_D2UDIS
       000000C5H   SFRSYM    DATA     BYTE      SMB0RXLN
       000000F6H   SFRSYM    DATA     BYTE      EIP2H
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 31
-
-
       000000A0H.6 SFRSYM    DATA     BIT       P2_B6
       00000090H.7 SFRSYM    DATA     BIT       P1_B7
       00000098H.3 SFRSYM    DATA     BIT       DACGCF1_D3UDIS
@@ -2011,12 +2014,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       000000FDH   SFRSYM    DATA     BYTE      TMR2CN1
       00000098H   SFRSYM    DATA     BYTE      TMR4CN0
       000000FEH   SFRSYM    DATA     BYTE      TMR3CN1
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 32
+
+
       000000C0H   SFRSYM    DATA     BYTE      TMR5CN0
       000000FFH   SFRSYM    DATA     BYTE      TMR4CN1
       000000D7H   SFRSYM    DATA     BYTE      SMB0ADR
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 32
-
-
       00000088H.4 SFRSYM    DATA     BIT       TCON_TR0
       000000F1H   SFRSYM    DATA     BYTE      TMR5CN1
       000000C8H.4 SFRSYM    DATA     BIT       TMR2CN0_TF2CEN
@@ -2076,12 +2079,12 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       ---         MODULE    ---      ---       ?C_STARTUP
       01000000H   PUBLIC    CODE     NEAR LAB  ?C_STARTUP
       000000E0H   SFRSYM    DATA     BYTE      ACC
+LX51 LINKER/LOCATER V4.66.97.0                                                        06/01/2021  11:29:49  PAGE 33
+
+
       000000F0H   SFRSYM    DATA     BYTE      B
       00000083H   SFRSYM    DATA     BYTE      DPH
       00000082H   SFRSYM    DATA     BYTE      DPL
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/12/2021  22:08:48  PAGE 33
-
-
       000000A0H   SFRSYM    DATA     BYTE      PPAGE_SFR
       00000081H   SFRSYM    DATA     BYTE      SP
       00000000H   SYMBOL    NUMBER   ---       IBPSTACK
@@ -2118,11 +2121,11 @@ SYMBOL TABLE OF MODULE:  BUTTON_INTERRUPT.OMF.CRBUILD (BUTTON_INTERRUPT_MAIN)
       0100084AH   PUBLIC    CODE     ---       ?C_START
 
       ---         MODULE    ---      ---       ?C?ULCMP
-      010000FBH   PUBLIC    CODE     ---       ?C?ULCMP
+      0100010EH   PUBLIC    CODE     ---       ?C?ULCMP
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0138H BYTE (15%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0141H BYTE (15%) *
 ******************************************************************************
 
-Program Size: data=18.1 xdata=0 const=0 code=458
+Program Size: data=18.1 xdata=0 const=0 code=467
 LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
